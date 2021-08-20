@@ -1,7 +1,7 @@
 <h1 align="center">El Paraíso de la Pizza</h1>
 
 <h2 align="center">Digital House - Trabajo </h2>
-<h3 align="center">Inglés Intermedio (B1)</h3>
+<h3 align="center">vvvvvvvvvvv</h3>
 
 <h3 align="center">_________________________________</h3>
 <h4 align="center">xxxxxx</h4> 
