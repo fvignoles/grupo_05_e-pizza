@@ -3,6 +3,9 @@
 <h2 align="center">Digital House - Curso Full Stack Developer </h2>
 <h3 align="center">Proyecto Integrador : e-commerce</h3>
 
+<h3 align="center">_________________________________</h3>
+
+<p align="center"><img src="./pizza01.jpg" alt="imagenPizza" width="250" height="auto"/></p>
 
 <h3 align="center">_________________________________</h3>
 <h4 align="center"> Integrantes :</h4>
@@ -12,9 +15,13 @@
 <h4 align="center">Facundo Vignoles</h4>
 <h3 align="center">_________________________________</h3>
 
+<h3 align="center"> Sitios de referencia</h3>
 
-<p align="center"><img src="./pizza01.jpg" alt="imagenPizza" width="250" height="auto"/></p>
-
+<h4 align="center"><a href="http://www.puntopizza.com.ar/" target="_blank">puntopizza.com.ar</a></h4>
+<h4 align="center"><a href="http://www.ristorantepizzeriaitalia.it/" target="_blank">ristorantepizzeriaitalia.it</h4>
+<h4 align="center"><a href="https://lamejorpizzeria.com/" target="_blank">lamejorpizzeria.com</h4>
+<h4 align="center"><a href="https://www.kentucky.com.ar/" target="_blank">kentucky.com.ar</h4>
+<h4 align="center"><a href="https://www.parrilladonjulio.com/" target="_blank">parrilladonjulio.com</h4>
 
 <h3 align="center">_________________________________</h3>
 
