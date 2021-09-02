@@ -15,6 +15,11 @@
 <h4 align="center">Facundo Vignoles</h4>
 <h3 align="center">_________________________________</h3>
 
+<h3 align="center">Oferta de productos y público</h3>
+<p align=center>Ofreceremos un abanico de sabores, con una calidad única. Habrá además pizza aptas para celiacos y veganos. Todo aquel que desee comer muy bien o probar la mejor pizza del país será bienvenido. </p>
+<h3 align="center">_________________________________</h3>
+
+
 <h3 align="center"> Sitios de referencia</h3>
 
 <h4 align="center"><a href="http://www.puntopizza.com.ar/" target="_blank">puntopizza.com.ar</a></h4>
