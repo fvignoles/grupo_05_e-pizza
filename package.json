@@ -1,0 +1,23 @@
+{
+  "name": "grupo_05_e-pizza",
+  "version": "1.0.0",
+  "description": "proyecto grupal #05",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fvignoles/grupo_05_e-pizza.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fvignoles/grupo_05_e-pizza/issues"
+  },
+  "homepage": "https://github.com/fvignoles/grupo_05_e-pizza#readme"
+}
