@@ -16,7 +16,7 @@
   }
   
   main {
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     font-family: Roboto;
   }
@@ -24,83 +24,115 @@
   section h2 {
     font-size: 24px;
     text-align: left;
-    padding: 10px;
+    padding: 5px;
   }
   
   .detalle-box {
-    padding: 10px;
-    border:1px solid black;
-    width: 50%;
+    padding: 5px;
+    /* border:1px solid black; */
+    width: 350px;
     height: auto;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-items: center;
     flex-direction: column;
     justify-content:space-around;
     flex-grow: 1;
   }
   
+  .detalle-titulo {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    margin: 5px;
+    width: 340px;
+    padding: 5px;
+  }
   .detalle-box-menor {
     display: flex;
-    border:1px solid black;
-    flex-direction: row;
+    /* border:1px solid black; */
+    flex-direction: column;
     margin: 5px;
     background-color: white;
-    width: 100%;
-    padding: 10px;
+    width: 340px;
+    padding: 5px;
+  }
+
+  /* .detalle-favorito i {
+      color: greenyellow;
+      justify-content:end;
+    
+  } */
+
+  .detalle-pie-imagen {
+    display: flex;
+    /* border:1px solid black; */
+    flex-direction: row;
+    align-items: center;
+    justify-content:center;
+    background-color: gainsboro;
+    width: 330px;
+    padding: 5px;
   }
   
   .detalle-box-menor:hover {
     box-shadow: 0px 0px 0px #ebebeb;
   }
   
-  /* .detalle-imagen-pizza {
-    margin: 0 auto;
-    width: 100%;
-    padding: 10px;
-  } */
-  
   .detalle-imagen-pizza {
-    border:1px solid black;
-    background-color: white;
+    width: 330px;
+    /* border:1px solid black; */
+    background-color: whitesmoke;
     flex-wrap: nowrap;
     align-items: baseline;
-    padding: 10px;
+    padding: 5px;
   }
+
+  .detalle-imagen-pizza img{
+    width:330px
+  }
+      
     
   .detalle-ingredientes {
-    border:1px solid black;
+    /* border:1px solid black; */
+    width: 330px;
     font-size: 12px;
-    font-weight: 200;
     text-align: left;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    display: inline-block;
-    padding: 10px;
+    padding: 5px 25px;
+    font-family: Roboto;
   }
+
+  .detalle-ingredientes h3 {
+    color:darkblue;
+    text-align: center;
+  }
+
+  .detalle-ingredientes p {
+    color: black;
+    text-align: center;
+  }
+
   
   .detalle-imagen-pizza:hover .detalle-ingredientes {
     opacity: 1;
   }
   
   .detalle-precio {
-    font-size: 16px;
+    font-size: 30px;
     font-family: Roboto;
-    width: 30%;
-    text-align: left;
+    width: 50%;
+    text-align: center;
     padding: 10px;
   }
 
   
   .submit {
-    margin-top: 5px;
-    width: 100%;
+    width: 100px;
     height: 50px;
     font-size: 16px;
     border: 2px solid #1259c3;
     border-radius: 5px;
     font-weight: 600;
-    box-shadow: none;
     transition: background-color 0.5s;
     background-color: #1259c3;
     color: white;
@@ -112,12 +144,12 @@
     width: 100%;
     height: 50px;
     font-size: 16px;
-    border: 2px solid #eac926;
+    border: 2px solid #e09018;;
     border-radius: 5px;
     font-weight: 600;
     box-shadow: none;
     transition: background-color 0.5s;
-    background-color: #eac926;
+    background-color: #e09018;
     color: white;
     cursor: pointer;
   }
