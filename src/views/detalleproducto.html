@@ -5,34 +5,88 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>El paraiso de la pizza</title>
+    <link rel="stylesheet" href="css/stylesHome.css">
     <link href="/public/css/detalleproducto.css" rel="stylesheet" />
-  </head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">  
+</head>
 
   <body>
+    <header>
+        <img src="images/logo.jpg" width="180" alt="Logo de pizzeria"> 
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Acerca de</a></li>
+                <li><a href="#">Pizzas</a></li>
+                <li><a href="#">Promos</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">Registrate <i class="far fa-id-card"></i></a></li>
+                <li><a href="#">Ingresá <i class="fas fa-sign-in-alt"></i></a></li>
+                <li><a href="#">Mi carrito <i class="fas fa-shopping-basket"></i></a></li>
+            </ul>
+        </nav>
+        <div class="burger-menu">
+            <i class="fa fa-bars burger"></i>
+        </div>
+    </header>
+    
     <div class="detalle-box">
       <div class="detalle-titulo">
         <h1>Pizza de Champignones</h1>
       </div>
       <div class="detalle-box-menor">
         <div class="detalle-imagen-pizza">
-          <img src="/public/img/detalle-pizza.png" alt="" />
-          <div class="detalle-precio">
-            <p>$ 700.-</p>
-          </div>
+            <div class="detalle-favorito"><i class="fas fa-star"></i></div>  
+            <img src="/public/img/detalle-pizza.png" alt="" />
+        </div>
+        <div class="detalle-pie-imagen">
+            <div class="detalle-precio">
+                <p>$ 799</p>
+            </div>
+            <div class="detalle-comprar">
+                <button class="submit" type="submit" id="button" name="button"><i class="fas fa-shopping-cart"></i> Comprar</button>
+            </div>
         </div>
         <div class="detalle-ingredientes">
-          <h3>ingredientes</h3>
+          <h3>Ingredientes</h3>
           <ul class="detalle-lista-ingredientes">
-            <li>Ingrediente 1</li>
-            <li>Ingrediente 2</li>
-            <li>Ingrediente 3</li>
+            <li>Muzzarella</li>
+            <li>Champignones cortados en mitades</li>
+            <li>Tomates cortados en filetes</li>
+            <li>Aceitunas negras</li>
           </ul>
           <div class="detalle-obs">
-            <h3>observaciones</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            <h3>Observaciones</h3>
+            <p>Los ingredientes se saltean previamente en aceite de oliva y luego se funden con la masa en la última cocción</p>
           </div>
+          <div class="detalle-salir">
+            <button class="reset" type="submit" id="button" name="button"><i class="fas fa-reply"></i> Salir</button>
+        </div>
+
         </div>
       </div>
     </div>
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="#">Promos</a></li>
+                <li><a href="#">Contacto</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Buscar</a></li>
+                <li><a href="#">Privacidad</a></li>
+                <li><a href="#">Comunidad</a></li>
+            </ul>
+        <div class="footer-icons"><i class="fa fa-facebook"></i></div>
+        <div class="footer-icons"><i class="fa fa-twitter"></i></div>
+        <div class="footer-icons"><i class="fa fa-instagram"></i></div>
+        <div class="footer-icons"><i class="fa fa-youtube"></i></div>
+
+
+        <p>Copyright © 1999-2021 El Paraíso de la pizza S.R.L.</p>
+    </footer>
   </body>
 </html>
