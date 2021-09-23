@@ -2,32 +2,40 @@
   margin: 0px;
   padding: 0px;
 }
+
 body {
   font-family: "Roboto", sans-serif;
   background-color: #a6abb9;
 }
+
 h3 {
   text-align: center;
   font-family: "Roboto", sans-serif;
-  font-size: 24px;
+  font-size: 20px;
 }
+
 header {
-  background-color: #506369;
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  color: white;
 }
+
 header nav {
   font-size: 12px;
   margin-top: 10px;
-  display: none;
 }
+
 header ul {
   margin-top: 10px;
 }
 header ul li {
   list-style-type: none;
 }
+
 header ul li a {
   text-decoration: none;
-  color: #000;
+  color: white ;
 }
 main img {
   width: 100%;
@@ -39,7 +47,7 @@ main img {
   background-color: rgb(68, 72, 87);
   border-radius: 5px;
   color: #fff;
-  font-size: 20px;
+  font-size: 18px;
   margin: 10px 0px 20px 0px;
   padding: 10px;
 }
@@ -47,7 +55,7 @@ main img {
   background-color: rgb(133, 147, 199);
   text-align: center;
   font-family: "Roboto", sans-serif;
-  font-size: 24px;
+  font-size: 18px;
 }
 /* inicio de footer */
 .footer-icons {
@@ -58,6 +66,7 @@ main img {
 }
 footer p {
   text-align: center;
+  font-size: 10px;
   padding: 10px;
 }
 footer li {
@@ -66,10 +75,16 @@ footer li {
   font-weight: bold;
 }
 footer {
-  background-color: rgb(68, 72, 87);
-  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items:center;
+  justify-content: space-around;
+  background-color:black;
+  padding: 5px;
+  margin-top: 10px;
+  color:white
+
 }
-/*fin de footer*/
 
 main section {
   width: 90%;
