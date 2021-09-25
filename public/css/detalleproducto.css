@@ -4,6 +4,11 @@
     padding: 0;
     box-sizing: border-box;
   }
+
+  header{
+    display: flex !important;
+}
+
   
   a:link, a:visited, a:active {
     text-decoration:none;
