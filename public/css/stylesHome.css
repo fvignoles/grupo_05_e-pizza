@@ -12,20 +12,27 @@ header{
 
 body {
   font-family: "Roboto", sans-serif;
-  background-color: #a6abb9;
+  background-image: url(../img/background-carrito.jpg);
 }
 
 h3 {
   text-align: center;
   font-family: "Roboto", sans-serif;
   font-size: 20px;
+  color: white;
+}
+
+h4 {
+    color: black;
+    font-weight:bolder;
 }
 
 .descripcion {
-  background-color: rgb(133, 147, 199);
+  background-image: url(../img/textura-pizza.jpg);
   text-align: center;
   font-family: "Roboto", sans-serif;
-  font-size: 18px;
+  font-size: 20px;
+  font-weight:bolder;
 }
 main section {
   width: 90%;
