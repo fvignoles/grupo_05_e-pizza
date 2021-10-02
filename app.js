@@ -3,35 +3,32 @@ const path = require("path");
 const app = express();
 const PORT = process.env.PORT || 8080;
 
-const publicPath = path.resolve(__dirname, "./public");
-app.use(express.static(publicPath));
+app.set('view engine', 'ejs');
+
+app.set('views', './src/views');
+
+app.use(express.static('public'));
+
+app.use(express.static('./src/views'));
 
 app.listen(PORT, () => console.log(`Server Running on port: ${PORT}`));
 
-app.get('/detalle', (req, res) => { 
-    res.sendFile(path.join(__dirname, "./src/views/detalleproducto.html")) 
-});
-
 app.get('/login', (req, res) => { 
-    res.sendFile(path.join(__dirname, "./src/views/login.html")) 
+    res.render("users/login.ejs") 
 });
 
 app.get('/register', (req, res) => { 
-    res.sendFile(path.join(__dirname, "./src/views/register.html")) 
+    res.render ("users/register.ejs") 
+});
+
+app.get('/detalle', (req, res) => { 
+    res.render("products/detalleproducto.ejs") 
 });
 
 app.get('/carrito', (req, res) => { 
-    res.sendFile(path.join(__dirname, "./src/views/carrito.html")) 
-});
-
-app.get('/error', (req, res) => { 
-    res.sendFile(path.join(__dirname, "./src/views/error.html")) 
+    res.render("products/carrito.ejs") 
 });
 
 app.get('/', (req, res) => {
-     res.sendFile(path.join(__dirname, "./src/views/home.html")) 
+     res.render("home/home.ejs") 
 });
-
-// app.get('*', (req, res) => { 
-//     res.sendFile(path.join(__dirname, "./views/error.html")) 
-// });
