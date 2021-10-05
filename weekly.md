@@ -2,7 +2,7 @@
 
 <h3 align="center">Weekly Standup</h3>
 
-<h2 align="center">Sprint 3 - Semana 1</h2>
+<h2 align="center">Sprint 3 - Semana 2</h2>
 
 <p align=center> Sofía : 
 ● Qué hice ...
