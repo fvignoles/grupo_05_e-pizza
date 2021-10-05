@@ -2,7 +2,7 @@
 
 <h3 align="center">Weekly Standup</h3>
 
-<h2 align="center">Sprint 3 - Semana 1</h2>
+<h2 align="center">Sprint 3 - Semana 2</h2>
 
 <p align=center> Sofía : 
 ● Qué hice ...
@@ -13,17 +13,9 @@
 
 <p align=center> Diego : </p>
 
-<p align=center> Facundo : </p>
-
-
-
-
-<h3 align="center">_________________________________</h3>
-
-<h2 align="center">Sprint 2</h2>
-
-<p align=center>  
-llllllllllllll
+<p align=center> Facundo : 
+● Que hice: Trabajé junto al equipo en la transformación del app.js y las vistas a la utilización de EJS. Además terminé con la vista de detalle de producto ultimando algunos detalles.
+● Impedimentos: Me faltó tiempo para transformar los contenidos a dinámicos.
+● Qué voy a hacer: transformar los contenidos de la vista de detalle de producto que tiene contenido estático para que funcione con contenido dinámico (utilizando EJS)
 </p>
 
-<h3 align="center">_________________________________</h3>
