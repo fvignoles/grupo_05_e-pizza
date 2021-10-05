@@ -10,7 +10,7 @@ header{
 
 
 
-body {
+.body-home {
   font-family: "Roboto", sans-serif;
   background-image: url(../img/background-carrito.jpg);
 }
