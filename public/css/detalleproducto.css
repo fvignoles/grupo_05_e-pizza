@@ -1,30 +1,5 @@
-
-* {
-    margin: 0;
-    padding: 0;
-  }
-
-  header{
-    display: flex !important;
-}
-
-  
-  a:link, a:visited, a:active {
-    text-decoration:none;
-  }
-  
-  body {
-    font-family: "Roboto", sans-serif;
-    background-image: url(../img/background-carrito.jpg);
-  }
-  
-  section h2 {
-    font-size: 24px;
-    text-align: left;
-    padding: 5px;
-  }
-  
   .detalle-box {
+    background-image: url(../img/background-carrito.jpg);
     padding: 5px;
     display: flex;
     align-items: center;
@@ -47,34 +22,31 @@
     flex-direction: column;
     align-items: center;
     margin: 5px;
-    background-color: white;
+    background-color: gray;
     width: 340px;
     padding: 5px;
   }
 
   .detalle-pie-imagen {
     display: flex;
+    background-color: gainsboro;
     flex-direction: row;
     align-items: center;
     justify-content:center;
-    background-color: gainsboro;
     width: 330px;
     padding: 5px;
   }
   
-  .detalle-box-menor:hover {
-    box-shadow: 0px 0px 0px #ebebeb;
-  }
-  
   .detalle-imagen-pizza {
     width: 330px;
-    background-color: whitesmoke;
+    background-color: gray;
     flex-wrap: nowrap;
     padding: 5px;
   }
 
   .detalle-imagen-pizza img{
-    width:330px
+    width:330px;
+    background-color: gray;
   }
       
     
@@ -94,11 +66,6 @@
   .detalle-ingredientes p {
     color: black;
     text-align: center;
-  }
-
-  
-  .detalle-imagen-pizza:hover .detalle-ingredientes {
-    opacity: 1;
   }
   
   .detalle-precio {
@@ -137,7 +104,6 @@
       width: 580px;
       background-color: whitesmoke;
       flex-wrap: nowrap;
-      padding: 5px;
     }
   
     .detalle-imagen-pizza img{
