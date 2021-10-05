@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head.ejs') %>
+    <link rel="stylesheet" href="css/agregarProducto.css">
+</head>
+
+<body>
+
+
+<%- include('../partials/header.ejs') %>
+
+
+<main>
+    <section class="w3-margin-bottom">
+    <form>
+        <strong><p class="w3-center">Agrega un producto!:</p></strong>
+        <input class="w3-input w3-border w3-round w3-margin-top" type="text" placeholder="Nombre del producto" required>
+        <textarea class="w3-input w3-border w3-round w3-margin-top"  placeholder="Descripcion"></textarea>
+        <strong><p>Imagen:</p></strong>
+        <input class="w3-margin-bottom" type="file" required>
+        <strong><p>Categoria:</p></strong>
+        <select class=" w3-select w3-border w3-round w3-margin-bottom" >
+            <option>Piedra</option>
+            <option>Molde</option>
+        </select>
+        <textarea class="w3-input w3-border w3-round w3-margin-top"  placeholder="Ingredientes"></textarea>
+        <strong><p>Precio:</p></strong>
+        <input class="w3-margin-bottom" type="number" required>
+
+    </form>
+    <input class="w3-btn w3-round-xlarge w3-green w3-hover-black" type="submit" value="Cargar producto">
+    </section>
+</main>
+
+<%- include('../partials/footer.ejs') %>
+
+</body>
+</html>
