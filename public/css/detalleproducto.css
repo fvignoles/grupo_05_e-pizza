@@ -1,3 +1,14 @@
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto';
+}
+
+header{
+  display: flex !important;
+}
+
   .detalle-box {
     background-image: url(../img/background-carrito.jpg);
     padding: 5px;
@@ -49,7 +60,6 @@
     background-color: gray;
   }
       
-    
   .detalle-ingredientes {
     width: 330px;
     font-size: 12px;
