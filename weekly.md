@@ -6,8 +6,8 @@
 
 <p align=center> Sofía : 
 ● Qué hice: Se trabajo en equipo para implementar ejs y modificar app.js, ademas cree la vista para agregar producto y editarlo.
-● Impedimentos encontrados: Ninguno.
-● Qué voy a hacer: Ninguno. </p>
+● Impedimentos encontrados: falta de inspiracion para el diseño de la vista..
+● Qué voy a hacer: refactorizar la vista a futuro </p>
 
 <p align=center> Agustín : </p>
 
