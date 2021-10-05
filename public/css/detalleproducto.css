@@ -11,7 +11,6 @@ header{
 
   .detalle-box {
     background-image: url(../img/background-carrito.jpg);
-    padding: 5px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -26,16 +25,13 @@ header{
     flex-direction: column;
     margin: 5px;
     width: 340px;
-    padding: 5px;
   }
   .detalle-box-menor {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 5px;
     background-color: gray;
     width: 340px;
-    padding: 5px;
   }
 
   .detalle-pie-imagen {
@@ -45,14 +41,12 @@ header{
     align-items: center;
     justify-content:center;
     width: 330px;
-    padding: 5px;
   }
   
   .detalle-imagen-pizza {
     width: 330px;
     background-color: gray;
     flex-wrap: nowrap;
-    padding: 5px;
   }
 
   .detalle-imagen-pizza img{
@@ -140,7 +134,6 @@ header{
       width: 680px;
       background-color: whitesmoke;
       flex-wrap: nowrap;
-      padding: 5px;
     }
   
     .detalle-imagen-pizza img{
