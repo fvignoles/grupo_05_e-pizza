@@ -5,9 +5,9 @@
 <h2 align="center">Sprint 3 - Semana 2</h2>
 
 <p align=center> Sofía : 
-● Qué hice ...
-● Impedimentos encontrados...
-● Qué voy a hacer...</p>
+● Qué hice: Se trabajo en equipo para implementar ejs y modificar app.js, ademas cree la vista para agregar producto y editarlo.
+● Impedimentos encontrados: Ninguno.
+● Qué voy a hacer: Ninguno. </p>
 
 <p align=center> Agustín : </p>
 
