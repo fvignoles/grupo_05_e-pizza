@@ -1,35 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
     <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>El paraiso de la pizza</title>
+        <%- include('../partials/head.ejs') %>
         <link href="css/estilosCarrito.css" rel="stylesheet" />
-        <link href="css/header.css" rel="stylesheet" />
-        <link href="css/footer.css" rel="stylesheet" />
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     </head>
     
 <body>
-    <header>
-        <img src="img/logo.jpg" width="180" alt="Logo de pizzeria" />
-            <nav>
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/login">Ingresá <i class="fas fa-sign-in-alt"></i></a></li>
-                    <li><a href="/register">Registrate <i class="far fa-id-card"></i></a></li>
-                    <li><a href="/carrito">Mi carrito <i class="fas fa-shopping-basket"></i></a></li>
-                    <li><a href="/detalle">Detalle</a></li>
-                </ul>
-            </nav>
-            <div class="burger-menu">
-                <i class="fa fa-bars burger"></i>
-            </div>
-    </header>
+
+    <%- include('../partials/header.ejs') %>
      
         <img  src="img/imagen-carrito-chica-comiendo-pizza.jpg" alt="" style="width: 100vw;">
 
@@ -45,9 +24,8 @@
 
             <div class="w3-button w3-round w3-red ">
                 <p>Reiniciar</p>
-            </article>
-
             </div>
+            </article>
 
             <article class="container-btn-precio-total w3-padding">
                 <div class="w3-button w3-round w3-aqua btn-precio-final " >
@@ -117,17 +95,7 @@
         </section>
  
     </main>
-    <footer class="w3-margin-top">
-        <div class="footer-icons">
-            <i class="fa fa-facebook"></i>
-            <i class="fa fa-twitter"></i>
-            <i class="fa fa-instagram"></i>
-            <i class="fa fa-youtube"></i>
-          </div>
-         <div> 
-        <p>Copyright © 2021 El Paraíso de la pizza</p>
-      </div>
-      </footer>
+    <%- include('../partials/footer.ejs') %>
     
 </body>
 </html>
