@@ -10,8 +10,6 @@
 
 <h2 align="center">Sprint 2</h2>
 
-<p align=center>  
-llllllllllllll
-</p>
+<p align=center> La dificultad principal que tuvimos como grupo en el Sprint fue el poder reunirnos para analizar cómo veníamos, qué habíamos hecho y cómo íbamos a continuar con el desarrollo de las tareas. Una vez que al fin pudimos reunirnos, hicimos gran parte del Sprint juntos y luego repartimos lo que no habíamos alcanzado a terminar. Fue muy productiva la reunión. Se habló además de como intentar tener una mejor comunicación, para saber en qué venimos por separado e intentar ayudar y colaborar entre todos. </p>
 
 <h3 align="center">_________________________________</h3>

@@ -9,7 +9,11 @@
 ● Impedimentos encontrados...
 ● Qué voy a hacer...</p>
 
-<p align=center> Agustín : </p>
+<p align=center> Agustín :
+● Que hice: Junto a todo el equipo modificamos el app.js y luego puse los archivos parciales(head, header y footer) en los archivos de login y register.
+● Impedimentos: Me costó entender el tema de enrutamiento, pero logré captarlo.
+● Qué voy a hacer: Hacer funcionar el menú hamburguesa.
+</p>
 
 <p align=center> Diego : </p>
 
