@@ -32,3 +32,11 @@ app.get('/carrito', (req, res) => {
 app.get('/', (req, res) => {
      res.render("home/home.ejs") 
 });
+
+app.get('/agregarProducto',(req,res) =>{
+    res.render("products/agregarProducto.ejs");
+});
+
+app.get('/editarProducto',(req,res) =>{
+    res.render("products/editarProducto.ejs");
+});
