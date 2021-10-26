@@ -13,3 +13,10 @@
 <p align=center> La dificultad principal que tuvimos como grupo en el Sprint fue el poder reunirnos para analizar cómo veníamos, qué habíamos hecho y cómo íbamos a continuar con el desarrollo de las tareas. Una vez que al fin pudimos reunirnos, hicimos gran parte del Sprint juntos y luego repartimos lo que no habíamos alcanzado a terminar. Fue muy productiva la reunión. Se habló además de como intentar tener una mejor comunicación, para saber en qué venimos por separado e intentar ayudar y colaborar entre todos. </p>
 
 <h3 align="center">_________________________________</h3>
+
+<h2 align="center">Sprint 3</h2>
+
+<p align=center> En este Sprint sufrimos una disminución del tiempo disponible para realizar las tareas, pero igualmente pudimos finalizarlas correctamente.
+  Al igual que en los anteriores Sprints mantuvimos buena comunicación y excelente relación grupal. Como objetivo para el próximo Sprint debemos proponernos reunirnos con mayor frecuencia para tratar de avanzar con mayor fluidez y en conjunto en la medida de lo posible.</p>
+
+<h3 align="center">_________________________________</h3>
