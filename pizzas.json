@@ -1,0 +1,117 @@
+[
+ {
+  "id": 1,
+  "name": "Muzzarella",
+  "description": "Salsa de tomates, Muzzarella, Aceitunas verdes o negras a elección",
+  "image": ,
+  "size": "",
+  "dough" : "",
+  },
+
+{
+  "id": 2,
+  "name": "Napolitana",
+  "description": "Queso, tomates en rodajas, ajo, orégano, aceitunas verdes o negras a elección",
+  "image": ,
+  "size": "",
+  "dough" : "",
+  },
+
+{
+  "id": 3,
+  "name": "Fugazzetta",
+  "description": "Queso y cebolla",
+  "image": ,
+  "size": "",
+  "dough" : "",
+  },
+
+{
+  "id": 4,
+  "name": "Roquefort",
+  "description": "Salsa de tomates, queso azul, aceitunas verdes o negras a elección",
+  "image": ,
+  "size": "",
+  "dough" : "",
+  },
+
+{
+  "id": 5,
+  "name": "Calabresa",
+  "description": "Salsa de tomates, Muzarella, Queso Provolone, Salame en rodajas, Aceitunas verdes o negras a elección",
+  "image": ,
+  "size": "",
+  "dough" : "",
+  },
+
+{
+  "id": 6,
+  "name": "4 quesos",
+  "description": "...",
+  "image": ,
+  "size": "",
+  "dough" : "",
+  },
+
+{
+  "id": 7,
+  "name": "Jamón y Queso",
+  "description": "Salsa de tomates, Queso, Jamón en rodajas, Aceitunas verdes o negras a elección",
+  "image": ,
+  "size": "",
+  "dough" : "",
+  },
+
+{
+  "id": 8,
+  "name": "Ananá",
+  "description": "",
+  "image": ,
+  "size": "",
+  "dough" : "",
+  },
+
+{
+  "id": 9,
+  "name": "Palmitos",
+  "description": "...",
+  "image": ,
+  "size": "",
+  "dough" : "",
+  },
+
+{
+  "id": 10,
+  "name": "Champignones",
+  "description": "...",
+  "image": ,
+  "size": "",
+  "dough" : "",
+  },
+
+{
+  "id": 11,
+  "name": "Rúcula y Jamón Crudo",
+  "description": "...",
+  "image": ,
+  "size": "",
+  "dough" : "",
+  },
+
+{
+  "id": 12,
+  "name": "Margarita",
+  "description": "Tomate, Albahaca y Muzzarella",
+  "image": ,
+  "size": "",
+  "dough" : "",
+  },
+
+  "id": 13,
+  "name": "De huevo",
+  "description": "Tomate, Albahaca y Muzzarella",
+  "image": ,
+  "size": "",
+  "dough" : "",
+  },
+]
