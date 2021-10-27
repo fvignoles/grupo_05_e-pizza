@@ -83,7 +83,7 @@
 {
   "id": 10,
   "name": "Champignones",
-  "description": "...",
+  "description": "Salsa de tomates, Mozzarella, Cebollas grandes, Champiñones y Queso Parmesano rallado",
   "image": ,
   "size": "",
   "dough" : "",
@@ -107,6 +107,7 @@
   "dough" : "",
   },
 
+{
   "id": 13,
   "name": "De huevo",
   "description": "Tomate, Albahaca y Muzzarella",
