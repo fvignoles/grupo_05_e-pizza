@@ -20,3 +20,15 @@
   Al igual que en los anteriores Sprints mantuvimos buena comunicación y excelente relación grupal. Como objetivo para el próximo Sprint debemos proponernos reunirnos con mayor frecuencia para tratar de avanzar con mayor fluidez y en conjunto en la medida de lo posible.</p>
 
 <h3 align="center">_________________________________</h3>
+
+
+<h2 align="center">Sprint 4</h2>
+
+1. Comenzar a hacer : revisión integral de la aplicación, integrar a nuestro nuevo compañero de grupo.
+2. Hacer más : reuniones de grupo que permitan avanzar mas firmes y más rápido.
+3. Continuar haciendo : trabajando responsablemente y con buen clima de grupo.
+4. Hacer menos :  dejar que pasen varios días sin reunirnos.
+5. Dejar de hacer : demorar el arranque del sprint (nos reunimos apenas comienza pero luego dejamos pasar varios días hasta que comenzamos a trabajar efectivamente).
+
+<h3 align="center">_________________________________</h3>
+
