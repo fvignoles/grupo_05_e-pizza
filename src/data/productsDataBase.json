@@ -1,0 +1,106 @@
+[
+    {
+     "id": 1,
+     "name": "Muzzarella",
+     "description": "Salsa de tomates, Muzzarella, Aceitunas verdes o negras a elección",
+     "image": "pizza.jpg",
+     "size": "",
+     "dough" : "a"
+    },  
+   {
+     "id": 2,
+     "name": "Napolitana",
+     "description": "Queso, tomates en rodajas, ajo, orégano, aceitunas verdes o negras a elección",
+     "image": "",
+     "size": "",
+     "dough" : ""
+    },
+   {
+     "id": 3,
+     "name": "Fugazzetta",
+     "description": "Queso, Cebolla y Parmesano",
+     "image": "",
+     "size": "",
+     "dough" : ""
+    },
+   {
+     "id": 4,
+     "name": "Roquefort",
+     "description": "Salsa de tomates, queso azul, aceitunas verdes o negras a elección",
+     "image": "",
+     "size": "",
+     "dough" : ""
+    },
+   {
+     "id": 5,
+     "name": "Calabresa",
+     "description": "Salsa de tomates, Muzarella, Queso Provolone, Salame en rodajas, Aceitunas verdes o negras a elección",
+     "image": " ",
+     "size": "",
+     "dough" : ""
+   },
+   {
+     "id": 6,
+     "name": "4 quesos",
+     "description": "Salsa de tomates, Muzarella, Fontina, Roquefort, Provolone",
+     "image": "",
+     "size": "",
+     "dough" : ""
+    },
+   {
+     "id": 7,
+     "name": "Jamón y Queso",
+     "description": "Salsa de tomates, Queso, Jamón en rodajas, Aceitunas verdes o negras a elección",
+     "image": " ",
+     "size": "",
+     "dough" : ""
+    },
+   {
+     "id": 8,
+     "name": "Ananá o HAWAIANA",
+     "description": "Ananá, Mozarella y Jamón en tiras",
+     "image": " ",
+     "size": "",
+     "dough" : ""
+   },
+   {
+     "id": 9,
+     "name": "Palmitos",
+     "description": "Huevo, Jamón, Palmito, Morron en tiras y Salsa Golf (sal y pimienta)",
+     "image": " ",
+     "size": "",
+     "dough" : ""
+    },
+   {
+     "id": 10,
+     "name": "Champignones",
+     "description": "Salsa de tomates, Mozzarella, Cebollas grandes, Champiñones y Queso Parmesano rallado",
+     "image": " ",
+     "size": "",
+     "dough" : ""
+     },
+   {
+     "id": 11,
+     "name": "Rúcula y Jamón Crudo",
+     "description": "Jamón Crudo, Tomates Secos, Mozzarella, Aceite de Oliva y Salsa de tomate",
+     "image": " ",
+     "size": "",
+     "dough" : ""
+    },
+   {
+     "id": 12,
+     "name": "Margarita",
+     "description": "Tomate, Albahaca y Muzzarella",
+     "image": " ",
+     "size": "",
+     "dough" : ""
+    },
+   {
+     "id": 13,
+     "name": "De huevo",
+     "description": "Tomate, Albahaca y Muzzarella",
+     "image": " ",
+     "size": "",
+     "dough" : ""
+    }
+]

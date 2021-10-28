@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('../partials/head.ejs') %>
+
+<body>
+    <%- include('../partials/header.ejs') %>
+    <!-- hola
+       <% const saludo = "hola soy ejs" %>
+        <%= saludo %> -->
+        <% for (let i=0 ; i < products.length; i++) { %>
+            <article class="articulo">
+                <div class= "contenedor">  
+                        <!-- <i class="fas fa-truck"></i> -->
+                    <p class="precio mcbook"><%= products[i].price %></p>
+                    <p class="descuento mcbook"><%= products[i].description %></p>
+                    <h4 class="descripcion mcbook"><%= products[i].name %></h4>
+                </div>
+            </article>
+        <% } %>
+    <%- include('../partials/footer.ejs') %>
+</body>
+</html>
