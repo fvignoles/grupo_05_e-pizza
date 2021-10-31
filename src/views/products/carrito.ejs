@@ -1,101 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <%- include('../partials/head.ejs') %>
+    <link href="/css/estilosCarrito.css" rel="stylesheet" />
+  </head>
 
-    <head>
-        <%- include('../partials/head.ejs') %>
-        <link href="/css/estilosCarrito.css" rel="stylesheet" />
-    </head>
-    
-<body>
-
+  <body>
     <%- include('../partials/header.ejs') %>
-     
-        <img  src="/img/imagen-carrito-chica-comiendo-pizza.jpg" alt="" style="width: 100vw;">
 
-    <main>  
-      
-        <section class="botones-carrito">
+    <img
+      src="/img/imagen-carrito-chica-comiendo-pizza.jpg"
+      alt=""
+      style="width: 100vw"
+    />
 
-            <article class="btn-reiniciar-ver-container w3-padding">
+    <main>
+      <section class="botones-carrito">
+        <article class="btn-reiniciar-ver-container w3-padding">
+          <div class="w3-button w3-round w3-green">
+            <p>Ver Pedido</p>
+          </div>
 
-            <div class="w3-button w3-round w3-green " >
-                <p>Ver Pedido</p>
+          <div class="w3-button w3-round w3-red">
+            <p>Reiniciar</p>
+          </div>
+        </article>
+
+        <article class="container-btn-precio-total w3-padding">
+          <div class="w3-button w3-round w3-aqua btn-precio-final">
+            Precio Final $0
+          </div>
+        </article>
+      </section>
+
+      <section>
+        <h1 class="pizzas w3-margin-top w3-margin-bottom">Pizzas</h1>
+        <div class="contenedor-pizzas">
+          <article>
+            <img src="/img/pizza1.jpg" alt="" style="width: 100%" />
+            <div class="contenedor-articulo">
+              <div class="texto-contenedor-pizza w3-margin-top">
+                <p class="nombre-producto"><strong>Muzzarella</strong></p>
+                <p>
+                  Muzzarella, salsa especial, oregano, aceitunas verdes, masa al
+                  molde/ a la piedra.
+                </p>
+              </div>
+              <div
+                class="contenedor-precio-pizza w3-margin-bottom w3-margin-top"
+              >
+                <p>$700</p>
+                <i class="fas fa-cart-plus"></i>
+              </div>
             </div>
-
-            <div class="w3-button w3-round w3-red ">
-                <p>Reiniciar</p>
+          </article>
+          <article>
+            <img src="/img/pizza 2.jpg" alt="" style="width: 100%" />
+            <div class="contenedor-articulo">
+              <div class="texto-contenedor-pizza w3-margin-top">
+                <p class="nombre-producto"><strong>Napolitana</strong></p>
+                <p>
+                  Muzzarella de bufala, salsa de tomate al natural, oregano,
+                  albahaca, aceitunas verdes, masa a la piedra.
+                </p>
+              </div>
+              <div
+                class="contenedor-precio-pizza w3-margin-bottom w3-margin-top"
+              >
+                <p>$1000</p>
+                <i class="fas fa-cart-plus"></i>
+              </div>
             </div>
-            </article>
-
-            <article class="container-btn-precio-total w3-padding">
-                <div class="w3-button w3-round w3-aqua btn-precio-final " >
-                Precio Final $0
-                </div>
-            </article>
-        </section>
-
-
-
-        <section>
-            <h1 class="pizzas w3-margin-top w3-margin-bottom">Pizzas</h1>
-            <div class="contenedor-pizzas">
-                <article>
-                   <img src="/img/pizza1.jpg" alt="" style="width:100%;">
-                   <div class="contenedor-articulo">
-                   <div class="texto-contenedor-pizza w3-margin-top">
-                   <p class="nombre-producto"><strong>Muzzarella</strong></p>
-                   <p>Muzzarella, salsa especial, oregano, aceitunas verdes, masa al molde/ a la piedra.</p>
-                    </div>
-                   <div class="contenedor-precio-pizza w3-margin-bottom w3-margin-top">
-                       <p>$700</p>
-                       <i class="fas fa-cart-plus"></i>
-                   </div>
-                </div>
-                </article>
-                <article>
-                    <img src="/img/pizza 2.jpg" alt="" style="width:100%;">
-                    <div class="contenedor-articulo">
-                    <div class="texto-contenedor-pizza w3-margin-top">
-                    <p class="nombre-producto"><strong>Napolitana</strong></p>
-                    <p>Muzzarella de bufala, salsa de tomate al natural, oregano, albahaca, aceitunas verdes, masa a la piedra.</p>
-                    </div>
-                    <div class="contenedor-precio-pizza w3-margin-bottom w3-margin-top" >
-                        <p>$1000</p>
-                        <i class="fas fa-cart-plus"></i>
-                    </div>
-                </div>
-                 </article>
-                 <article>
-                    <img src="/img/pizza3.jpg" alt="" style="width:100%;">
-                    <div class="contenedor-articulo">
-                    <div class="texto-contenedor-pizza w3-margin-top">
-                    <p class="nombre-producto"><strong>New york</strong></p>
-                    <p>Peperoni, Muzzarella, oregano, aceitunas verdes, salsa especial, masa al molde.</p>
-                    </div>
-                    <div class="contenedor-precio-pizza w3-margin-bottom w3-margin-top">
-                        <p>$800</p>
-                        <i class="fas fa-cart-plus"></i>
-                    </div>
-                    </div>
-                 </article>
-                 <article>
-                    <img src="/img/pizza4.jpg" alt="" style="width:100%;">
-                    <div class="contenedor-articulo">
-                    <div class="texto-contenedor-pizza w3-margin-top">
-                    <p class="nombre-producto"><strong>Jamon y Rucula</strong></p>
-                    <p>Rucula, jamon crudo, tomate en rodajas, oregano, Salsa especial, Muzzarella masa a la piedra.</p>
-                    </div>
-                    <div class="contenedor-precio-pizza w3-margin-bottom w3-margin-top">
-                        <p>$1200</p>
-                        <i class="fas fa-cart-plus"></i>
-                    </div>
-                    </div>
-                 </article>
+          </article>
+          <article>
+            <img src="/img/pizza3.jpg" alt="" style="width: 100%" />
+            <div class="contenedor-articulo">
+              <div class="texto-contenedor-pizza w3-margin-top">
+                <p class="nombre-producto"><strong>New york</strong></p>
+                <p>
+                  Peperoni, Muzzarella, oregano, aceitunas verdes, salsa
+                  especial, masa al molde.
+                </p>
+              </div>
+              <div
+                class="contenedor-precio-pizza w3-margin-bottom w3-margin-top"
+              >
+                <p>$800</p>
+                <i class="fas fa-cart-plus"></i>
+              </div>
             </div>
-        </section>
- 
+          </article>
+          <article>
+            <img src="/img/pizza4.jpg" alt="" style="width: 100%" />
+            <div class="contenedor-articulo">
+              <div class="texto-contenedor-pizza w3-margin-top">
+                <p class="nombre-producto"><strong>Jamon y Rucula</strong></p>
+                <p>
+                  Rucula, jamon crudo, tomate en rodajas, oregano, Salsa
+                  especial, Muzzarella masa a la piedra.
+                </p>
+              </div>
+              <div
+                class="contenedor-precio-pizza w3-margin-bottom w3-margin-top"
+              >
+                <p>$1200</p>
+                <i class="fas fa-cart-plus"></i>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
     </main>
     <%- include('../partials/footer.ejs') %>
-    
-</body>
+  </body>
 </html>

@@ -1,13 +1,14 @@
-header{
+/* header{
     display: flex !important;
+} */
+
+h3{
+    margin-top: 0px;
+    width: 100%;
+
 }
 
-main{
-    margin: 0 auto;
-    width: 50%;
-
-}
-
-main section form input{
+/* main section form input{
     width: 100% !important;
-}
+} */
+

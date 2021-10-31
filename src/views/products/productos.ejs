@@ -1,23 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-
     <%- include('../partials/head.ejs') %>
+    <link rel="stylesheet" href="/css/productos.css" />
 
 <body>
     <%- include('../partials/header.ejs') %>
-    <!-- hola
-       <% const saludo = "hola soy ejs" %>
-        <%= saludo %> -->
-        <% for (let i=0 ; i < products.length; i++) { %>
-            <article class="articulo">
-                <div class= "contenedor">  
-                        <!-- <i class="fas fa-truck"></i> -->
-                    <p class="precio mcbook"><%= products[i].price %></p>
-                    <p class="descuento mcbook"><%= products[i].description %></p>
-                    <h4 class="descripcion mcbook"><%= products[i].name %></h4>
-                </div>
-            </article>
-        <% } %>
+    <main>
+        <section>
+            <div class="productos">
+            <% for (let i=1 ; i < products.length; i++) { %>
+                <article class="articulo">
+                    <a href="/products/detalle/<%= products.id %>">
+                    <img src="/img/<%= products[i].image %>" width="70%" alt="" class="img-product">
+                    <div class= "contenedor">  
+                            <!-- <i class="fas fa-truck"></i> -->
+                        <p class="precio"><%= products[i].price %></p>
+                        <p class="descripcion"><%= products[i].description %></p>
+                        <h4 class="descripcion"><%= products[i].name %></h4>
+                    </div>
+                </article>
+            <% } %>
+            </div>
+        </section>
+    </main>
+    
     <%- include('../partials/footer.ejs') %>
 </body>
 </html>

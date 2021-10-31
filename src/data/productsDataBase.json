@@ -5,102 +5,114 @@
      "description": "Salsa de tomates, Muzzarella, Aceitunas verdes o negras a elección",
      "image": "pizza.jpg",
      "size": "",
-     "dough" : "a"
+     "dough" : "a",
+     "price" : "500"
     },  
    {
      "id": 2,
      "name": "Napolitana",
      "description": "Queso, tomates en rodajas, ajo, orégano, aceitunas verdes o negras a elección",
-     "image": "",
+     "image": "pizza4.jpg",
      "size": "",
-     "dough" : ""
+     "dough" : "",
+     "price" : "500"
     },
    {
      "id": 3,
      "name": "Fugazzetta",
      "description": "Queso, Cebolla y Parmesano",
-     "image": "",
+     "image": "pizza3.jpg",
      "size": "",
-     "dough" : ""
+     "dough" : "",
+     "price" : "500"
     },
    {
      "id": 4,
      "name": "Roquefort",
      "description": "Salsa de tomates, queso azul, aceitunas verdes o negras a elección",
-     "image": "",
+     "image": "pizza4.jpg",
      "size": "",
-     "dough" : ""
+     "price" : "500"
     },
    {
      "id": 5,
      "name": "Calabresa",
      "description": "Salsa de tomates, Muzarella, Queso Provolone, Salame en rodajas, Aceitunas verdes o negras a elección",
-     "image": " ",
+     "image": "pizza1.jpg",
      "size": "",
-     "dough" : ""
+     "dough" : "",
+     "price" : "500"
    },
    {
      "id": 6,
      "name": "4 quesos",
      "description": "Salsa de tomates, Muzarella, Fontina, Roquefort, Provolone",
-     "image": "",
+     "image": "pizza4.jpg",
      "size": "",
-     "dough" : ""
+     "dough" : "",
+     "price" : "500"
     },
    {
      "id": 7,
      "name": "Jamón y Queso",
      "description": "Salsa de tomates, Queso, Jamón en rodajas, Aceitunas verdes o negras a elección",
-     "image": " ",
+     "image": "pizza4.jpg ",
      "size": "",
-     "dough" : ""
+     "dough" : "",
+     "price" : "500"
     },
    {
      "id": 8,
      "name": "Ananá o HAWAIANA",
      "description": "Ananá, Mozarella y Jamón en tiras",
-     "image": " ",
+     "image": "pizza4.jpg",
      "size": "",
-     "dough" : ""
+     "dough" : "",
+     "price" : "500"
    },
    {
      "id": 9,
      "name": "Palmitos",
      "description": "Huevo, Jamón, Palmito, Morron en tiras y Salsa Golf (sal y pimienta)",
-     "image": " ",
+     "image": "pizza4.jpg",
      "size": "",
-     "dough" : ""
+     "dough" : "",
+     "price" : "500"
     },
    {
      "id": 10,
      "name": "Champignones",
      "description": "Salsa de tomates, Mozzarella, Cebollas grandes, Champiñones y Queso Parmesano rallado",
-     "image": " ",
+     "image": "pizza4.jpg",
      "size": "",
-     "dough" : ""
-     },
+     "dough" : "",
+     "price" : "500"
+    },
    {
      "id": 11,
      "name": "Rúcula y Jamón Crudo",
      "description": "Jamón Crudo, Tomates Secos, Mozzarella, Aceite de Oliva y Salsa de tomate",
-     "image": " ",
+     "image": "pizza4.jpg",
      "size": "",
-     "dough" : ""
+     "dough" : "",
+     "price" : "500"
     },
    {
      "id": 12,
      "name": "Margarita",
      "description": "Tomate, Albahaca y Muzzarella",
-     "image": " ",
+     "image": "pizza4.jpg",
      "size": "",
-     "dough" : ""
+     "dough" : "",
+     "price" : "500"
     },
    {
      "id": 13,
      "name": "De huevo",
      "description": "Tomate, Albahaca y Muzzarella",
-     "image": " ",
+     "image": "pizza4.jpg",
      "size": "",
-     "dough" : ""
+     "dough" : "",
+     "price" : "500"
     }
 ]

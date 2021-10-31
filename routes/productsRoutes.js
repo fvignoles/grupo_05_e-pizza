@@ -24,4 +24,9 @@ router.get('/agregar', productsController.agregar);
 
 router.get('/productos', productsController.vista);
 
+router.post('/productos', productsController.create);
+
+router.get('/detail/:id', productsController.detail); 
+
+
 module.exports = router;

@@ -1,0 +1,71 @@
+.contenedor {
+    border-top: 1px solid #ebebeb;
+    background-color: #fff;
+    /* padding: 15px; */
+    margin: auto;
+    /* position: relative; */
+}
+.precio {
+    font-size: 18px;
+    text-align: center;
+    margin-top: 50px;
+    /* display: inline-block; */
+    width: 100%;
+}
+.descuento {
+    font-size: 16px;
+    text-align: center;
+    color: #39b54a;
+    margin-top: 5px;
+    /* display: inline-block; */
+    /* width: 40%; */
+}
+.descripcion {
+    font-size: 16px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+main section {
+    width: 90%;
+    margin-top: auto;
+}
+main section article {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.img-product{
+    text-align: center;
+    align-items: center;
+}
+
+@media (min-width: 361px){
+    /*.descripcion{
+        display: block;
+    }*/
+    main section article{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+    main section div.productos{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    main section div.productos article{
+        width: 45%;
+    }
+
+}
+
+@media (min-width: 769px){
+    main section div.productos article{
+        width: 23%;
+    }
+    .descuento{
+        width: 40%;
+        margin-left: 15px;
+    }
+
+}
