@@ -1,49 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <%- include('../partials/head.ejs') %>
-    <link rel="stylesheet" href="/css/editarProducto.css" />
-  </head>
 
-  <body>
-    <%- include('../partials/header.ejs') %>
+
+<%- include('../partials/head.ejs') %>
+<link rel="stylesheet" href="/css/editarProducto.css" />
+
+
+<body>
+  <%- include('../partials/header.ejs') %>
 
     <main>
       <section class="w3-margin-bottom">
-        <form>
-          <strong><p class="w3-center">Editar un producto!:</p></strong>
-          <input
-            class="w3-input w3-border w3-round w3-margin-top"
-            type="text"
-            placeholder="Nombre del producto"
-            required
-          />
-          <textarea
-            class="w3-input w3-border w3-round w3-margin-top"
-            placeholder="Descripcion"
-          ></textarea>
-          <strong><p>Imagen:</p></strong>
-          <input class="w3-margin-bottom" type="file" required />
-          <strong><p>Categoria:</p></strong>
-          <select class="w3-select w3-border w3-round w3-margin-bottom">
-            <option>Piedra</option>
-            <option>Molde</option>
-          </select>
-          <textarea
-            class="w3-input w3-border w3-round w3-margin-top"
-            placeholder="Ingredientes"
-          ></textarea>
-          <strong><p>Precio:</p></strong>
-          <input class="w3-margin-bottom" type="number" required />
+        <form action="/products/edit/<%= productToEdit.id %>?_method=PATCH" method="POST">
+          <strong>
+            <p class="w3-center">Editar un producto!: <%= productToEdit.name %>
+            </p>
+          </strong>
+
+          <label for="name" class="form-label">Nombre:</label>
+          <input value="<%= productToEdit.name %>" name="name" id="name" class="form-input">
+
+          <label for="description" class="form-label"><strong>
+              <p>Descripción:</p>
+            </strong></label>
+          <input value="<%= productToEdit.description %>" name="description" id="description" class="form-input">
+
+          <label for="size" class="form-label"><strong>
+              <p>Tamaño:</p>
+            </strong></label>
+          <input value="<%= productToEdit.size %>" name="size" id="size" class="form-input">
+
+          <label for="dough" class="form-label"><strong>
+              <p>Masa:</p>
+            </strong></label>
+          <input value="<%= productToEdit.dough %>" name="dough" id="dough" class="form-input">
+
+          <strong>
+            <p>Precio:</p>
+          </strong>
+          <input class="w3-margin-bottom" type="number" name="price" required value="<%= productToEdit.price %>">
+
+          <input class="w3-btn w3-round-xlarge w3-green w3-hover-black" type="submit" value="Editar producto">
+
         </form>
-        <input
-          class="w3-btn w3-round-xlarge w3-green w3-hover-black"
-          type="submit"
-          value="Editar producto"
-        />
       </section>
     </main>
 
     <%- include('../partials/footer.ejs') %>
-  </body>
+</body>
+
 </html>

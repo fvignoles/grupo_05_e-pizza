@@ -6,9 +6,11 @@
   text-decoration: none;
 }
 
-/* .header{
+.header{
   position: fixed;
-} */
+  display: flex;
+}
+
 .nav{
   background-color: black;
   height: 80px;
@@ -27,11 +29,11 @@
 nav ul{
   float: right;
   margin-right: 20px;
-  /* font-size: 18px;
+  font-size: 18px;
   margin: 0 10px;
   line-height: 80px;
   text-transform: uppercase;
-  width: max-content; */
+  width: max-content;
 }
 
 nav ul li {
@@ -99,12 +101,15 @@ a.nav-link, a:hover{
   }
 }
 
-  /* header{
+
+
+/* 
+   header{
     display: flex;
     justify-content: space-around;
     background-color: black;
     color: white;
-    }
+   }
   
   header nav ul li {
       display: none;
@@ -153,4 +158,4 @@ a.nav-link, a:hover{
     text-decoration: none;
     color: white ;
   }
-} */
+}  */

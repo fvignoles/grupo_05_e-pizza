@@ -1,68 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <%- include('../partials/head.ejs') %>
+
+<head>
+  <%- include('../partials/head.ejs') %>
     <link href="/css/detalleproducto.css" rel="stylesheet" />
-  </head>
-  
-  <body>
-    <%- include('../partials/header.ejs') %>
+</head>
+
+<body>
+  <%- include('../partials/header.ejs') %>
     <div class="detalle-box">
       <div class="detalle-titulo">
-        <h1>Detalle del producto: <%= product.name %></h1>
+        <h1>Detalle del producto: <%= product.name %>
+        </h1>
+        <img src="/img/<%= product.image %>" width="70%" alt="" class="img-product">
       </div>
       <div class="detalle-box-menor">
         <div class="detalle-imagen-pizza">
-         
+
         </div>
         <div class="detalle-pie-imagen">
           <div class="detalle-precio">
-            <p>$ 799</p>
+            <p>$ <%= product.price %>
+            </p>
           </div>
           <div class="detalle-comprar">
-            <button
-              class="w3-button w3-round w3-green"
-              type="submit"
-              id="button"
-              name="button"
-            >
+            <button class="w3-button w3-round w3-green" type="submit" id="button" name="button">
               <i class="fas fa-shopping-cart"></i> Comprar
             </button>
           </div>
         </div>
         <div class="detalle-ingredientes">
-          <h3>Ingredientes</h3>
-          <ul class="detalle-lista-ingredientes">
-            <li>Muzzarella</li>
-            <li>Champignones cortados en mitades</li>
-            <li>Tomates cortados en filetes</li>
-            <li>Aceitunas negras</li>
-          </ul>
+          <h3>Descripción</h3>
+          <p class="detalle-lista-ingredientes">
+            <%= product.description %>
+          </p>
           <div class="detalle-obs">
-            <h3>Observaciones</h3>
+            <h3>Tamaño</h3>
+
             <p>
-              Los ingredientes se saltean previamente en aceite de oliva y luego
-              se funden con la masa en la última cocción
+              <%= product.size %>
             </p>
+            <h3>Masa</h3>
+
+            <p>
+              <%= product.dough %>
+            </p>
+
+
           </div>
+          <div>
+            <a href="/products/edit/<%= product.id %>" class="action-button edit">EDITAR PRODUCTO</a>
+            <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST" style="display: inline-flex">
+              <button type="submit" class="action-button delete">ELIMINAR</button>
+            </form>
+
+          </div>
+
+
         </div>
         <div class="detalle-salir">
-          <button
-            class="w3-button w3-round w3-aqua"
-            type="submit"
-            id="button"
-            name="button"
-          >
-          <i class="fas fa-door-open"></i> Salir
-            
+          <button class="w3-button w3-round w3-aqua" type="submit" id="button" name="button">
+            <i class="fas fa-door-open"></i> Salir
+
           </button>
         </div>
       </div>
     </div>
-  </div>
+    </div>
 
 
-     <%- include('../partials/footer.ejs') %>
-  
-    </body>
+    <%- include('../partials/footer.ejs') %>
+
+</body>
+
 </html>

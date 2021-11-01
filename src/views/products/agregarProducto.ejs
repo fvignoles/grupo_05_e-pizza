@@ -38,13 +38,19 @@
         />
       </section> -->
       <h3>Crear producto</h3>
-      <form action="products/productos" method="POST">
-        <label for="name">Nombre</label>
+      <form  enctype="multipart/form-data" action="agregar" method="POST">
+        <label for="name">Nombre : </label>
         <input type="text" name="name"><br>
-        <label for="descripcion">Descripcion</label>
+        <label for="descripcion">Descripción : </label>
         <textarea name="description" cols="20" rows="5"></textarea>
-        <label for="image"><p>Imagen</p></label>
+        <label for="image"><p>Imágen : </p></label>
         <input class="w3-margin-bottom" type="file" name="image"/><br>
+        <label for="size">Tamaño : </label>
+        <input type="text" name="size"><br>
+        <label for="dough">Masa : </label>
+        <input type="text" name="dough"><br>
+        <label for="price">Precio $ : </label>
+        <input type="number" name="price"><br>
         <input type="submit" value="Enviar">
       </form>
       
