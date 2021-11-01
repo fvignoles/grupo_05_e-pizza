@@ -7,7 +7,6 @@
 }
 
 .header{
-  position: fixed;
   display: flex;
 }
 
@@ -15,7 +14,6 @@
   background-color: black;
   height: 80px;
   width: 100%;
-  position: fixed;
   justify-content: space-between;
   margin: 0 auto;
 }

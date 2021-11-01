@@ -30,5 +30,8 @@
 4. Hacer menos :  dejar que pasen varios días sin reunirnos.
 5. Dejar de hacer : demorar el arranque del sprint (nos reunimos apenas comienza pero luego dejamos pasar varios días hasta que comenzamos a trabajar efectivamente).
 
+Observación : Al transformar el sitio en interactivo con el CRUD de productos (Pizzas) se rompieron varios estilos.
+En el próximo Sprint se arreglarán los estilos dañados.
+
 <h3 align="center">_________________________________</h3>
 

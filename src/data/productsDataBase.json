@@ -106,14 +106,5 @@
   "size": "Grande/Mediana",
   "dough": "Normal/Integral",
   "price": "700"
- },
- {
-  "id": 14,
-  "name": "Pollo y Jamón",
-  "description": "Trozos de pollo, Salsa de Tomate, Queso, Jamón y Aceitunas",
-  "size": "Grande/Mediana",
-  "dough": "Normal/Integral",
-  "price": "599",
-  "image": "product1635730564502.jpg"
  }
 ]
