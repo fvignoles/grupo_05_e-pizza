@@ -7,42 +7,18 @@
     <%- include('../partials/header.ejs') %>
 
     <main>
-      <form action="/" method="GET" class="login-form">
+      <form action="register" class="login-form" enctype="multipart/form-data" method="POST">
         <section class="form-register">
           <h4 class="h4-form">Registrate</h4>
-          <input
-            class="control"
-            type="text"
-            name="nombre"
-            placeholder="Nombre y Apellido"
-          />
-          <input
-            class="control"
-            type="email"
-            name="email"
-            placeholder="E-mail"
-          />
-          <input
-            class="control"
-            type="text"
-            name="usuario"
-            placeholder="Nombre de usuario"
-          />
-          <input
-            class="control"
-            type="password"
-            name="contrasena"
-            placeholder="Contraseña"
-          />
-          <input
-            class="control"
-            type="password"
-            name="contrasena"
-            placeholder="Confirmar Contraseña"
-          />
+          <input class="control" type="text" name="firstName" placeholder="Nombre"/>
+          <input class="control" type="text" name="lastName" placeholder="Apellido"/>
+          <input class="control" type="email" name="email" placeholder="E-mail" />
+          <label for="image">Imágen de Perfil</label>
+          <input class="control" type="file" name="image" placeholder="Imagen de Perfil"/>
+          <input class="control" type="password" name="password" placeholder="Contraseña"/>
           <input class="button" type="submit" name="" value="Crear cuenta" />
           <input class="button" type="reset" name="" value="Cancelar" />
-          <p><a href="/login">¿Ya tenés una cuenta?¡Ingresá!</a></p>
+          <p><a href="/users/login">¿Ya tenés una cuenta?¡Ingresá!</a></p>
         </section>
       </form>
     </main>
