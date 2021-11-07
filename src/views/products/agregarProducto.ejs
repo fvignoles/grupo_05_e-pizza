@@ -13,28 +13,30 @@
 
         <main>
 
-          <h3>Crear producto</h3>
-          <form enctype="multipart/form-data" action="agregar" method="POST">
-            <label for="name">Nombre : </label>
-            <input type="text" name="name"><br>
+          <form enctype="multipart/form-data" action="agregar" method="POST" class="create-form">
+            <section class="form-create">
+              <h4 class="h4-form">Crear producto</h4>
+              <label for="name">Nombre : </label>
+            <input class="control" type="text" name="name"><br>
             <label for="descripcion">Descripción : </label>
-            <textarea name="description" cols="20" rows="5"></textarea>
+            <textarea class="control" name="description" cols="20" rows="5"></textarea>
             <label for="image">
               <p>Imágen : </p>
             </label>
-            <input class="w3-margin-bottom" type="file" name="image" /><br>
+            <input class="control" class="w3-margin-bottom" type="file" name="image" /><br>
             <label for="size">Tamaño : </label>
-            <input type="text" name="size"><br>
+            <input class="control" type="text" name="size"><br>
             <label for="dough">Masa : </label>
-            <input type="text" name="dough"><br>
+            <input class="control" type="text" name="dough"><br>
             <label for="price">Precio $ : </label>
-            <input type="number" name="price"><br>
-            <input type="submit" value="Enviar">
+            <input class="control" type="number" name="price"><br>
+            <input class="button" type="submit" value="Enviar">
+            </section>
           </form>
 
         </main>
 
-        <!-- <%- include('../partials/footer.ejs') %> -->
+        <%- include('../partials/footer.ejs') %>
       </body>
 
 </html>
