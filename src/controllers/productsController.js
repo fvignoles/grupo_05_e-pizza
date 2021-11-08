@@ -65,7 +65,7 @@ const productsController = {
     if (req.file == undefined) {
       newProduct.image = "pizza1.jpg";
     } else {
-      newProduct.image = req.file.filename;
+      newProduct.image = "/products/" + req.file.filename;
     }
 
     products.push(newProduct);

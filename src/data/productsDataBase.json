@@ -3,7 +3,7 @@
   "id": 1,
   "name": "Muzzarella",
   "description": "Salsa de tomates, Muzzarella, Aceitunas verdes o negras a elección",
-  "image": "pizzas/mozzarella.jpg",
+  "image": "products/mozzarella.jpg",
   "size": "Grande/Mediana",
   "dough": "Normal/Integral",
   "price": "600"
@@ -15,7 +15,7 @@
   "size": "Grande/Mediana",
   "dough": "Normal/Integral",
   "price": "600",
-  "image": "pizzas/napolitana.jpg"
+  "image": "products/napolitana.jpg"
  },
  {
   "id": 3,
@@ -24,13 +24,13 @@
   "size": "Grande/Mediana",
   "dough": "Normal/Integral",
   "price": "600",
-  "image": "pizzas/fugazzeta.jpg"
+  "image": "products/fugazzeta.jpg"
  },
  {
   "id": 4,
   "name": "Roquefort",
   "description": "Salsa de tomates, queso azul, aceitunas verdes o negras a elección",
-  "image": "pizzas/fugazzeta-al-roquefort.jpg",
+  "image": "products/fugazzeta-al-roquefort.jpg",
   "size": "Grande/Mediana",
   "dough": "Normal/Integral",
   "price": "700"
@@ -39,7 +39,7 @@
   "id": 5,
   "name": "Calabresa",
   "description": "Salsa de tomates, Muzarella, Queso Provolone, Salame en rodajas, Aceitunas verdes o negras a elección",
-  "image": "pizzas/longaniza.jpg",
+  "image": "products/longaniza.jpg",
   "size": "Grande/Mediana",
   "dough": "Normal/Integral",
   "price": "700"
@@ -48,7 +48,7 @@
   "id": 6,
   "name": "4 quesos",
   "description": "Salsa de tomates, Muzarella, Fontina, Roquefort, Provolone",
-  "image": "pizzas/cuatro-quesos.jpg",
+  "image": "products/cuatro-quesos.jpg",
   "size": "Grande/Mediana",
   "dough": "Normal/Integral",
   "price": "800"
@@ -57,7 +57,7 @@
   "id": 7,
   "name": "Jamón y Champignon",
   "description": "Salsa de tomates, Queso, Jamón en rodajas, Champignones Aceitunas verdes o negras a elección",
-  "image": "pizzas/jamon-y-champingnon.jpg",
+  "image": "products/jamon-y-champingnon.jpg",
   "size": "Grande/Mediana",
   "dough": "Normal/Integral",
   "price": "600"
@@ -66,7 +66,7 @@
   "id": 8,
   "name": "Ananá",
   "description": "Ananá, Mozarella y Jamón en tiras",
-  "image": "pizzas/anana.jpg",
+  "image": "products/anana.jpg",
   "size": "Grande/Mediana",
   "dough": "Normal/Integral",
   "price": "900"
@@ -75,7 +75,7 @@
   "id": 9,
   "name": "Camarones",
   "description": "Huevo, Jamón, Camarones, Morron en tiras (sal y pimienta)",
-  "image": "pizzas/camarones.jpg",
+  "image": "products/camarones.jpg",
   "size": "Grande/Mediana",
   "dough": "Normal/Integral",
   "price": "900"
@@ -84,7 +84,7 @@
   "id": 10,
   "name": "Cuatro Estaciones",
   "description": "Salsa de tomates, Mozzarella, Jamón, Ananá, Tomates y Queso Parmesano rallado",
-  "image": "pizzas/cuatro-estaciones.jpg",
+  "image": "products/cuatro-estaciones.jpg",
   "size": "Grande/Mediana",
   "dough": "Normal/Integral",
   "price": "900"
@@ -93,7 +93,7 @@
   "id": 11,
   "name": "Rúcula y Jamón Crudo",
   "description": "Jamón Crudo, Tomates Secos, Mozzarella, Aceite de Oliva y Salsa de tomate",
-  "image": "pizzas/ruculajamoncrudo.png",
+  "image": "products/ruculajamoncrudo.png",
   "size": "Grande/Mediana",
   "dough": "Normal/Integral",
   "price": "850"
@@ -102,7 +102,7 @@
   "id": 12,
   "name": "Margarita",
   "description": "Tomate, Albahaca y Muzzarella",
-  "image": "pizzas/tomates-albahaca.jpg",
+  "image": "products/tomates-albahaca.jpg",
   "size": "Grande",
   "dough": "Normal/Integral",
   "price": "700"
@@ -111,7 +111,7 @@
   "id": 13,
   "name": "De huevo",
   "description": "Tomate, Albahaca y Muzzarella",
-  "image": "pizzas/huevo.jpg",
+  "image": "products/huevo.jpg",
   "size": "Grande/Mediana",
   "dough": "Normal/Integral",
   "price": "700"
@@ -120,7 +120,7 @@
   "id": 14,
   "name": "Pollo",
   "description": "Tomate, Pollo y Muzzarella",
-  "image": "pizzas/pollo.jpg",
+  "image": "products/pollo.jpg",
   "size": "Grande/Mediana",
   "dough": "Normal/Integral",
   "price": "700"
@@ -129,9 +129,18 @@
   "id": 15,
   "name": "Fugazzeta al roquefort",
   "description": "Tomate, Cebolla, Muzzarella y Roquefort",
-  "image": "pizzas/fugazzeta-al-roquefort.jpg",
+  "image": "products/fugazzeta-al-roquefort.jpg",
   "size": "Grande/Mediana",
   "dough": "Normal/Integral",
   "price": "700"
+ },
+ {
+  "id": 16,
+  "name": "fdbcx",
+  "description": "xdvvxx",
+  "image": "pizza1.jpg",
+  "size": "vzdzx",
+  "dough": "zcxzcczcz",
+  "price": "7"
  }
 ]
