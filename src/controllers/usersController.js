@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 
 const usersFilePath = path.join(__dirname, "../data/usersDataBase.json");
-const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
+let users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
 
 const usersController = {
   login: (req, res) => {
@@ -29,13 +29,13 @@ const usersController = {
     res.redirect("/");
   },
   list: (req, res) => {
-    res.render("users/userList", { users: users });
+    res.render("/users/list", { users: users });
   },
   // Update - Form to edit
   editar: (req, res) => {
     let id = req.params.id;
     let userToEdit = users.find((user) => user.id == id);
-    res.render("users/editarUsuario", { userToEdit });
+    res.render("/users/edit", { userToEdit });
   },
 
   // Update - Method to update
@@ -58,19 +58,19 @@ const usersController = {
 
     fs.writeFileSync(usersFilePath, JSON.stringify(newUsers, null, " "));
     users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
-    res.redirect("users/userList");
+    res.redirect("/users/list");
   },
   detail: (req, res) => {
     let id = req.params.id;
     let user = users.find((user) => user.id == id);
-    res.render("users/detail", { user });
+    res.render("/users/detail", { user });
   },
   destroy: (req, res) => {
     let id = req.params.id;
     let finalUsers = users.filter((user) => user.id != id);
     fs.writeFileSync(usersFilePath, JSON.stringify(finalUsers, null, " "));
     users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
-    res.redirect("users/userList");
+    res.redirect("/users/list");
   },
 };
 
