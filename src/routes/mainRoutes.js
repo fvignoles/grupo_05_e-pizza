@@ -3,16 +3,15 @@ const router = express.Router();
 
 const mainController = require('../controllers/mainController');
 
-router.get('/login', mainController.login);
+// router.get('/login', mainController.login);
 
-router.get('/register', mainController.register);
+// router.get('/carrito', mainController.carrito);
 
-router.get('/carrito', mainController.carrito);
+// router.get('/detalle', mainController.detalle);
+
+
+// router.get('/register', mainController.register);
 
 router.get('/', mainController.home);
 
-router.get('/detalle', mainController.detalle);
-
-router.get('/register', mainController.register);
-
-module.exports = router;
+module.exports = router; 

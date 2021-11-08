@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('../partials/head.ejs') %>
+    <link href="/css/detalleproducto.css" rel="stylesheet" />
+</head>
+
+<body>
+  <%- include('../partials/header.ejs') %>
+    <div class="detalle-box">
+      <div class="detalle-titulo">
+        <h1>Detalle del usuario: <%= user.firstName %>
+        </h1>
+      </div>
+      <div class="detalle-box-menor">
+        <div class="detalle-imagen-pizza">
+
+        </div>
+        <div class="detalle-pie-imagen">
+          <div class="detalle-precio">
+            </p>
+          </div>
+          <div class="detalle-comprar">
+            <button class="w3-button w3-round w3-green" type="submit" id="button" name="button">
+              <i class="fas fa-shopping-cart"></i> Comprar
+            </button>
+          </div>
+        </div>
+        <div class="detalle-ingredientes">
+          <h3>Descripción</h3>
+          <p class="detalle-lista-ingredientes">
+          </p>
+          <div class="detalle-obs">
+
+          </div>
+          <div>
+            <a href="/users/edit/<%= user.id %>" class="action-button edit">EDITAR PRODUCTO</a>
+            <form action="/users/delete/<%= user.id %>?_method=DELETE" method="POST" style="display: inline-flex">
+              <button type="submit" class="action-button delete">ELIMINAR</button>
+            </form>
+          </div>
+        </div>
+        <div class="detalle-salir">
+          <button class="w3-button w3-round w3-aqua" type="submit" id="button" name="button">
+            <i class="fas fa-door-open"></i> Salir
+
+          </button>
+        </div>
+      </div>
+    </div>
+    </div>
+
+
+    <%- include('../partials/footer.ejs') %>
+
+</body>
+
+</html>
