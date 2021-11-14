@@ -1,5 +1,7 @@
+// const bcrypt = require('bcryptjs');
 const fs = require("fs");
 const path = require("path");
+const {validationResult} = require('express-validator');
 
 const usersFilePath = path.join(__dirname, "../data/usersDataBase.json");
 let users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
@@ -13,6 +15,15 @@ const usersController = {
   },
   // Create -  Method to store
   store: (req, res) => {
+    const resultValidation = validationResult(req);
+
+    if(resultValidation.errors.length > 0){
+      return res.render("users/register", {
+        errors: resultValidation.mapped(),
+        oldData : req.body
+      });
+    }
+
     let newUser = {
       id: users[users.length - 1].id + 1,
       ...req.body,
@@ -23,7 +34,7 @@ const usersController = {
     } else {
       newUser.image = req.file.filename;
     }
-
+    
     users.push(newUser);
     fs.writeFileSync(usersFilePath, JSON.stringify(users, null, " "));
     res.redirect("/");

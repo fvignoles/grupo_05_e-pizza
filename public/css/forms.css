@@ -90,3 +90,8 @@ header{
         width: 80%;
     }
 }
+
+.error-msg{
+color: rgb(255, 75, 43);
+  text-align: center;
+}
