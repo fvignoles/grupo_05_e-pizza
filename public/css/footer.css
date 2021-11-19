@@ -24,3 +24,18 @@
     padding: 5px;
     color:white
   }
+
+.social-network a{
+  font-size: 20px;
+  color: #fff;
+  padding: 0 10px;
+  transition: all 0.5s ease;
+}
+.social-network h4{
+  text-align: center;
+  color: #fff;
+}
+.social-network a:hover {
+  border-color: transparent;
+  color: cyan;
+}

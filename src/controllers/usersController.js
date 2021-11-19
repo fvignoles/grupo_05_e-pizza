@@ -1,4 +1,4 @@
-// const bcrypt = require('bcryptjs');
+const bcryptjs = require('bcryptjs');
 const fs = require("fs");
 const path = require("path");
 const {validationResult} = require('express-validator');
@@ -18,15 +18,28 @@ const usersController = {
     const resultValidation = validationResult(req);
 
     if(resultValidation.errors.length > 0){
-      return res.render("users/register", {
+        return res.render("users/register", {
         errors: resultValidation.mapped(),
-        oldData : req.body
+        oldData: req.body
       });
     }
+
+    // let newUser = newUser.findByFiel ('email', req.body.email);
+
+    // if (newUser) {
+    //   return res.render("users/register", {
+    //     errors: {
+    //       email: {
+    //         msg: 'Este email ya esta registrado'
+    //     }        
+    //   },
+    //   oldData: req.body
+    // });
 
     let newUser = {
       id: users[users.length - 1].id + 1,
       ...req.body,
+      password: bcryptjs.hashSync (req.body.password, 10),
     };
 
     if (req.file == undefined) {
@@ -37,7 +50,7 @@ const usersController = {
     
     users.push(newUser);
     fs.writeFileSync(usersFilePath, JSON.stringify(users, null, " "));
-    res.redirect("/");
+    res.redirect("/users/login");
   },
   list: (req, res) => {
     res.render("/users/list", { users: users });
