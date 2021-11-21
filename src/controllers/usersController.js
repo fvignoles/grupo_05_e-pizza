@@ -6,6 +6,8 @@ const {validationResult} = require('express-validator');
 const usersFilePath = path.join(__dirname, "../data/usersDataBase.json");
 let users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
 
+const User = require('../models/user.js');
+
 const usersController = {
   login: (req, res) => {
     return res.render("users/login");
@@ -18,40 +20,61 @@ const usersController = {
     const resultValidation = validationResult(req);
 
     if(resultValidation.errors.length > 0){
-        return res.render("users/register", {
+      return res.render("users/register", {
         errors: resultValidation.mapped(),
-        oldData: req.body
+        oldData : req.body
       });
     }
 
-    // let newUser = newUser.findByFiel ('email', req.body.email);
-
-    // if (newUser) {
-    //   return res.render("users/register", {
-    //     errors: {
-    //       email: {
-    //         msg: 'Este email ya esta registrado'
-    //     }        
-    //   },
-    //   oldData: req.body
-    // });
-
-    let newUser = {
-      id: users[users.length - 1].id + 1,
+    let userToCreate = {
       ...req.body,
-      password: bcryptjs.hashSync (req.body.password, 10),
-    };
+      password: bcryptjs.hashSync(req.body.password, 10),
+      image: req.file.filename
+  }
 
-    if (req.file == undefined) {
-      newUser.image = "pizza1.jpg";
-    } else {
-      newUser.image = req.file.filename;
-    }
-    
-    users.push(newUser);
-    fs.writeFileSync(usersFilePath, JSON.stringify(users, null, " "));
-    res.redirect("/users/login");
+    User.create(userToCreate);
+    return res.send("LLEGAASTE");
   },
+
+
+  // store: (req, res) => {
+  //   const resultValidation = validationResult(req);
+
+  //   if(resultValidation.errors.length > 0){
+  //       return res.render("users/register", {
+  //       errors: resultValidation.mapped(),
+  //       oldData: req.body
+  //     });
+  //   }
+
+  //   // let newUser = newUser.findByFiel ('email', req.body.email);
+
+  //   // if (newUser) {
+  //   //   return res.render("users/register", {
+  //   //     errors: {
+  //   //       email: {
+  //   //         msg: 'Este email ya esta registrado'
+  //   //     }        
+  //   //   },
+  //   //   oldData: req.body
+  //   // });
+
+  //   let newUser = {
+  //     id: users[users.length - 1].id + 1,
+  //     ...req.body,
+  //     password: bcryptjs.hashSync (req.body.password, 10),
+  //   };
+
+  //   if (req.file == undefined) {
+  //     newUser.image = "pizza1.jpg";
+  //   } else {
+  //     newUser.image = req.file.filename;
+  //   }
+    
+  //   users.push(newUser);
+  //   fs.writeFileSync(usersFilePath, JSON.stringify(users, null, " "));
+  //   res.redirect("/users/login");
+  // },
   list: (req, res) => {
     res.render("/users/list", { users: users });
   },
