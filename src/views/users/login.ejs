@@ -7,21 +7,14 @@
     <%- include('../partials/header.ejs') %>
 
     <main>
-      <form action="/" method="GET" class="login-form">
+      <form action="/users/login" method="POST" class="login-form">
         <section class="form-login">
           <h4 class="h4-form">Ingresá</h4>
-          <input
-            class="control"
-            type="email"
-            name="usuario"
-            placeholder="e-mail"
-          />
-          <input
-            class="control"
-            type="password"
-            name="contrasena"
-            placeholder="contraseña"
-          />
+          <input class="control" type="email" name="email" placeholder="E-mail"/>
+          <% if(locals.errors && errors.email) { %>
+            <p class="error-msg"><%= errors.email.msg %></p>
+        <% } %>
+          <input class="control" type="password" name="password" placeholder="contraseña"/>
           <input class="button" type="submit" name="" value="Ingresar" />
           <input class="button" type="reset" name="" value="Cancelar" />
           <p><a href="#">¿Olvidaste tu contraseña?</a></p>

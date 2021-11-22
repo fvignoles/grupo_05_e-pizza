@@ -5,24 +5,35 @@
       <i class="fas fa-bars"></i>
     </label>
     <a href="/" class="logo"><img src="/img/logo.jpg" alt="logo" class="logo-img" /></a>
+    <% if(locals.isLogged){ %>
 
-    <ul class="nav-menu">
-      <li><a href="/" class="nav-menu-link nav-link">Home</a></li>
-      <li>
-        <a href="/users/login" class="nav-menu-link nav-link">Ingresá <i class="fas fa-sign-in-alt"></i></a>
-      </li>
-      <li>
-        <a href="/users/register" class="nav-menu-link nav-link">Registrate <i class="far fa-id-card"></i></a>
-      </li>
-      <li>
-        <a href="/products/agregar" class="nav-menu-link nav-link">+ Producto</a>
-      </li>
-      <li>
-        <a href="/products/carrito" class="nav-menu-link nav-link">Mi Carrito <i class="fas fa-shopping-basket"></i></a>
-      </li>
-      <li>
-        <a href="/products/productos" class="nav-menu-link nav-link">Productos</a>
-      </li>
-    </ul>
+      <ul class="nav-menu">
+        <li>
+          <a class="nav-menu-link nav-link">HOLA <%= locals.userLogged.firstName + locals.userLogged.lastName %></a>
+        </li>
+        <li>
+          <a href="/products/agregar" class="nav-menu-link nav-link">+ Producto</a>
+        </li>
+        <li>
+          <a href="/products/carrito" class="nav-menu-link nav-link">Mi Carrito <i class="fas fa-shopping-basket"></i></a>
+        </li>
+        <li>
+          <a href="/products/productos" class="nav-menu-link nav-link">Productos</a>
+        </li>
+        <li>
+          <a href="/users/logout" class="nav-menu-link nav-link">SALIR</a>
+        </li>
+      </ul>
+      <% } else{ %>
+        <ul class="nav-menu">
+          <li><a href="/" class="nav-menu-link nav-link">Home</a></li>
+          <li>
+            <a href="/users/login" class="nav-menu-link nav-link">Ingresá <i class="fas fa-sign-in-alt"></i></a>
+          </li>
+          <li>
+            <a href="/users/register" class="nav-menu-link nav-link">Registrate <i class="far fa-id-card"></i></a>
+          </li>
+        </ul>
+      <% } %>
   </nav>
 </header>

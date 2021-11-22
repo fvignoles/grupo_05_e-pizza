@@ -89,6 +89,42 @@ const usersController = {
   //   fs.writeFileSync(usersFilePath, JSON.stringify(users, null, " "));
   //   res.redirect("/users/login");
   // },
+  profile: (req, res) => {
+    return res.render("users/profile",{
+      user: req.session.userLogged
+    });
+  },
+  loginProcess: (req, res) => {
+    let userToLogin = User.findByField('email', req.body.email);
+
+    if(userToLogin){
+      let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
+      if(isOkThePassword){
+        delete userToLogin.password;
+        req.session.userLogged = userToLogin;
+        return res.redirect('profile');
+      }
+      return res.render('users/login',{
+        errors: {
+          email: {
+            msg : 'Credenciales invalidas.'
+          }
+        }
+      })
+    }
+
+    return res.render('users/login',{
+      errors: {
+        email: {
+          msg : 'No se encuentra el mail en la base de datos'
+        }
+      }
+    });
+  },
+  logout : (req,res) => {
+    req.session.destroy();
+    return res.redirect('/')
+  },
   list: (req, res) => {
     res.render("/users/list", { users: users });
   },

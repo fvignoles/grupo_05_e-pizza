@@ -3,10 +3,18 @@ const methodOverride =  require('method-override'); // Pasar poder usar los mét
 const path = require("path");
 const app = express();
 const PORT = process.env.PORT || 8080;
+const session = require('express-session');
+const userLoggedMiddleware = require('./src/middlewares/userLoggedMiddleware');
 
 app.set('view engine', 'ejs');
 app.set('views', './src/views');
 
+app.use(session({
+    secret : "Secrettt",
+    resave : false,
+    saveUninitialized:false,
+}));
+app.use(userLoggedMiddleware);
 app.use(express.static('public'));
 app.use(express.static(path.resolve(__dirname,'./public')));
 

@@ -30,5 +30,13 @@
   "email": "plista@gmail.com",
   "password": "$2a$10$PM.UvqblMvSAC42YxhPHTeIqyN76Kmc9VFAsc1aekGzs/iSct1Sbm",
   "image": "../../public/img/avatardefault.png"
+ },
+ {
+  "id": 5,
+  "firstName": "as",
+  "lastName": "aa",
+  "email": "agustincolman0310@gmail.com",
+  "password": "$2a$10$X8rSdtzOh1zC822QzYtPnOtVI9xiZEiPRfRIQRHZIrbIj.tq1I5vi",
+  "image": "user1637591965086.png"
  }
 ]
