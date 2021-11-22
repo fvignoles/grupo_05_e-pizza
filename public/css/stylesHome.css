@@ -8,8 +8,6 @@ header{
   display: flex !important;
 }
 
-
-
 .body-home {
   font-family: "Roboto", sans-serif;
   background-image: url(../img/background-carrito.jpg);
@@ -18,7 +16,7 @@ header{
 h3 {
   text-align: center;
   font-family: "Roboto", sans-serif;
-  font-size: 20px;
+  font-size: 10px;
   color: white;
 }
 
@@ -31,7 +29,7 @@ h4 {
   background-image: url(../img/textura-pizza.jpg);
   text-align: center;
   font-family: "Roboto", sans-serif;
-  font-size: 20px;
+  font-size: 10px;
   font-weight:bolder;
 }
 main section {
