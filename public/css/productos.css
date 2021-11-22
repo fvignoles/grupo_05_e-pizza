@@ -5,6 +5,15 @@
     margin: auto;
     /* position: relative; */
 }
+
+.articulo {
+      display: flex;
+}
+
+.img-product {
+    align-content: center;
+}
+
 .precio {
     font-size: 18px;
     text-align: center;

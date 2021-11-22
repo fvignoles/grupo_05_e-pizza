@@ -5,17 +5,15 @@
 
   <body class="body-form">
     <%- include('../partials/header.ejs') %>
-
     <main>
       <form action="register" class="login-form" enctype="multipart/form-data" method="POST">
         <section class="form-register">
           <h4 class="h4-form">Registrate</h4>
-          <input class="control" type="text" name="firstName" placeholder="Nombre" value= "<%= locals.oldData ? oldData.firstName :null%> "/>
-          <!-- <%= console.log(locals.errors) %> -->
+          <input class="control" type="text" name="firstName" placeholder="Nombre" value= "<%= locals.oldData ? oldData.firstName :null%>"/>
           <% if(locals.errors && errors.firstName) { %>
               <p class="error-msg"><%= errors.firstName.msg %></p>
           <% } %>
-          <input class="control" type="text" name="lastName" placeholder="Apellido" value= "<%=locals.oldData ? oldData.lastName :null%> "/>
+          <input class="control" type="text" name="lastName" placeholder="Apellido" value= "<%=locals.oldData ? oldData.lastName :null%>"/>
           <% if(locals.errors && errors.lastName) { %>
             <p class="error-msg"><%= errors.lastName.msg %></p>
         <% } %>
@@ -32,6 +30,7 @@
         </section>
       </form>
     </main>
+
 
     <%- include('../partials/footer.ejs') %>
   </body>
