@@ -21,7 +21,6 @@
 
 <h3 align="center">_________________________________</h3>
 
-
 <h2 align="center">Sprint 4</h2>
 
 1. Comenzar a hacer : revisión integral de la aplicación, integrar a nuestro nuevo compañero de grupo.
@@ -32,6 +31,16 @@
 
 Observación : Al transformar el sitio en interactivo con el CRUD de productos (Pizzas) se rompieron varios estilos.
 En el próximo Sprint se arreglarán los estilos dañados.
+
+<h3 align="center">_________________________________</h3>
+
+<h2 align="center">Sprint 5</h2>
+
+1. Comenzar a hacer : revisión integral de la aplicación, revisar a fondo los estilos.
+2. Hacer más : reuniones de grupo que permitan avanzar más rápido.
+3. Continuar haciendo : trabajando responsablemente y con buen clima de grupo, y realizando al menos una reunión a la semana para avanzar juntos con el proyeto.
+4. Hacer menos :  dejar que pasen varios días sin reunirnos.
+5. Dejar de hacer : ignorar el CSS e ir atrasando su mejoramiento sprint tras sprint.
 
 <h3 align="center">_________________________________</h3>
 
