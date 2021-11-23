@@ -44,24 +44,23 @@
             <p>
               <%= product.dough %>
             </p>
-
-
           </div>
-          <div>
-            <a href="/products/edit/<%= product.id %>" class="action-button edit">EDITAR PRODUCTO</a>
-            <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST" style="display: inline-flex">
-              <button type="submit" class="action-button delete">ELIMINAR</button>
-            </form>
-
+          <div class="crud-buttons">
+            <div>
+              <a href="/products/edit/<%= product.id %>" class="w3-button w3-round w3-blue">Editar Producto</a>
+            </div>
+            <div>
+              <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST"
+                style="display: inline-flex">
+                <button type="submit" class="w3-button w3-round w3-red">ELIMINAR Producto</button>
+              </form>
+            </div>
           </div>
 
 
         </div>
         <div class="detalle-salir">
-          <button class="w3-button w3-round w3-aqua" type="submit" id="button" name="button">
-            <i class="fas fa-door-open"></i> Salir
-
-          </button>
+          <a href="/products/productos" class="w3-button w3-round w3-aqua"><i class="fas fa-door-open"></i> Salir</a>
         </div>
       </div>
     </div>

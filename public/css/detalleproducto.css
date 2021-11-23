@@ -50,7 +50,7 @@ header{
   }
 
   .detalle-imagen-pizza img{
-    width:330px;
+    width:300px;
     background-color: gray;
   }
       
@@ -87,6 +87,15 @@ header{
     font-family: Roboto;
     width: 100%;
     text-align: right;
+    padding: 10px;
+  }
+
+  .crud-buttons{
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    font-family: Roboto;
+    text-align: center;
     padding: 10px;
   }
 
