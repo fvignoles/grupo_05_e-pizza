@@ -67,7 +67,7 @@ a.nav-link, a:hover{
   display: none;
 }
 
-@media(max-width: 900px){
+@media(max-width: 1200px){
   .checkbtn{
     display: block;
   }
@@ -98,62 +98,3 @@ a.nav-link, a:hover{
     left: 0;
   }
 }
-
-
-
-/* 
-   header{
-    display: flex;
-    justify-content: space-around;
-    background-color: black;
-    color: white;
-   }
-  
-  header nav ul li {
-      display: none;
-  }
-
-  main img {
-    width: 100vw;
-  }
-
-  .burger-menu {
-    text-align: center;
-    margin-top:70px;
-  }
-  .burger-menu i {
-    background-color: rgb(68, 72, 87);
-    border-radius: 5px;
-    color: #fff;
-    font-size: 18px;
-    margin: 10px 0px 20px 0px;
-    padding: 10px;
-  }
-
-  
-@media (min-width: 722px) {
-
-  header nav ul li{
-    font-size: 15px;
-    margin-top: 70px;
-    display:inline-block;
-    text-align: center;
-    padding:10px 20px;
-  }
-  
-  .burger-menu {
-    display: none;
-  }
-
-  header ul {
-    margin-top: 10px;
-  }
-  header ul li {
-    list-style-type: none;
-  }
-  
-  header ul li a {
-    text-decoration: none;
-    color: white ;
-  }
-}  */

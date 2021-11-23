@@ -15,7 +15,7 @@
       </div>
       <div class="detalle-box-menor">
         <div class="detalle-imagen-pizza">
-          <img src="/img/<%= product.image %>" width="70%" alt="" class="img-product">
+          <img src="/img/<%= product.image %>" width="70%" alt="">
         </div>
         <div class="detalle-pie-imagen">
           <div class="detalle-precio">
@@ -47,12 +47,12 @@
           </div>
           <div class="crud-buttons">
             <div>
-              <a href="/products/edit/<%= product.id %>" class="w3-button w3-round w3-blue">Editar Producto</a>
+              <a href="/products/edit/<%= product.id %>" class="w3-button w3-round w3-blue">Editar</a>
             </div>
             <div>
               <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST"
                 style="display: inline-flex">
-                <button type="submit" class="w3-button w3-round w3-red">ELIMINAR Producto</button>
+                <button type="submit" class="w3-button w3-round w3-red">Eliminar</button>
               </form>
             </div>
           </div>
