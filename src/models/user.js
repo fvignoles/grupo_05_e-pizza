@@ -8,7 +8,6 @@ const userPathFile = path.join(__dirname, '../data/usersDataBase.json');
 const User = {
     
     getData: function () {
-        console.log("hola");
         return JSON.parse(fs.readFileSync(userPathFile, 'utf-8'))
      },
 
