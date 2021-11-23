@@ -111,7 +111,8 @@ header{
     }
   
     .detalle-imagen-pizza img{
-      width:580px
+      width:580px;
+      padding: 10px;
     }
 }
 
