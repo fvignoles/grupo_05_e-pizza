@@ -1,5 +1,7 @@
 USE `pizzadb`;
 
+----------- Categories (users) -----------
+
 INSERT INTO pizzadb.categories
 (category_name, category_active)
 VALUES('admin', 1);
@@ -11,6 +13,8 @@ VALUES('user', 1);
 INSERT INTO pizzadb.categories
 (category_name, category_active)
 VALUES('guest', 1);
+
+----------- Users -----------
 
 INSERT INTO pizzadb.users
 (user_category_id, user_firstname, user_lastname, user_email, user_password, user_image, user_active)
@@ -31,6 +35,8 @@ VALUES(1, 'Pedro', 'Lista', 'plista@gmail.com', '$2a$10$PM.UvqblMvSAC42YxhPHTeIq
 INSERT INTO pizzadb.users
 (user_category_id, user_firstname, user_lastname, user_email, user_password, user_image, user_active)
 VALUES(0, 'as', 'as', 'agustincolman0310@gmail.com', '$2a$10$X8rSdtzOh1zC822QzYtPnOtVI9xiZEiPRfRIQRHZIrbIj.tq1I5vi', 'user1637591965086.png', 1);
+
+----------- Ingredients (pizzas) -----------
 
 INSERT INTO pizzadb.ingredients (ingredient_name, ingredient_active) VALUES('Salsa de Tomate', 1); --id 0
 
@@ -75,6 +81,23 @@ INSERT INTO pizzadb.ingredients (ingredient_name, ingredient_active) VALUES('Cam
 INSERT INTO pizzadb.ingredients (ingredient_name, ingredient_active) VALUES('Tomates Secos', 1); --id 20
 
 INSERT INTO pizzadb.ingredients (ingredient_name, ingredient_active) VALUES('Aceite de Oliva', 1); --id 21
+
+INSERT INTO pizzadb.ingredients (ingredient_name, ingredient_active) VALUES('Albahaca', 1); --id 22
+
+INSERT INTO pizzadb.ingredients (ingredient_name, ingredient_active) VALUES('Pollo picado', 1); --id 23
+
+----------- sizes (tamaños pizzas) -----------
+
+INSERT INTO pizzadb.sizes (size_name, size_active) VALUES('Pizzeta', 1); --id 0
+
+INSERT INTO pizzadb.sizes (size_name, size_active) VALUES('Mediana', 1); --id 1
+
+INSERT INTO pizzadb.sizes (size_name, size_active) VALUES('Grande', 1); --id 2
+
+INSERT INTO pizzadb.sizes (size_name, size_active) VALUES('Gigante', 1); --id 3
+
+----------- doughs (masas pizzas) -----------
+
 
 
 [
