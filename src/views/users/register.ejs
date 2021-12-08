@@ -24,8 +24,8 @@
           <label for="image">Imágen de Perfil</label>
           <input class="control" type="file" name="image" placeholder="Imagen de Perfil"/>
           <input class="control" type="password" name="password" placeholder="Contraseña" value= "<%= locals.oldData ? oldData.password : null %>"/>
-          <input class="button" type="submit" name="" value="Crear cuenta" />
-          <input class="button" type="reset" name="" value="Cancelar" />
+          <button class="button" type="submit" name="" value="Crear cuenta"> Crear cuenta </button>
+          <button class="button" type="reset" name="" value="Cancelar"> Cancelar </button>
           <p><a href="/users/login">¿Ya tenés una cuenta?¡Ingresá!</a></p>
         </section>
       </form>

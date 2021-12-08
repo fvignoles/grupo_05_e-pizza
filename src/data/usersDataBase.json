@@ -38,5 +38,21 @@
   "email": "agustincolman0310@gmail.com",
   "password": "$2a$10$X8rSdtzOh1zC822QzYtPnOtVI9xiZEiPRfRIQRHZIrbIj.tq1I5vi",
   "image": "user1637591965086.png"
+ },
+ {
+  "id": 6,
+  "firstName": "Pepe",
+  "lastName": "Pizzas",
+  "email": "pepito@pizzas.com",
+  "password": "$2a$10$UD6JdgCl/eXa9ycJfh8L8ezYIb.rsiTieYzeOAwr6/09iMJ3hALRO",
+  "image": "user1637625310623.jpg"
+ },
+ {
+  "id": 7,
+  "firstName": "jose",
+  "lastName": "almeida",
+  "email": "jose@almeida.com",
+  "password": "$2a$10$lxXExeeD0venihRrv04UxevvcORHutUNAXJVGpd/yfpL1deWizBpO",
+  "image": "user1638233133991.png"
  }
 ]
