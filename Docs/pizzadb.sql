@@ -1,8 +1,10 @@
 CREATE DATABASE `pizzadb`;
 
+USE `pizzadb`;
+
 CREATE TABLE `Users` (
    `user_id` INT NOT NULL AUTO_INCREMENT,
-   `user_category_id` INT NOT NULL AUTO_INCREMENT,
+   `user_category_id` INT NOT NULL,
    `user_firstname` CHAR(50) NOT NULL,
    `user_lastname` CHAR(50) NOT NULL,
    `user_email` CHAR(50) NOT NULL,
@@ -27,7 +29,7 @@ CREATE TABLE `Products` (
    `product_description` CHAR(50) NOT NULL,
    `product_image` CHAR(50) NOT NULL,
    `product_price` DECIMAL(10,2) NOT NULL,
-   `product_active` TINYCHART NOT NULL,
+   `product_active` TINYINT NOT NULL,
    PRIMARY KEY (`product_id`)
 );
 
@@ -54,7 +56,7 @@ CREATE TABLE `Ingredients` (
 
 CREATE TABLE `Carts` (
    `cart_id` INT NOT NULL AUTO_INCREMENT,
-   `cart_user_id` INT NOT NULL AUTO_INCREMENT,
+   `cart_user_id` INT NOT NULL,
    `cart_quantity` SMALLINT NOT NULL,
    `cart_amount` DECIMAL(10,2) NOT NULL,
    `cart_active` TINYINT,
@@ -63,16 +65,16 @@ CREATE TABLE `Carts` (
 
 CREATE TABLE `Products_Carts` (
    `product_cart_id` INT NOT NULL AUTO_INCREMENT,
-   `product_cart_cartid` INT NOT NULL AUTO_INCREMENT,
-   `product_cart_productid` INT NOT NULL AUTO_INCREMENT,
+   `product_cart_cartid` INT NOT NULL,
+   `product_cart_productid` INT NOT NULL,
    `product_cart_quantity` SMALLINT NOT NULL,
    PRIMARY KEY (`product_cart_id`)
 );
 
 CREATE TABLE `Ingredients_Products` (
    `ingredients_products_id` INT NOT NULL AUTO_INCREMENT,
-   `ingredients_products_ingredientsid` INT NOT NULL AUTO_INCREMENT,
-   `ingredients_products_productid` INT NOT NULL AUTO_INCREMENT,
+   `ingredients_products_ingredientsid` INT NOT NULL,
+   `ingredients_products_productid` INT NOT NULL,
    PRIMARY KEY (`ingredients_products_id`)
 );
 
