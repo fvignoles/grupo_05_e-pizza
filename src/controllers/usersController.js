@@ -43,11 +43,12 @@ const usersController = {
     let userToCreate = {
       ...req.body,
       password: bcryptjs.hashSync(req.body.password, 10),
-      image: (!req.file ? "../../public/img/avatardefault.png" : req.file.filename),
+      image: (!req.file ? "../../public/img/userdefault.png" : req.file.filename),
     };
 
     User.create(userToCreate);
-    return res.send("LLEGAASTE");
+    return res.redirect("/users/login");
+    // return res.send("LLEGAASTE");
   },
 
 

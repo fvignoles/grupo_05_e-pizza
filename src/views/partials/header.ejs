@@ -8,15 +8,16 @@
     <% if(locals.isLogged){ %>
 
       <ul class="nav-menu">
-        <li>
+        <li>          
           <a class="nav-menu-link nav-link">Usuario: <%= locals.userLogged.firstName + " " + locals.userLogged.lastName %></a>
+          <!-- <img src="/public/img/userdefault.png" width="40" style="border-radius: 100%"> -->
         </li>
         <li>
           <a href="/products/agregar" class="nav-menu-link nav-link">+ Producto</a>
         </li>
         <li>
           <a href="/products/carrito" class="nav-menu-link nav-link">Mi Carrito <i class="fas fa-shopping-basket"></i></a>
-        </li>
+        </li>  
         <li>
           <a href="/products/productos" class="nav-menu-link nav-link">Productos</a>
         </li>
