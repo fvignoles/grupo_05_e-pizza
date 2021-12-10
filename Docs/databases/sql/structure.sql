@@ -8,7 +8,7 @@ CREATE TABLE `Users` (
    `user_firstname` CHAR(50) NOT NULL,
    `user_lastname` CHAR(50) NOT NULL,
    `user_email` CHAR(50) NOT NULL,
-   `user_password` CHAR(50) NOT NULL,
+   `user_password` CHAR(100) NOT NULL,
    `user_image` CHAR(50) NOT NULL,
    `user_active` TINYINT NOT NULL,
    PRIMARY KEY (`user_id`)
