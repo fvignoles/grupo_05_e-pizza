@@ -125,115 +125,111 @@ INSERT INTO pizzadb.ingredients_products
 (ingredients_products_ingredientsid, ingredients_products_productid)
 VALUES(8, 3);
 
+INSERT INTO pizzadb.products
+(product_size_id, product_dough_id, product_name, product_description, product_image, product_price, product_active)
+VALUES(3, 1, 'Roquefort', 'Descripcion Roquefort', 'products/fugazzeta-al-roquefort.jpg', 700, 1); -- id 4
+-- Queso azul, aceitunas verdes
 
-/* {
-  "id": 4,
-  "name": "Roquefort",
-  "description": "Salsa de tomates, queso azul, aceitunas verdes o negras a elección",
-  "image": "products/fugazzeta-al-roquefort.jpg",
-  "size": "Grande/Mediana",
-  "dough": "Normal/Integral",
-  "price": "700"
- },
- {
-  "id": 5,
-  "name": "Calabresa",
-  "description": "Salsa de tomates, Muzarella, Queso Provolone, Salame en rodajas, Aceitunas verdes o negras a elección",
-  "image": "products/longaniza.jpg",
-  "size": "Grande/Mediana",
-  "dough": "Normal/Integral",
-  "price": "700"
- },
- {
-  "id": 6,
-  "name": "4 quesos",
-  "description": "Salsa de tomates, Muzarella, Fontina, Roquefort, Provolone",
-  "image": "products/cuatro-quesos.jpg",
-  "size": "Grande/Mediana",
-  "dough": "Normal/Integral",
-  "price": "800"
- },
- {
-  "id": 7,
-  "name": "Jamón y Champignon",
-  "description": "Salsa de tomates, Queso, Jamón en rodajas, Champignones Aceitunas verdes o negras a elección",
-  "image": "products/jamon-y-champingnon.jpg",
-  "size": "Grande/Mediana",
-  "dough": "Normal/Integral",
-  "price": "600"
- },
- {
-  "id": 8,
-  "name": "Ananá",
-  "description": "Ananá, Mozarella y Jamón en tiras",
-  "image": "products/anana.jpg",
-  "size": "Grande/Mediana",
-  "dough": "Normal/Integral",
-  "price": "900"
- },
- {
-  "id": 9,
-  "name": "Camarones",
-  "description": "Huevo, Jamón, Camarones, Morron en tiras (sal y pimienta)",
-  "image": "products/camarones.jpg",
-  "size": "Grande/Mediana",
-  "dough": "Normal/Integral",
-  "price": "900"
- },
- {
-  "id": 10,
-  "name": "Cuatro Estaciones",
-  "description": "Salsa de tomates, Mozzarella, Jamón, Ananá, Tomates y Queso Parmesano rallado",
-  "image": "products/cuatro-estaciones.jpg",
-  "size": "Grande/Mediana",
-  "dough": "Normal/Integral",
-  "price": "900"
- },
- {
-  "id": 11,
-  "name": "Rúcula y Jamón Crudo",
-  "description": "Jamón Crudo, Tomates Secos, Mozzarella, Aceite de Oliva y Salsa de tomate",
-  "image": "products/ruculajamoncrudo.png",
-  "size": "Grande/Mediana",
-  "dough": "Normal/Integral",
-  "price": "850"
- },
- {
-  "id": 12,
-  "name": "Margarita",
-  "description": "Tomate, Albahaca y Muzzarella",
-  "image": "products/tomates-albahaca.jpg",
-  "size": "Grande",
-  "dough": "Normal/Integral",
-  "price": "700"
- },
- {
-  "id": 13,
-  "name": "De huevo",
-  "description": "Tomate, Albahaca y Muzzarella",
-  "image": "products/huevo.jpg",
-  "size": "Grande/Mediana",
-  "dough": "Normal/Integral",
-  "price": "700"
- },
- {
-  "id": 14,
-  "name": "Pollo",
-  "description": "Tomate, Pollo y Muzzarella",
-  "image": "products/pollo.jpg",
-  "size": "Grande/Mediana",
-  "dough": "Normal/Integral",
-  "price": "700"
- },
- {
-  "id": 15,
-  "name": "Fugazzeta al roquefort",
-  "description": "Tomate, Cebolla, Muzzarella y Roquefort",
-  "image": "products/fugazzeta-al-roquefort.jpg",
-  "size": "Grande/Mediana",
-  "dough": "Normal/Integral",
-  "price": "700"
- }
+INSERT INTO pizzadb.ingredients_products
+(ingredients_products_ingredientsid, ingredients_products_productid)
+VALUES(10, 4);
 
- */
- 
+INSERT INTO pizzadb.products
+(product_size_id, product_dough_id, product_name, product_description, product_image, product_price, product_active)
+VALUES(3, 1, 'Calabresa', 'Descripcion Calabresa', 'products/longaniza.jpg', 700, 1); -- id 5
+-- Muzarella, Queso Provolone, Salame en rodajas, Aceitunas
+
+INSERT INTO pizzadb.ingredients_products
+(ingredients_products_ingredientsid, ingredients_products_productid)
+VALUES(11, 5);
+
+INSERT INTO pizzadb.products
+(product_size_id, product_dough_id, product_name, product_description, product_image, product_price, product_active)
+VALUES(3, 1, '4 quesos', 'Descripcion 4 quesos', 'products/cuatro-quesos.jpg', 800, 1); -- id 6
+-- Muzarella, Fontina, Roquefort, Provolone
+
+INSERT INTO pizzadb.ingredients_products
+(ingredients_products_ingredientsid, ingredients_products_productid)
+VALUES(13, 6);
+
+INSERT INTO pizzadb.products
+(product_size_id, product_dough_id, product_name, product_description, product_image, product_price, product_active)
+VALUES(3, 1, 'Jamón y Champignon', 'Descripcion Jamón y Champignon', 'products/jamon-y-champingnon.jpg', 600, 1); -- id 7
+-- Queso, Jamón en rodajas, Champignones Aceitunas verdes
+
+INSERT INTO pizzadb.ingredients_products
+(ingredients_products_ingredientsid, ingredients_products_productid)
+VALUES(14, 7);
+
+INSERT INTO pizzadb.products
+(product_size_id, product_dough_id, product_name, product_description, product_image, product_price, product_active)
+VALUES(3, 1, 'Ananá', 'Descripcion Ananá', 'products/anana.jpg', 900, 1); -- id 8
+-- Ananá, Mozarella y Jamón en tiras
+
+INSERT INTO pizzadb.ingredients_products
+(ingredients_products_ingredientsid, ingredients_products_productid)
+VALUES(17, 8);
+
+INSERT INTO pizzadb.products
+(product_size_id, product_dough_id, product_name, product_description, product_image, product_price, product_active)
+VALUES(3, 1, 'Camarones', 'Descripcion Camarones', 'products/camarones.jpg', 900, 1); -- id 9
+-- Huevo, Jamón, Camarones, Morron en tiras (sal y pimienta)
+
+INSERT INTO pizzadb.ingredients_products
+(ingredients_products_ingredientsid, ingredients_products_productid)
+VALUES(20, 9);
+
+INSERT INTO pizzadb.products
+(product_size_id, product_dough_id, product_name, product_description, product_image, product_price, product_active)
+VALUES(3, 1, 'Cuatro Estaciones', 'Descripcion Cuatro Estaciones', 'products/cuatro-estaciones.jpg', 900, 1); -- id 10
+-- Mozzarella, Jamón, Ananá, Tomates y Queso Parmesano rallado
+
+INSERT INTO pizzadb.ingredients_products
+(ingredients_products_ingredientsid, ingredients_products_productid)
+VALUES(9, 10);
+
+INSERT INTO pizzadb.products
+(product_size_id, product_dough_id, product_name, product_description, product_image, product_price, product_active)
+VALUES(3, 1, 'Rúcula y Jamón Crudo', 'Descripcion Rúcula y Jamón Crudo', 'products/ruculajamoncrudo.png', 850, 1); -- id 11
+-- Jamón Crudo, Tomates Secos, Mozzarella, Aceite de Oliva y Salsa de tomate
+
+INSERT INTO pizzadb.ingredients_products
+(ingredients_products_ingredientsid, ingredients_products_productid)
+VALUES(16, 11);
+
+INSERT INTO pizzadb.products
+(product_size_id, product_dough_id, product_name, product_description, product_image, product_price, product_active)
+VALUES(3, 1, 'Margarita', 'Descripcion Margarita', 'products/tomates-albahaca.jpg', 700, 1); -- id 12
+-- Tomate, Albahaca y Muzzarella
+
+INSERT INTO pizzadb.ingredients_products
+(ingredients_products_ingredientsid, ingredients_products_productid)
+VALUES(23, 12);
+
+INSERT INTO pizzadb.products
+(product_size_id, product_dough_id, product_name, product_description, product_image, product_price, product_active)
+VALUES(3, 1, 'De huevo', 'Descripcion De huevo', 'products/huevo.jpg', 700, 1); -- id 13
+-- Tomate, Huevo rallado y Muzzarella
+
+INSERT INTO pizzadb.ingredients_products
+(ingredients_products_ingredientsid, ingredients_products_productid)
+VALUES(18, 13);
+
+INSERT INTO pizzadb.products
+(product_size_id, product_dough_id, product_name, product_description, product_image, product_price, product_active)
+VALUES(3, 1, 'Pollo', 'Descripcion Pollo', 'products/pollo.jpg', 700, 1); -- id 14
+-- Tomate, Pollo y Muzzarella
+
+INSERT INTO pizzadb.ingredients_products
+(ingredients_products_ingredientsid, ingredients_products_productid)
+VALUES(24, 14);
+
+INSERT INTO pizzadb.products
+(product_size_id, product_dough_id, product_name, product_description, product_image, product_price, product_active)
+VALUES(3, 1, 'Fugazzeta al roquefort', 'Descripcion Fugazzeta al roquefort', 'products/fugazzeta-al-roquefort.jpg', 700, 1); -- id 15
+-- Tomate, Cebolla, Muzzarella y Roquefort
+
+INSERT INTO pizzadb.ingredients_products
+(ingredients_products_ingredientsid, ingredients_products_productid)
+VALUES(10, 15);
+
