@@ -10,8 +10,6 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.INTEGER,
             allowNull: false
         },
-        // created_at: dataTypes.TIMESTAMP,
-        // updated_at: dataTypes.TIMESTAMP,
         user_firstname: {
             type: dataTypes.STRING(50),
             allowNull: false

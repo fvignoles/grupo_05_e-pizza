@@ -11,14 +11,14 @@ let usersDB = {
             } )
     },
     create : function(req, res){
-        console.log(req.body);
         db.User.create({
-            user_category_id : "2",
-            user_firstname :"a" ,
-            user_lastname : "g",
-            user_email : "u",
-            user_password :"s" ,
-            user_image : "agustin"
+            user_category_id :2,
+            user_firstname :req.body.firstName ,
+            user_lastname : req.body.lastName,
+            user_email : req.body.email,
+            user_password :req.body.password,
+            user_image : req.file.filename,
+            user_active: 1
         })
             .then((resultados) => {
                 res.send("Llegaste");

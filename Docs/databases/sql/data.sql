@@ -6,7 +6,6 @@ INSERT INTO pizzadb.categories (category_name, category_active) VALUES('admin', 
 
 INSERT INTO pizzadb.categories (category_name, category_active) VALUES('user', 1); -- id 2
 
-INSERT INTO pizzadb.categories (category_name, category_active) VALUES('guest', 1); -- id 3
 
 -- --------- Users -----------
 
@@ -232,4 +231,3 @@ VALUES(3, 1, 'Fugazzeta al roquefort', 'Descripcion Fugazzeta al roquefort', 'pr
 INSERT INTO pizzadb.ingredients_products
 (ingredients_products_ingredientsid, ingredients_products_productid)
 VALUES(10, 15);
-
