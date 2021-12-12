@@ -22,7 +22,7 @@
             <p class="error-msg"><%= errors.email.msg %></p>
         <% } %>
           <label for="images">Imágen de Perfil</label>
-          <input class="control" type="file" name="images" placeholder="Imagen de Perfil"/>
+          <input class="control" type="file" name="images" id="images" placeholder="Imagen de Perfil"/>
           <input class="control" type="password" name="password" placeholder="Contraseña" value= "<%= locals.oldData ? oldData.password : null %>"/>
           <button class="button" type="submit" name="" value="Crear cuenta"> Crear cuenta </button>
           <button class="button" type="reset" name="" value="Cancelar"> Cancelar </button>

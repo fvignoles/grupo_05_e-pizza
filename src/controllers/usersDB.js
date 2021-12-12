@@ -1,6 +1,9 @@
 let db = require("../database/models");
 
 let usersDB = {
+    register: (req, res) => {
+        return res.render("users/register");
+      },
     findAll: function(req, res){
         db.User.findAll()
             .then((resultados) => {
@@ -11,10 +14,10 @@ let usersDB = {
         console.log(req.body);
         db.User.create({
             user_category_id : "2",
-            user_firstname : req.body.firstName,
-            user_lastname : req.body.lastName,
-            user_email : req.body.email,
-            user_password : req.body.password,
+            user_firstname :"a" ,
+            user_lastname : "g",
+            user_email : "u",
+            user_password :"s" ,
             user_image : "agustin"
         })
             .then((resultados) => {

@@ -12,24 +12,37 @@ const authMiddleware = require('../middlewares/authMiddleware');
 const path = require("path");
 const multer = require("multer");
 
-// Multer
+// // Multer
 const storage = multer.diskStorage({
    destination: function (req, file, cb) {
        let folder = path.join(__dirname, '../../public/img/users');
        cb(null, folder);
    },
    filename: function (req, file, cb) {
+    //    console.log(file);
        let imageName = 'user' + Date.now() + path.extname(file.originalname);
        cb(null, imageName);
    }
 })
 
-const upload = multer({ storage: storage });
+// const upload = multer({ storage: storage });
+const upload = multer({
+    storage, fileFilter: (req, file, cb) => {
+        if ((file.mimetype == "image/png"  || file.mimetype == "image/jpg"  || file.mimetype == "image/jpeg")) {
+            console.log(file);
+            cb(null, true);
+        } else {
+            cb(null, false);
+            return cb(new Error('Imagenes en formato .png / .jpg / .jpeg'));
+        }
+    }
+});
 router.get('/login', guestMiddleware, usersController.login);
 
 router.post('/login', usersController.loginProcess);
 
-router.get('/register', guestMiddleware, usersController.register);
+// router.get('/register', guestMiddleware, usersController.register);
+router.get('/register', guestMiddleware, usersDB.register);
 
 router.post('/register', upload.single('images'), usersDB.create);
 
