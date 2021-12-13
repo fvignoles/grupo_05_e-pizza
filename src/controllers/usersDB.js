@@ -20,11 +20,11 @@ let usersDB = {
             user_image : req.file.filename,
             user_active: 1
         })
-            .then((resultados) => {
-                res.send("Llegaste");
+            .then(() => {
+                res.redirect("/users/login");
             })
-            .catch((resultados) =>{
-                res.send("error");
+            .catch((error) =>{
+                console.log(error);
             })
     }
 }
