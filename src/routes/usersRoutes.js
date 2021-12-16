@@ -11,24 +11,26 @@ const guestMiddleware = require('../middlewares/guestMiddleware');
 const authMiddleware = require('../middlewares/authMiddleware');
 const path = require("path");
 const multer = require("multer");
+const validateRegister = require('../middlewares/validateRegister');
 
 // // Multer
 const storage = multer.diskStorage({
-   destination: function (req, file, cb) {
-       let folder = path.join(__dirname, '../../public/img/users');
-       cb(null, folder);
-   },
-   filename: function (req, file, cb) {
-    //    console.log(file);
-       let imageName = 'user' + Date.now() + path.extname(file.originalname);
-       cb(null, imageName);
-   }
+    destination: function(req, file, cb) {
+        let folder = path.join(__dirname, '../../public/img/users');
+        cb(null, folder);
+    },
+    filename: function(req, file, cb) {
+        //    console.log(file);
+        let imageName = 'user' + Date.now() + path.extname(file.originalname);
+        cb(null, imageName);
+    }
 })
 
 // const upload = multer({ storage: storage });
 const upload = multer({
-    storage, fileFilter: (req, file, cb) => {
-        if ((file.mimetype == "image/png"  || file.mimetype == "image/jpg"  || file.mimetype == "image/jpeg")) {
+    storage,
+    fileFilter: (req, file, cb) => {
+        if ((file.mimetype == "image/png" || file.mimetype == "image/jpg" || file.mimetype == "image/jpeg")) {
             console.log(file);
             cb(null, true);
         } else {
@@ -37,29 +39,29 @@ const upload = multer({
         }
     }
 });
-router.get('/login', guestMiddleware, usersController.login);
+router.get('/login', guestMiddleware, usersDB.login);
 
-router.post('/login', usersController.loginProcess);
+router.post('/login', usersDB.loginProcess);
 
 // router.get('/register', guestMiddleware, usersController.register);
 router.get('/register', guestMiddleware, usersDB.register);
 
-router.post('/register', upload.single('images'), usersDB.create);
+router.post('/register', validateRegister, upload.single('images'), usersDB.create);
 
 router.get('/list', usersController.list);
 
-router.get('/detail/:id', usersController.detail); 
+router.get('/detail/:id', usersController.detail);
 
-router.get('/profile', authMiddleware ,usersController.profile);
+router.get('/profile', authMiddleware, usersDB.profile);
 
-router.get('/logout' ,usersController.logout);
+router.get('/logout', usersController.logout);
 
-router.get('/edit/:id', usersController.editar); 
+router.get('/edit/:id', usersController.editar);
 
 router.patch('/edit/:id', usersController.update);
 
-router.delete('/delete/:id', usersController.destroy); 
+router.delete('/delete/:id', usersController.destroy);
 
-router.get('/findall',usersDB.findAll);
+// router.get('/findall', usersDB.findAll);
 
-module.exports = router; 
+module.exports = router;

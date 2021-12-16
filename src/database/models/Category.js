@@ -18,16 +18,16 @@ module.exports = (sequelize, dataTypes) => {
         }
     };
     let config = {
-        tableName : 'categories',
+        tableName: 'categories',
         timestamps: false
     }
-    const Category = sequelize.define(alias, cols, config); 
+    const Category = sequelize.define(alias, cols, config);
 
-    Category.associate = function (models) {
+    Category.associate = function(models) {
         Category.hasMany(models.User, { // models.Movie -> Movies es el valor de alias en movie.js
-            as: "users"
+            as: "users",
             // through: 'User_movie',
-            // foreignKey: 'user_id',
+            foreignKey: 'user_id',
             // otherKey: 'movie_id',
             // timestamps: false
         })

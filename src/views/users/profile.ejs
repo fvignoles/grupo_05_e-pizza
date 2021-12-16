@@ -3,24 +3,27 @@
 
 
 <%- include('../partials/head.ejs') %>
-<link rel="stylesheet" href="/css/userProfile.css" />
+    <link rel="stylesheet" href="/css/userProfile.css" />
 
 
-<body>
-  <%- include('../partials/header.ejs') %>
+    <body>
+        <%- include('../partials/header.ejs') %>
 
-  <div>
-    <div class="container-user">
-        <div class="mensaje-user">
-            <h2>Hola <%= user.firstName + user.lastName %> ! </h2>
-            <img src="/img/users/<%= user.image %> " class="image-user">
-            <br>
-            <div class="mail-user"><%= user.email %> </div>
-        </div>
-    </div>
-</div>
+            <div>
+                <div class="container-user">
+                    <div class="mensaje-user">
+                        <h2>Hola
+                            <%= user.user_firstname +" "+ user.user_lastname %>! </h2>
+                        <img src="/img/users/<%= user.user_image %> " class="image-user">
+                        <br>
+                        <div class="mail-user">
+                            <%= user.user_email %>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-    <%- include('../partials/footer.ejs') %>
-</body>
+            <%- include('../partials/footer.ejs') %>
+    </body>
 
 </html>
