@@ -16,20 +16,20 @@ module.exports = (sequelize, dataTypes) => {
         },
     };
     let config = {
-        tableName : 'doughs',
+        tableName: 'doughs',
         timestamps: false
     }
-    const Dough = sequelize.define(alias, cols, config); 
+    const Dough = sequelize.define(alias, cols, config);
 
-    // Product.associate = function (models) {
-    //     User.belongsTo(models.Category, { // models.Category -> Movies es el valor de alias en movie.js
-    //         as: "categories",
-    //         // through: 'User_movie',
-    //         foreignKey: 'user_category_id',
-    //         // otherKey: 'movie_id',
-    //         // timestamps: false
-    //     })
-    // }
+    Dough.associate = function(models) {
+        Dough.hasMany(models.Product, { // models.Category -> Movies es el valor de alias en movie.js
+            as: "products",
+            // through: 'User_movie',
+            foreignKey: 'product_dough_id',
+            // otherKey: 'movie_id',
+            // timestamps: false
+        })
+    }
 
     return Dough
 };

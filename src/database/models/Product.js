@@ -41,12 +41,12 @@ module.exports = (sequelize, dataTypes) => {
     }
     const Product = sequelize.define(alias, cols, config);
 
-    Product.associate = function (models) {
-        Product.belongsTo(models.Size, { 
+    Product.associate = function(models) {
+        Product.belongsTo(models.Size, {
             as: "sizes",
             //          through: 'User_movie',
             foreignKey: 'product_size_id',
-            otherKey: 'size_id',
+            // otherKey: 'size_id',
             //          timestamps: false
         })
 
@@ -54,7 +54,7 @@ module.exports = (sequelize, dataTypes) => {
             as: "doughs",
             //          through: 'User_movie',
             foreignKey: 'product_dough_id',
-            otherKey: 'dough_id',
+            // otherKey: 'dough_id',
             //          timestamps: false
         })
 

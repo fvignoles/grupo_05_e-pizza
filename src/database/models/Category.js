@@ -27,7 +27,7 @@ module.exports = (sequelize, dataTypes) => {
         Category.hasMany(models.User, { // models.Movie -> Movies es el valor de alias en movie.js
             as: "users",
             // through: 'User_movie',
-            foreignKey: 'user_id',
+            foreignKey: 'user_category_id',
             // otherKey: 'movie_id',
             // timestamps: false
         })
