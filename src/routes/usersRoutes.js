@@ -46,7 +46,7 @@ router.post('/login', usersDB.loginProcess);
 // router.get('/register', guestMiddleware, usersController.register);
 router.get('/register', guestMiddleware, usersDB.register);
 
-router.post('/register', validateRegister, upload.single('images'), usersDB.create);
+router.post('/register', upload.single('images'), validateRegister, usersDB.create);
 
 router.get('/list', usersController.list);
 

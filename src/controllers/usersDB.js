@@ -1,8 +1,8 @@
 const db = require("../database/models");
 const bcryptjs = require('bcryptjs');
 const { validationResult } = require('express-validator');
-const sequelize = db.sequelize;
-const { Op } = require("sequelize");
+// const sequelize = db.sequelize;
+// const { Op } = require("sequelize");
 
 let usersDB = {
     register: (req, res) => {
@@ -11,13 +11,8 @@ let usersDB = {
     login: (req, res) => {
         return res.render("users/login");
     },
-    findAll: function(req, res) {
-        db.User.findAll()
-            .then((resultados) => {
-                res.json(resultados);
-            })
-    },
-    create: function(req, res) {
+
+    create: function (req, res) {
         const resultValidation = validationResult(req);
 
         if (resultValidation.errors.length > 0) {
@@ -29,10 +24,10 @@ let usersDB = {
 
         // let userInDB = User.findByField('email', req.body.email);
         db.User.findOne({
-                where: {
-                    user_email: req.body.email
-                }
-            })
+            where: {
+                user_email: req.body.email
+            }
+        })
             .then((userInDB) => {
                 if (userInDB) {
                     return res.render('users/register', {
@@ -44,36 +39,17 @@ let usersDB = {
                         oldData: req.body
                     });
                 }
-                /*else {
-                    user_image: (!req.file ? "../../public/img/userdefault.png" : req.file.filename)
-                }*/
-
-
-                // let userToCreate = {
-                //     ...req.body,
-                //     password: bcryptjs.hashSync(req.body.password, 10),
-                //     image: (!req.file ? "../../public/img/userdefault.png" : req.file.filename),
-                // };
-
-                // User.create(userToCreate);
-                // return res.redirect("/users/login");
-                // // return res.send("LLEGAASTE");
 
                 db.User.create({
-                        user_category_id: 2,
-                        user_firstname: req.body.firstName,
-                        user_lastname: req.body.lastName,
-                        user_email: req.body.email,
-                        user_password: bcryptjs.hashSync(req.body.password, 10),
-                        user_image: req.file.filename,
-                        user_active: 1
-                    })
-                    // .then(() => {
-                    //     res.redirect("/users/login");
-                    // })
-                    // .catch((error) => {
-                    //     console.log(error);
-                    // })
+                    user_category_id: 2,
+                    user_firstname: req.body.firstName,
+                    user_lastname: req.body.lastName,
+                    user_email: req.body.email,
+                    user_password: bcryptjs.hashSync(req.body.password, 10),
+                    user_image: req.file.filename,
+                    user_active: 1
+                })
+
             })
             .then(() => {
                 res.redirect("/users/login");
@@ -86,10 +62,10 @@ let usersDB = {
         // let userToLogin = User.findByField('email', req.body.email);
 
         db.User.findOne({
-                where: {
-                    user_email: req.body.email
-                }
-            })
+            where: {
+                user_email: req.body.email
+            }
+        })
             .then((userToLogin) => {
 
 
