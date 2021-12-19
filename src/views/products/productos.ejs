@@ -1,28 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('../partials/head.ejs') %>
+<%- include('../partials/head.ejs') %>
     <link rel="stylesheet" href="/css/productos.css" />
 
-<body>
-    <%- include('../partials/header.ejs') %>
-    <main>
-        <section>
-            <div class="productos">
-            <% for (let i=1 ; i < products.length; i++) { %>
-                <article class="articulo">
-                    <a href="/products/detalle/<%= products[i].id %>">
-                    <div class= "contenedor">  
-                        <img class="img-product" src="/img/<%= products[i].image %>" width="70%" alt="">
-                        <p class="precio">$<%= products[i].price %></p>
-                        <p class="descripcion"><%= products[i].description %></p>
-                        <h4 class="descripcion"><%= products[i].name %></h4>
+    <body>
+        <%- include('../partials/header.ejs') %>
+            <main>
+                <section>
+                    <div class="productos">
+                        <% for (let i=1 ; i < products.length; i++) { %>
+                            <article class="articulo">
+                                <a href="/products/detalle/<%= products[i].product_id %>">
+                                    <div class="contenedor">
+                                        <img class="img-product" class="images" src="/img/<%= products[i].product_image %>" width="70%" alt="">
+                                        <p class="precio">$
+                                            <%= products[i].product_price %>
+                                        </p>
+                                        <p class="descripcion">
+                                            <%= products[i].product_description %>
+                                        </p>
+                                        <h4 class="descripcion">
+                                            <%= products[i].product_name %>
+                                        </h4>
+                                    </div>
+                            </article>
+                            <% } %>
                     </div>
-                </article>
-            <% } %>
-            </div>
-        </section>
-    </main>
-    
-    <%- include('../partials/footer.ejs') %>
-</body>
+                </section>
+            </main>
+
+            <%- include('../partials/footer.ejs') %>
+    </body>
+
 </html>

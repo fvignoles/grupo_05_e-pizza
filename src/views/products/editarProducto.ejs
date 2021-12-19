@@ -3,50 +3,62 @@
 
 
 <%- include('../partials/head.ejs') %>
-<link rel="stylesheet" href="/css/editarProducto.css" />
+    <link rel="stylesheet" href="/css/editarProducto.css" />
 
 
-<body>
-  <%- include('../partials/header.ejs') %>
+    <body>
+        <%- include('../partials/header.ejs') %>
 
-    <main>
-      <section class="w3-margin-bottom">
-        <form action="/products/edit/<%= productToEdit.id %>?_method=PATCH" method="POST">
-          <strong>
-            <p class="w3-center">Editar un producto!: <%= productToEdit.name %>
+            <main>
+                <section class="w3-margin-bottom">
+                    <form action="/products/edit/<%= productToEdit.id %>?_method=PATCH" method="POST">
+                        <strong>
+            <p class="w3-center">Editar <%= productToEdit.product_name %>
             </p>
           </strong>
 
-          <label for="name" class="form-label">Nombre:</label>
-          <input value="<%= productToEdit.name %>" name="name" id="name" class="form-input">
+                        <label for="name" class="form-label">Nombre:</label>
+                        <input value="<%= productToEdit.product_name %>" name="name" id="name" class="form-input">
 
-          <label for="description" class="form-label"><strong>
+                        <label for="description" class="form-label"><strong>
               <p>Descripción:</p>
             </strong></label>
-          <input value="<%= productToEdit.description %>" name="description" id="description" class="form-input">
+                        <input value="<%= productToEdit.product_description %>" name="description" id="description" class="form-input">
 
-          <label for="size" class="form-label"><strong>
-              <p>Tamaño:</p>
-            </strong></label>
-          <input value="<%= productToEdit.size %>" name="size" id="size" class="form-input">
+                        <label for="size" class="form-label"><strong><p>Tamaño:</p></strong>
+            
+                            <select name="size">
+                              <% for(let i=0; i < sizes.length; i++) { %>
+                              <% if(sizes[i].size_id == productToEdit.product_size_id) {%>
+                                <option value="<%= sizes[i].size_id %>" selected>
+                                  <%= sizes[i].size_name %>
+                                </option>
+                                <%}else{ %>
+                                  <option value="<%= sizes[i].size_id %>" >
+                                    <%= sizes[i].size_name %>
+                                  </option>
+                                <% } %>
+                                <% } %>
+                              </select>
+          </label>
 
-          <label for="dough" class="form-label"><strong>
+                        <label for="dough" class="form-label"><strong>
               <p>Masa:</p>
             </strong></label>
-          <input value="<%= productToEdit.dough %>" name="dough" id="dough" class="form-input">
+                        <input value="<%= productToEdit.product_dough_id %>" name="dough" id="dough" class="form-input">
 
-          <strong>
+                        <strong>
             <p>Precio:</p>
           </strong>
-          <input class="w3-margin-bottom" type="number" name="price" required value="<%= productToEdit.price %>">
+                        <input class="w3-margin-bottom" type="number" name="price" required value="<%= productToEdit.product_price %>">
 
-          <input class="w3-btn w3-round-xlarge w3-green w3-hover-black" type="submit" value="Editar producto">
+                        <input class="w3-btn w3-round-xlarge w3-green w3-hover-black" type="submit" value="Editar producto">
 
-        </form>
-      </section>
-    </main>
+                    </form>
+                </section>
+            </main>
 
-    <%- include('../partials/footer.ejs') %>
-</body>
+            <%- include('../partials/footer.ejs') %>
+    </body>
 
 </html>

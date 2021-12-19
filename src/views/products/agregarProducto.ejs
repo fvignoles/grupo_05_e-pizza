@@ -3,40 +3,56 @@
 
 
 <%- include('../partials/head.ejs') %>
-  <link href="/css/forms.css" rel="stylesheet" />
+    <link href="/css/forms.css" rel="stylesheet" />
 
-  <body class="body-form">
-    <%- include('../partials/header.ejs') %>
+    <body class="body-form">
+        <%- include('../partials/header.ejs') %>
 
-      <body>
+            <body>
 
 
-        <main>
+                <main>
 
-          <form enctype="multipart/form-data" action="agregar" method="POST" class="create-form">
-            <section class="form-create">
-              <h4 class="h4-form">Crear producto</h4>
-              <label for="name">Nombre : </label>
-            <input class="control" type="text" name="name"><br>
-            <label for="descripcion">Descripción : </label>
-            <textarea class="control" name="description" cols="20" rows="5"></textarea>
-            <label for="image">
+                    <form enctype="multipart/form-data" action="agregar" method="POST" class="create-form">
+                        <section class="form-create">
+                            <h4 class="h4-form">Crear producto</h4>
+                            <label for="name">Nombre : </label>
+                            <input class="control" type="text" name="name"><br>
+                            <label for="descripcion">Descripción : </label>
+                            <textarea class="control" name="description" cols="20" rows="5"></textarea>
+                            <label for="image">
               <p>Imágen : </p>
             </label>
-            <input class="control" class="w3-margin-bottom" type="file" name="image" /><br>
-            <label for="size">Tamaño : </label>
-            <input class="control" type="text" name="size"><br>
-            <label for="dough">Masa : </label>
-            <input class="control" type="text" name="dough"><br>
-            <label for="price">Precio $ : </label>
-            <input class="control" type="number" name="price"><br>
-            <input class="button" type="submit" value="Enviar">
-            </section>
-          </form>
+                            <input class="control" class="w3-margin-bottom" type="file" name="image" /><br>
+                            <label for="size">Tamaño :
+                              <select name="size">
+                                <% for(let i=0; i < sizes.length; i++) { %>
+                                  <option value="<%= sizes[i].size_id %>">
+                                    <%= sizes[i].size_name %>
+                                  </option>
+                                  <% } %>
+                                </select>
+                            </label><br>
+                            <!-- <input class="control" type="text" name="size"><br> -->
+                            <label for="dough">Masa :
+                              <select name="dough">
+                                <% for(let i=0; i < doughs.length; i++) { %>
+                                  <option value="<%= doughs[i].dough_id %>">
+                                    <%= doughs[i].dough_name %>
+                                  </option>
+                                  <% } %>
+                                </select>
+                            </label><br>
+                            <!-- <input class="control" type="text" name="dough"><br> -->
+                            <label for="price">Precio $ : </label>
+                            <input class="control" type="number" name="price"><br>
+                            <input class="button" type="submit" value="Enviar">
+                        </section>
+                    </form>
 
-        </main>
+                </main>
 
-        <%- include('../partials/footer.ejs') %>
-      </body>
+                <%- include('../partials/footer.ejs') %>
+            </body>
 
 </html>

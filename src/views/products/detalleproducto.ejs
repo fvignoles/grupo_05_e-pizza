@@ -2,72 +2,72 @@
 <html lang="en">
 
 <head>
-  <%- include('../partials/head.ejs') %>
-    <link href="/css/detalleproducto.css" rel="stylesheet" />
+    <%- include('../partials/head.ejs') %>
+        <link href="/css/detalleproducto.css" rel="stylesheet" />
 </head>
 
 <body>
-  <%- include('../partials/header.ejs') %>
-    <div class="detalle-box">
-      <div class="detalle-titulo">
-        <h1>Detalle del producto: <%= product.name %>
-        </h1>
-      </div>
-      <div class="detalle-box-menor">
-        <div class="detalle-imagen-pizza">
-          <img src="/img/<%= product.image %>" width="70%" alt="">
-        </div>
-        <div class="detalle-pie-imagen">
-          <div class="detalle-precio">
-            <p>$ <%= product.price %>
-            </p>
-          </div>
-          <div class="detalle-comprar">
-            <button class="w3-button w3-round w3-green" type="submit" id="button" name="button">
+    <%- include('../partials/header.ejs') %>
+        <div class="detalle-box">
+            <div class="detalle-titulo">
+                <h1>Detalle
+                    <%= product.product_name %>
+                </h1>
+            </div>
+            <div class="detalle-box-menor">
+                <div class="detalle-imagen-pizza">
+                    <img src="/img/<%= product.product_image %>" width="70%" alt="">
+                </div>
+                <div class="detalle-pie-imagen">
+                    <div class="detalle-precio">
+                        <p>$
+                            <%= product.product_price %>
+                        </p>
+                    </div>
+                    <div class="detalle-comprar">
+                        <button class="w3-button w3-round w3-green" type="submit" id="button" name="button">
               <i class="fas fa-shopping-cart"></i> Comprar
             </button>
-          </div>
-        </div>
-        <div class="detalle-ingredientes">
-          <h3>Descripción</h3>
-          <p class="detalle-lista-ingredientes">
-            <%= product.description %>
-          </p>
-          <div class="detalle-obs">
-            <h3>Tamaño</h3>
+                    </div>
+                </div>
+                <div class="detalle-ingredientes">
+                    <h3>Descripción</h3>
+                    <p class="detalle-lista-ingredientes">
+                        <%= product.product_description %>
+                    </p>
+                    <div class="detalle-obs">
+                        <h3>Tamaño</h3>
+                        <p>
+                            <%= product.sizes.size_name %>
+                        </p>
+                        <h3>Masa</h3>
 
-            <p>
-              <%= product.size %>
-            </p>
-            <h3>Masa</h3>
+                        <p>
+                            <%= product.doughs.dough_name %>
+                        </p>
+                    </div>
+                    <div class="crud-buttons">
+                        <div>
+                            <a href="/products/edit/<%= product.product_id %>" class="w3-button w3-round w3-blue">Editar</a>
+                        </div>
+                        <div>
+                            <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST" style="display: inline-flex">
+                                <button type="submit" class="w3-button w3-round w3-red">Eliminar</button>
+                            </form>
+                        </div>
+                    </div>
 
-            <p>
-              <%= product.dough %>
-            </p>
-          </div>
-          <div class="crud-buttons">
-            <div>
-              <a href="/products/edit/<%= product.id %>" class="w3-button w3-round w3-blue">Editar</a>
+
+                </div>
+                <div class="detalle-salir">
+                    <a href="/products/productos" class="w3-button w3-round w3-aqua"><i class="fas fa-door-open"></i> Salir</a>
+                </div>
             </div>
-            <div>
-              <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST"
-                style="display: inline-flex">
-                <button type="submit" class="w3-button w3-round w3-red">Eliminar</button>
-              </form>
-            </div>
-          </div>
-
-
         </div>
-        <div class="detalle-salir">
-          <a href="/products/productos" class="w3-button w3-round w3-aqua"><i class="fas fa-door-open"></i> Salir</a>
         </div>
-      </div>
-    </div>
-    </div>
 
 
-    <%- include('../partials/footer.ejs') %>
+        <%- include('../partials/footer.ejs') %>
 
 </body>
 
