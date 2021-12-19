@@ -30,6 +30,7 @@ router.post('/agregar', upload.single('images'), productsDB.guardar);
 router.get('/productos', productsDB.listado);
 router.get('/detalle/:id', productsDB.detalle);
 router.get('/edit/:id', productsDB.editar);
+router.post('/edit/:id', productsDB.actualizar);
 
 
 
@@ -41,8 +42,8 @@ router.get('/edit/:id', productsDB.editar);
 
 // router.get('/edit/:id', productsController.editar);
 
-router.patch('/edit/:id', productsController.update);
+// router.patch('/edit/:id', productsController.update);
 
-router.delete('/delete/:id', productsController.destroy);
+router.post('/delete/:id', productsDB.borrar);
 
 module.exports = router;

@@ -11,7 +11,7 @@
 
             <main>
                 <section class="w3-margin-bottom">
-                    <form action="/products/edit/<%= productToEdit.id %>?_method=PATCH" method="POST">
+                    <form action="/products/edit/<%= productToEdit.product_id %>" method="POST">
                         <strong>
             <p class="w3-center">Editar <%= productToEdit.product_name %>
             </p>
@@ -44,8 +44,22 @@
 
                         <label for="dough" class="form-label"><strong>
               <p>Masa:</p>
-            </strong></label>
-                        <input value="<%= productToEdit.product_dough_id %>" name="dough" id="dough" class="form-input">
+            </strong>
+            <select name="dough">
+              <% for(let i=0; i < doughs.length; i++) { %>
+              <% if(doughs[i].dough_id == productToEdit.product_dough_id) {%>
+                <option value="<%= doughs[i].dough_id %>" selected>
+                  <%= doughs[i].dough_name %>
+                </option>
+                <%}else{ %>
+                  <option value="<%= doughs[i].dough_id %>" >
+                    <%= doughs[i].dough_name %>
+                  </option>
+                <% } %>
+                <% } %>
+              </select>
+          </label>
+                        <!-- <input value="<%= productToEdit.product_dough_id %>" name="dough" id="dough" class="form-input"> -->
 
                         <strong>
             <p>Precio:</p>

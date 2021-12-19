@@ -45,11 +45,37 @@ let productDB = {
     editar: function(req, res) {
         let productoSeleccionado = db.Product.findByPk(req.params.id);
         let tamanio = db.Size.findAll();
+        let masa = db.Dough.findAll();
 
-        Promise.all([productoSeleccionado, tamanio])
-            .then(function([productToEdit, sizes]) {
-                res.render("products/editarProducto", { productToEdit: productToEdit, sizes: sizes })
+        Promise.all([productoSeleccionado, tamanio, masa])
+            .then(function([productToEdit, sizes, doughs]) {
+                res.render("products/editarProducto", { productToEdit: productToEdit, sizes: sizes, doughs: doughs })
             })
+    },
+    actualizar: function(req, res) {
+        db.Product.update({
+            product_size_id: req.body.size,
+            product_dough_id: req.body.dough,
+            product_name: req.body.name,
+            product_description: req.body.description,
+            product_price: req.body.price,
+            // product_image: req.file.filename,
+            product_active: 1
+        }, {
+            where: {
+                product_id: req.params.id
+            }
+        });
+        res.redirect("/products/productos");
+    },
+    borrar: function(req, res) {
+        db.Product.destroy({
+            where: {
+                product_id: req.params.id
+            },
+            force: true
+        });
+        res.redirect("/products/productos");
     }
 }
 
