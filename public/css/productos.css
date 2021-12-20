@@ -1,3 +1,7 @@
+*{
+    font-family: Roboto;
+}
+
 body {
     background-image: url(../img/background-carrito.jpg);
 }

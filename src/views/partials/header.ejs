@@ -2,8 +2,8 @@
     <nav class="nav">
         <input type="checkbox" id="check" />
         <label for="check" class="checkbtn">
-      <i class="fas fa-bars"></i>
-    </label>
+            <i class="fas fa-bars"></i>
+        </label>
 
         <a href="/" class="logo"><img src="/img/logo.jpg" alt="logo" class="logo-img" /></a>
 
@@ -11,14 +11,15 @@
 
             <ul class="nav-menu">
                 <li>
-                    <a class="nav-menu-link nav-link">Usuario: <%= locals.userLogged.user_firstname + " " + locals.userLogged.user_lastname %></a>
+                    <a class="nav-menu-link nav-link">Usuario: <%= locals.userLogged.user_firstname + " "%></a>
                     <!-- <img src="/public/img/userdefault.png" width="40" style="border-radius: 100%"> -->
                 </li>
                 <li>
                     <a href="/products/agregar" class="nav-menu-link nav-link">+ Producto</a>
                 </li>
                 <li>
-                    <a href="/products/carrito" class="nav-menu-link nav-link">Mi Carrito <i class="fas fa-shopping-basket"></i></a>
+                    <a href="/products/carrito" class="nav-menu-link nav-link">Mi Carrito <i
+                            class="fas fa-shopping-basket"></i></a>
                 </li>
                 <li>
                     <a href="/products/productos" class="nav-menu-link nav-link">Productos</a>
@@ -26,27 +27,31 @@
                 <li>
                     <a href="/users/logout" class="nav-menu-link nav-link">SALIR</a>
                 </li>
+                <li>
+                    <div>
+                        <form action="/products/encontrados" method="POST">
+                            <input class="search" name="search" placeholder="Buscar...">
+                            <button class="fas fa-search" type="submit"></button>                           
+                        </form>
+                    </div>
+                </li>
             </ul>
             <% } else{ %>
                 <ul class="nav-menu">
                     <li><a href="/" class="nav-menu-link nav-link">Home</a></li>
                     <li>
-                        <a href="/users/login" class="nav-menu-link nav-link">Ingresá <i class="fas fa-sign-in-alt"></i></a>
+                        <a href="/users/login" class="nav-menu-link nav-link">Ingresá <i
+                                class="fas fa-sign-in-alt"></i></a>
                     </li>
                     <li>
-                        <a href="/users/register" class="nav-menu-link nav-link">Registrate <i class="far fa-id-card"></i></a>
+                        <a href="/users/register" class="nav-menu-link nav-link">Registrate <i
+                                class="far fa-id-card"></i></a>
                     </li>
                 </ul>
                 <% } %>
 
-                 <section class="common-header-center">
-        <div>
-            <form action="/products/encontrados" method="POST">
-                <input type="search" name="search" placeholder="Buscar...">
-                <button class="fa fa-search" type="submit"></button>
-            </form>
-        </div>
-    </section>
+                    <section class="common-header-center">
+                    </section>
     </nav>
-   
+
 </header>
