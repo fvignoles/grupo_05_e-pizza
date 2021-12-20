@@ -31,7 +31,7 @@ nav ul {
     float: right;
     margin-right: 20px;
     font-size: 18px;
-    margin: 0 10px;
+    margin: auto;
     line-height: 80px;
     text-transform: uppercase;
     width: max-content;
@@ -87,7 +87,7 @@ a:hover {
     }
     nav ul li {
         display: block;
-        margin: 50px 0;
+        margin: 45px 0;
         line-height: 30px;
     }
     nav ul li a {
@@ -96,7 +96,7 @@ a:hover {
     a:hover,
     a.nav-link {
         background: none;
-        color: #0082e6;
+        color: rgb(223, 220, 228);
     }
     #check:checked~ul {
         left: 0;
