@@ -4,7 +4,9 @@
         <label for="check" class="checkbtn">
       <i class="fas fa-bars"></i>
     </label>
+
         <a href="/" class="logo"><img src="/img/logo.jpg" alt="logo" class="logo-img" /></a>
+
         <% if(locals.isLogged){ %>
 
             <ul class="nav-menu">
@@ -37,4 +39,12 @@
                 </ul>
                 <% } %>
     </nav>
+    <section class="common-header-center">
+        <div>
+            <form action="/products/encontrados" method="POST">
+                <input type="search" name="search" placeholder="Buscar...">
+                <button class="fa fa-search" type="submit"></button>
+            </form>
+        </div>
+    </section>
 </header>

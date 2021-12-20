@@ -3,33 +3,33 @@
 
 
 <%- include('../partials/head.ejs') %>
-<link rel="stylesheet" href="/css/editarProducto.css" />
+    <link rel="stylesheet" href="/css/editarProducto.css" />
 
 
-<body>
-  <%- include('../partials/header.ejs') %>
+    <body>
+        <%- include('../partials/header.ejs') %>
 
-    <main>
-      <section class="w3-margin-bottom">
-        <form action="/users/edit/<%= userToEdit.id %>?_method=PATCH" method="POST">
-          <strong>
-            <p class="w3-center">Editar <%= userToEdit.firstName %>
+            <main>
+                <section class="w3-margin-bottom">
+                    <form action="/users/edit/<%= userToEdit.user_id %>?_method=PATCH" method="POST">
+                        <strong>
+            <p class="w3-center">Editar <%= userToEdit.user_firstname %>
             </p>
           </strong>
 
-          <label for="firstName" class="form-label">Nombre:</label>
-          <input value="<%= userToEdit.firstName %>" name="firstName" id="name" class="form-input">
+                        <label for="firstName" class="form-label">Nombre:</label>
+                        <input value="<%= userToEdit.user_firstname %>" name="firstName" id="name" class="form-input">
 
-          <label for="lastName" class="form-label">Apellido:</label>
-          <input value="<%= userToEdit.lastName %>" name="lastName" id="name" class="form-input">
+                        <label for="lastName" class="form-label">Apellido:</label>
+                        <input value="<%= userToEdit.user_lastname %>" name="lastName" id="name" class="form-input">
 
-          <input class="w3-btn w3-round-xlarge w3-green w3-hover-black" type="submit" value="Editar producto">
+                        <input class="w3-btn w3-round-xlarge w3-green w3-hover-black" type="submit" value="Editar usuario">
 
-        </form>
-      </section>
-    </main>
+                    </form>
+                </section>
+            </main>
 
-    <%- include('../partials/footer.ejs') %>
-</body>
+            <%- include('../partials/footer.ejs') %>
+    </body>
 
 </html>

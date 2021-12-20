@@ -17,33 +17,30 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage });
 
-const productsController = require('../controllers/productsController');
 const productsDB = require('../controllers/productsDB');
 
-router.get('/carrito', productsController.carrito);
+router.get('/carrito', productsDB.carrito);
 
-router.get('/detalle', productsController.detalle);
+router.get('/detalle', productsDB.detalle);
 
-// router.get('/agregar', productsController.agregar);
+//Creación y guardado de un producto nuevo
 router.get('/agregar', productsDB.crear);
 router.post('/agregar', upload.single('images'), productsDB.guardar);
+
+//Listado de productos
 router.get('/productos', productsDB.listado);
+
+//Detalle de un producto
 router.get('/detalle/:id', productsDB.detalle);
+
+//Edición y actualización de un producto
 router.get('/edit/:id', productsDB.editar);
 router.post('/edit/:id', productsDB.actualizar);
 
-
-
-// router.post('/agregar', upload.single('image'), productsController.store);
-
-// router.get('/productos', productsController.vista);
-
-// router.get('/detalle/:id', productsController.detail);
-
-// router.get('/edit/:id', productsController.editar);
-
-// router.patch('/edit/:id', productsController.update);
-
+//Eliminación de un producto
 router.post('/delete/:id', productsDB.borrar);
+
+//Búsqueda de productos por nombre
+router.post('/encontrados', productsDB.search);
 
 module.exports = router;

@@ -63,7 +63,7 @@ CREATE TABLE `carts` (
    PRIMARY KEY (`cart_id`)
 );
 
-CREATE TABLE `products_Carts` (
+CREATE TABLE `products_carts` (
    `product_cart_id` INT NOT NULL AUTO_INCREMENT,
    `product_cart_cartid` INT NOT NULL,
    `product_cart_productid` INT NOT NULL,

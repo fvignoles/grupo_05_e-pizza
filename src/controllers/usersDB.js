@@ -12,7 +12,7 @@ let usersDB = {
         return res.render("users/login");
     },
 
-    create: function (req, res) {
+    create: function(req, res) {
         const resultValidation = validationResult(req);
 
         if (resultValidation.errors.length > 0) {
@@ -24,10 +24,10 @@ let usersDB = {
 
         // let userInDB = User.findByField('email', req.body.email);
         db.User.findOne({
-            where: {
-                user_email: req.body.email
-            }
-        })
+                where: {
+                    user_email: req.body.email
+                }
+            })
             .then((userInDB) => {
                 if (userInDB) {
                     return res.render('users/register', {
@@ -62,10 +62,10 @@ let usersDB = {
         // let userToLogin = User.findByField('email', req.body.email);
 
         db.User.findOne({
-            where: {
-                user_email: req.body.email
-            }
-        })
+                where: {
+                    user_email: req.body.email
+                }
+            })
             .then((userToLogin) => {
 
 
@@ -102,6 +102,33 @@ let usersDB = {
         return res.render("users/profile", {
             user: req.session.userLogged
         });
+    },
+    editar: function(req, res) {
+        // let usuarioSeleccionado = db.User.findByPk(req.params.id);
+        // let tamanio = db.Size.findAll();
+        // let masa = db.Dough.findAll();
+
+        // Promise.all([productoSeleccionado, tamanio, masa])
+        db.User.findByPk(req.params.id)
+            .then(function(userToEdit) {
+                res.render("users/editarUsuario", { userToEdit: userToEdit })
+            })
+    },
+    actualizar: function(req, res) {
+        db.User.update({
+            user_firstname: req.body.firstName,
+            user_lastname: req.body.lastName
+        }, {
+            where: {
+                user_id: req.params.id
+            }
+        });
+        res.redirect("/users/profile");
+
+    },
+    logout: (req, res) => {
+        req.session.destroy();
+        return res.redirect('/')
     },
 }
 

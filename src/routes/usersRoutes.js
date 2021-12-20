@@ -1,9 +1,6 @@
 const express = require('express');
 const router = express.Router();
 
-
-
-const usersController = require('../controllers/usersController');
 const usersDB = require('../controllers/usersDB');
 // const validateForm = require('../middlewares/validateRegister');
 // const upload = require('../middlewares/multer');
@@ -48,19 +45,21 @@ router.get('/register', guestMiddleware, usersDB.register);
 
 router.post('/register', upload.single('images'), validateRegister, usersDB.create);
 
-router.get('/list', usersController.list);
-
-router.get('/detail/:id', usersController.detail);
-
 router.get('/profile', authMiddleware, usersDB.profile);
 
-router.get('/logout', usersController.logout);
+router.get('/edit/:id', usersDB.editar);
+router.patch('/edit/:id', usersDB.actualizar);
 
-router.get('/edit/:id', usersController.editar);
+router.get('/logout', usersDB.logout);
 
-router.patch('/edit/:id', usersController.update);
+// router.get('/list', usersController.list);
 
-router.delete('/delete/:id', usersController.destroy);
+// router.get('/detail/:id', usersController.detail);
+// router.get('/edit/:id', usersController.editar);
+
+// router.patch('/edit/:id', usersController.update);
+
+// router.delete('/delete/:id', usersController.destroy);
 
 // router.get('/findall', usersDB.findAll);
 
