@@ -116,9 +116,10 @@ let productDB = {
         db.Product.findAll({
                 where: {
                     product_name: {
-                        [Op.like]: `%${req.body.search}%`
-
+                        [Op.like]: '%' + req.query.search + '%'
                     }
+
+
                 }
             }, {
                 product_active: 1
