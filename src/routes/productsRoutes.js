@@ -43,6 +43,6 @@ router.post('/edit/:id', productsDB.actualizar);
 router.post('/delete/:id', productsDB.borrar);
 
 //Búsqueda de productos por nombre
-router.get('/encontrados', productsDB.search);
+router.post('/encontrados', productsDB.search);
 
 module.exports = router;

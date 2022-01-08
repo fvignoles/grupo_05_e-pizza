@@ -6,6 +6,7 @@ INSERT INTO pizzadb.categories (category_name, category_active) VALUES('admin', 
 
 INSERT INTO pizzadb.categories (category_name, category_active) VALUES('user', 1); -- id 2
 
+
 -- --------- Users -----------
 
 INSERT INTO pizzadb.users
