@@ -19,13 +19,15 @@ const upload = multer({ storage: storage });
 
 const productsDB = require('../controllers/productsDB');
 
+const validateProduct = require('../middlewares/validateProduct');
+
 router.get('/carrito', productsDB.carrito);
 
 router.get('/detalle', productsDB.detalle);
 
 //Creación y guardado de un producto nuevo
 router.get('/agregar', productsDB.crear);
-router.post('/agregar', upload.single('images'), productsDB.guardar);
+router.post('/agregar', upload.single('images'), validateProduct, productsDB.guardar);
 
 //Listado de productos
 router.get('/productos', productsDB.listado);
