@@ -16,12 +16,23 @@
                     <form enctype="multipart/form-data" action="agregar" method="POST" class="create-form">
                         <section class="form-create">
                             <h4 class="h4-form">Crear producto</h4>
-                            <label for="name">Nombre : </label>
-                            <input class="control" type="text" name="name"><br>
-                            <label for="descripcion">Descripción : </label>
+                            <label for="productName">Nombre : </label>
+                            <input class="control" type="text" name="productName"><br>
+                            <% if(locals.errors && errors.productName) { %>
+                              <p class="error-msg">
+                                  <%= errors.productName.msg %>
+                              </p>
+                              <% } %>
+                            <label for="description">Descripción : </label>
                             <textarea class="control" name="description" cols="20" rows="5"></textarea>
+                            <% if(locals.errors && errors.description) { %>
+                              <p class="error-msg">
+                                  <%= errors.description.msg %>
+                              </p>
+                              <% } %>
                             <label for="image">
               <p>Imágen : </p>
+              
             </label>
                             <input class="control" class="w3-margin-bottom" type="file" name="images" /><br>
                             <label for="size">Tamaño :

@@ -1,7 +1,9 @@
 const express = require('express');
 const router = express.Router();
+const productsDB = require('../controllers/productsDB');
 const multer = require("multer");
 const path = require("path");
+const validateCreate = require('../middlewares/validateCreate');
 
 // Multer
 const storage = multer.diskStorage({
@@ -17,7 +19,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage });
 
-const productsDB = require('../controllers/productsDB');
+// const validateRegister = require('../middlewares/validateRegister');
 
 router.get('/carrito', productsDB.carrito);
 
@@ -25,7 +27,7 @@ router.get('/detalle', productsDB.detalle);
 
 //Creación y guardado de un producto nuevo
 router.get('/agregar', productsDB.crear);
-router.post('/agregar', upload.single('images'), productsDB.guardar);
+router.post('/agregar', upload.single('images'),validateCreate, productsDB.guardar);
 
 //Listado de productos
 router.get('/productos', productsDB.listado);

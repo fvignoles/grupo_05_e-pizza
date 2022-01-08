@@ -15,11 +15,13 @@ module.exports = [
     body('password')
         .notEmpty().withMessage('Ingrese una contraseña por favor')
         .isLength({ min: 8}).withMessage('Debe tener al menos 8 caracteres')
-        .matches(/^(?=.\d)(?=.[a-z])(?=.[A-Z])[a-zA-Z\d@$.!%#?&]/).withMessage('Deberá tener letras mayúsculas, minúsculas, un número y un carácter especial.'),
-        // .matches(/^(?=.\d)(?=.[a-z])(?=.[A-Z])(?=.[0-9])[a-zA-Z0-9\d@$.!%#?&]/).withMessage('Deberá tener letras mayúsculas, minúsculas, un número y un carácter especial.'),
+        .matches(/[a-z]/).withMessage('Deberá tener al menos una letra minúscula')
+        .matches(/[A-Z]/).withMessage('Deberá tener al menos una mayúscula')
+        .matches(/[0-9]/).withMessage('Deberá tener al menos un número')
+        .matches(/[@$.!%#?&]/).withMessage('Deberá tener al menos un caracter especial'),
     body('image').custom((value, { req }) => {
         let file = req.file;
-        let acceptedExtensions = ['.jpg', '.png', '.gif'];
+        let acceptedExtensions = ['.jpg', '.png', '.gif', '.jpeg'];
 
         if (!file) {
             throw new Error ('Eliga una imagen');
