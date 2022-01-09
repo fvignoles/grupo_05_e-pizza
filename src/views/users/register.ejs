@@ -30,6 +30,11 @@
                                                 <label for="images">Imágen de Perfil</label>
                                                 <input class="control" type="file" name="images" id="images" placeholder="Imagen de Perfil" />
                                                 <input class="control" type="password" name="password" placeholder="Contraseña" value="<%= locals.oldData ? oldData.user_password : null %>" />
+                                                <% if(locals.errors && errors.password) { %>
+                                                    <p class="error-msg">
+                                                        <%= errors.password.msg %>
+                                                    </p>
+                                                    <% } %>
                                                 <button class="button" type="submit" name="" value="Crear cuenta"> Crear cuenta </button>
                                                 <button class="button" type="reset" name="" value="Cancelar"> Cancelar </button>
                                                 <p><a href="/users/login">¿Ya tenés una cuenta?¡Ingresá!</a></p>
