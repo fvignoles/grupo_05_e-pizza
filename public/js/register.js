@@ -13,6 +13,7 @@ window.addEventListener('load',()=>{
     const numero = /[0-9]/;
     const caracterEspecial = /[@$.!%#?&]/;
     form.addEventListener('submit', (e) => {
+        errores = [];
     if(firstName.value == ''){
         errores.push('El campo no puede estar vacío');
         // firstName.classList.add('error-msg');

@@ -6,10 +6,10 @@
     <body class="body-form">
         <%- include('../partials/header.ejs') %>
             <main>
-                <ul class="errors"></ul>
                 <form action="register" class="login-form" enctype="multipart/form-data" method="POST">
                     <section class="form-register">
                         <h4 class="h4-form">Registrate</h4>
+                        <ul class="errors"></ul>
                         <input class="control firstName" type="text" name="firstName" placeholder="Nombre" value="<%= locals.oldData ? oldData.user_firstName :null%>" />
                         <% if(locals.errors && errors.firstName) { %>
                             <p class="error-msg">
