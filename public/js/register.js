@@ -3,6 +3,7 @@ window.addEventListener('load',()=>{
     const form = document.querySelector("form.login-form");
     const firstName = document.querySelector(".firstName");
     const lastName = document.querySelector(".lastName");
+    const imageName = document.querySelector("#images")
     const email = document.querySelector(".email");
     const password = document.querySelector(".password");
     const emailRegex = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
@@ -30,6 +31,10 @@ window.addEventListener('load',()=>{
         errores.push('El e-mail no puede estar vacio');
     }else if(!emailRegex.test(email.value)){
         errores.push('Ingrese un formato de e-mail válido por favor');
+    };
+    
+    if (imageName.value == '') {
+        errores.push('Debe seleccionar una imagen para el usuario');
     };
     if(password.value == ''){
         errores.push('La contraseña no puede estar vacía')
