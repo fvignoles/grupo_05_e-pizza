@@ -4,7 +4,6 @@ window.addEventListener('load',()=>{
     const productName = document.querySelector("#name");
     const descriptionName = document.querySelector("#description");
     const productPrice = document.querySelector("#price");
-    const numero = /[0-9]/;
     form.addEventListener('submit', (e) => {
         errores = [];
     if(productName.value == ''){
@@ -20,8 +19,6 @@ window.addEventListener('load',()=>{
     };
     if(productPrice.value == ''){
         errores.push('El importe no puede estar vacio');
-    }else if(!numeroRegex.test(productPrice.value)){
-        errores.push('El importe debe ser un número');
     }else if (productPrice.value < 0){
         errores.push('El importe debe ser mayor a 0');
     }
