@@ -54,3 +54,12 @@ En el próximo Sprint se arreglarán los estilos dañados.
 
 <h3 align="center">_________________________________</h3>
 
+<h2 align="center">Sprint 7</h2>
+
+Comenzar a hacer : efectuar mejoras de UX/UI a los estilos, construir la API para alimentar el scoreboard
+Hacer más : pruebas de QA a la aplicación.
+Continuar haciendo : trabajando responsablemente y con buen clima de grupo, y reuniéndonos una o dos veces a la semana para avanzar juntos con el proyeto.
+Hacer menos : reuniones tan largas.
+Dejar de hacer : demorar el comienzo del sprint.
+_________________________________
+
