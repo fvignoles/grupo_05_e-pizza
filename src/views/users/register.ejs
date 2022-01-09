@@ -9,8 +9,8 @@
                 <form action="register" class="login-form" enctype="multipart/form-data" method="POST">
                     <section class="form-register">
                         <h4 class="h4-form">Registrate</h4>
-                        <ul class="errors"></ul>
-                        <input class="control firstName" type="text" name="firstName" placeholder="Nombre" value="<%= locals.oldData ? oldData.user_firstName :null%>" />
+                        
+                        <input class="control firstName" type="text" name="firstName" placeholder="Nombre" value="<%= locals.oldData ? oldData.user_firstName : null %>" />
                         <% if(locals.errors && errors.firstName) { %>
                             <p class="error-msg">
                                 <%= errors.firstName.msg %>
@@ -24,7 +24,7 @@
                                     <% } %>
                                         <input class="control email" type="email" name="email" placeholder="E-mail" value="<%= locals.oldData ? oldData.user_email :null%> " />
                                         <% if(locals.errors && errors.email) { %>
-                                            <p class="error-msg">
+                                            <p class="error-msg" >
                                                 <%= errors.email.msg %>
                                             </p>
                                             <% } %>
@@ -36,6 +36,7 @@
                                                         <%= errors.password.msg %>
                                                     </p>
                                                     <% } %>
+                                                <ul class="errors"></ul>    
                                                 <button class="button" type="submit" name="" value="Crear cuenta"> Crear cuenta </button>
                                                 <button class="button" type="reset" name="" value="Cancelar"> Cancelar </button>
                                                 <p><a href="/users/login">¿Ya tenés una cuenta?¡Ingresá!</a></p>

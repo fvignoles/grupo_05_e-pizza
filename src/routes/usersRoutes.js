@@ -2,8 +2,6 @@ const express = require('express');
 const router = express.Router();
 
 const usersDB = require('../controllers/usersDB');
-// const validateForm = require('../middlewares/validateRegister');
-// const upload = require('../middlewares/multer');
 const guestMiddleware = require('../middlewares/guestMiddleware');
 const authMiddleware = require('../middlewares/authMiddleware');
 const path = require("path");
@@ -17,13 +15,12 @@ const storage = multer.diskStorage({
         cb(null, folder);
     },
     filename: function(req, file, cb) {
-        //    console.log(file);
+
         let imageName = 'user' + Date.now() + path.extname(file.originalname);
         cb(null, imageName);
     }
 })
 
-// const upload = multer({ storage: storage });
 const upload = multer({
     storage,
     fileFilter: (req, file, cb) => {
@@ -40,7 +37,6 @@ router.get('/login', guestMiddleware, usersDB.login);
 
 router.post('/login', usersDB.loginProcess);
 
-// router.get('/register', guestMiddleware, usersController.register);
 router.get('/register', guestMiddleware, usersDB.register);
 
 router.post('/register', upload.single('images'), validateRegister, usersDB.create);
@@ -51,16 +47,5 @@ router.get('/edit/:id', usersDB.editar);
 router.patch('/edit/:id', usersDB.actualizar);
 
 router.get('/logout', usersDB.logout);
-
-// router.get('/list', usersController.list);
-
-// router.get('/detail/:id', usersController.detail);
-// router.get('/edit/:id', usersController.editar);
-
-// router.patch('/edit/:id', usersController.update);
-
-// router.delete('/delete/:id', usersController.destroy);
-
-// router.get('/findall', usersDB.findAll);
 
 module.exports = router;

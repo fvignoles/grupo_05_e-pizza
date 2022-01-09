@@ -13,11 +13,11 @@
 
         <main>
 
-          <form enctype="multipart/form-data" action="agregar" method="POST" class="create-form">
+          <form enctype="multipart/form-data" action="agregar" method="POST" class="create-form" name="create-form">
             <section class="form-create">
               <h4 class="h4-form">Crear producto</h4>
               <label for="name">Nombre : </label>
-              <input class="control" type="text" name="name" value="<%= locals.oldData ? oldData.product_name :null%>"><br>
+              <input class="control" type="text" name="name" id="name" value="<%= locals.oldData ? oldData.product_name :null%>"><br>
               <% if(locals.errors && errors.name) { %>
                 <p class="error-msg">
                     <%= errors.name.msg %>
@@ -25,7 +25,7 @@
                 <% } %>
                             
               <label for="descripcion">Descripción : </label>
-              <textarea class="control" name="description" value="<%= locals.oldData ? oldData.product_description :null%>" ></textarea>
+              <textarea class="control" name="description" id="description" value="<%= locals.oldData ? oldData.product_description :null%>" ></textarea>
               <% if(locals.errors && errors.description) { %>
                 <p class="error-msg">
                     <%= errors.description.msg %>
@@ -57,13 +57,16 @@
               </label><br>
               <!-- <input class="control" type="text" name="dough"><br> -->
               <label for="price">Precio $ : </label>
-              <input class="control" type="number" name="price"><br>
+              <input class="control" type="number" name="price" id="price"><br>
+
+              <ul class="errors"></ul>    
+
               <input class="button" type="submit" value="Enviar">
             </section>
           </form>
 
         </main>
-
+        <script src="/js/agregarProducto.js"></script>
         <%- include('../partials/footer.ejs') %>
       </body>
 

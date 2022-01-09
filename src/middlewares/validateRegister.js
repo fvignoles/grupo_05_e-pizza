@@ -19,7 +19,6 @@ module.exports = [
         .matches(/[A-Z]/).withMessage('Debe tener al menos una letra mayúscula.')
         .matches(/[0-9]/).withMessage('Debe tener al menos un número.')
         .matches(/[@$.!%#?&]/).withMessage('Debe tener al menos un caracter especial(@$.!%#?&).'),
-        // .matches(/^(?=.\d)(?=.[a-z])(?=.[A-Z])(?=.[0-9])[a-zA-Z0-9\d@$.!%#?&]/).withMessage('Deberá tener letras mayúsculas, minúsculas, un número y un carácter especial.'),
     body('image').custom((value, { req }) => {
         let file = req.file;
         let acceptedExtensions = ['.jpg', '.jpeg', '.png', '.gif'];

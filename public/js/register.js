@@ -1,8 +1,6 @@
 window.addEventListener('load',()=>{
     let errores = [];
     const form = document.querySelector("form.login-form");
-
-
     const firstName = document.querySelector(".firstName");
     const lastName = document.querySelector(".lastName");
     const email = document.querySelector(".email");
@@ -15,23 +13,23 @@ window.addEventListener('load',()=>{
     form.addEventListener('submit', (e) => {
         errores = [];
     if(firstName.value == ''){
-        errores.push('El campo no puede estar vacío');
+        errores.push('El nombre no puede estar vacío');
         // firstName.classList.add('error-msg');
     }else if(firstName.value.length < 2){
-        errores.push('El campo debe tener al menos 2 caracteres');
+        errores.push('El nombre debe tener al menos 2 caracteres');
         // firstName.classList.add('error-msg');
     };
     if(lastName.value == ''){
-        errores.push('El campo no puede estar vacío!!!!!!!!!!!!!!');
+        errores.push('El apellido no puede estar vacío');
         // firstName.classList.add('error-msg');
     }else if(lastName.value.length < 2){
-        errores.push('El campo debe tener al menos 2 caracteres!!!!');
+        errores.push('El apellido debe tener al menos 2 caracteres');
         // firstName.classList.add('error-msg');
     };
     if(email.value == ''){
-        errores.push('El mail no puede estar vacio');
+        errores.push('El e-mail no puede estar vacio');
     }else if(!emailRegex.test(email.value)){
-        errores.push('Ingrese un formato de mail válido por favor');
+        errores.push('Ingrese un formato de e-mail válido por favor');
     };
     if(password.value == ''){
         errores.push('La contraseña no puede estar vacía')
@@ -43,7 +41,6 @@ window.addEventListener('load',()=>{
         if(!numero.test(password.value)) errores.push('La contraseña debe contener al menos un número')
         if(!caracterEspecial.test(password.value)) errores.push('La contraseña debe contener al menos un caracter especial')
     }
-
 
     if (errores.length > 0) {
         e.preventDefault();
