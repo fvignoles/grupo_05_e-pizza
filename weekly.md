@@ -2,6 +2,29 @@
 
 <h3 align="center">Weekly Standup</h3>
 
+<h2 align="center">Sprint 7 - Semana 2</h2>
+
+<p align=center> Sofía : 
+● Qué hice: Se trabajo en equipo para implementar las validaciones en el backend y frontend en los formularios de registro de usuarios, login y creación y modificación de productos.
+● Impedimentos encontrados: algunos temas que tuvimos que volver a repasar / investigamos sobre RegEx (expresiones regulares).
+● Qué voy a hacer: revisar el funcionamiento de la aplicación </p>
+
+<p align=center> Agustín : 
+● Qué hice: Se trabajo en equipo para implementar las validaciones en el backend y frontend en los formularios de registro de usuarios, login y creación y modificación de productos.
+● Impedimentos encontrados: algunos temas que tuvimos que volver a repasar / investigamos sobre RegEx (expresiones regulares).
+● Qué voy a hacer: revisar el funcionamiento de la aplicación </p>
+
+<p align=center> Franco : 
+● Qué hice: Se trabajo en equipo para implementar las validaciones en el backend y frontend en los formularios de registro de usuarios, login y creación y modificación de productos.
+● Impedimentos encontrados: algunos temas que tuvimos que volver a repasar / investigamos sobre RegEx (expresiones regulares).
+● Qué voy a hacer: revisar el funcionamiento de la aplicación </p>
+
+<p align=center> Facundo : 
+● Qué hice: Se trabajo en equipo para implementar las validaciones en el backend y frontend en los formularios de registro de usuarios, login y creación y modificación de productos.
+● Impedimentos encontrados: algunos temas que tuvimos que volver a repasar / investigamos sobre RegEx (expresiones regulares).
+● Qué voy a hacer: revisar el funcionamiento de la aplicación </p>
+
+
 <h2 align="center">Sprint 3 - Semana 2</h2>
 
 <p align=center> Sofía : 
