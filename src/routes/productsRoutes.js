@@ -21,6 +21,8 @@ const productsDB = require('../controllers/productsDB');
 
 const validateProduct = require('../middlewares/validateProduct');
 
+const validateProductUpdate = require('../middlewares/validateProductUpdate');
+
 router.get('/carrito', productsDB.carrito);
 
 router.get('/detalle', productsDB.detalle);
@@ -37,7 +39,7 @@ router.get('/detalle/:id', productsDB.detalle);
 
 //Edición y actualización de un producto
 router.get('/edit/:id', productsDB.editar);
-router.post('/edit/:id', productsDB.actualizar);
+router.post('/edit/:id', /*validateProductUpdate,*/ productsDB.actualizar);
 
 //Eliminación de un producto
 router.post('/delete/:id', productsDB.borrar);

@@ -59,6 +59,12 @@
               <label for="price">Precio $ : </label>
               <input class="control" type="number" name="price" id="price"><br>
 
+              <% if(locals.errors && errors.price) { %>
+                <p class="error-msg">
+                    <%= errors.price.msg %>
+                </p>
+                <% } %>
+
               <ul class="errors"></ul>    
 
               <input class="button" type="submit" value="Enviar">

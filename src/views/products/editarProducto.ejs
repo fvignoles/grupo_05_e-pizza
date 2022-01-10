@@ -11,7 +11,7 @@
 
             <main>
                 <section class="w3-margin-bottom">
-                    <form action="/products/edit/<%= productToEdit.product_id %>" method="POST">
+                    <form action="/products/edit/<%= productToEdit.product_id %>" class="edit-form" method="POST">
                         <strong>
             <p class="w3-center">Editar <%= productToEdit.product_name %>
             </p>
@@ -20,10 +20,22 @@
                         <label for="name" class="form-label">Nombre:</label>
                         <input value="<%= productToEdit.product_name %>" name="name" id="name" class="form-input">
 
+                        <% if(locals.errors && errors.name) { %>
+                          <p class="error-msg">
+                              <%= errors.name.msg %>
+                          </p>
+                          <% } %>
+
                         <label for="description" class="form-label"><strong>
               <p>Descripción:</p>
             </strong></label>
                         <input value="<%= productToEdit.product_description %>" name="description" id="description" class="form-input">
+
+                        <% if(locals.errors && errors.description) { %>
+                          <p class="error-msg">
+                              <%= errors.description.msg %>
+                          </p>
+                          <% } %>
 
                         <label for="size" class="form-label"><strong><p>Tamaño:</p></strong>
             
@@ -64,7 +76,15 @@
                         <strong>
             <p>Precio:</p>
           </strong>
-                        <input class="w3-margin-bottom" type="number" name="price" required value="<%= productToEdit.product_price %>">
+                        <input class="w3-margin-bottom" type="number" name="price" id="price" value="<%= productToEdit.product_price %>">
+
+                        <% if(locals.errors && errors.price) { %>
+                          <p class="error-msg">
+                              <%= errors.price.msg %>
+                          </p>
+                          <% } %>
+                        
+                        <ul class="errors"></ul>  
 
                         <input class="w3-btn w3-round-xlarge w3-green w3-hover-black" type="submit" value="Editar producto">
 
@@ -72,6 +92,7 @@
                 </section>
             </main>
 
+            <script src="/js/editarProducto.js"></script>
             <%- include('../partials/footer.ejs') %>
     </body>
 

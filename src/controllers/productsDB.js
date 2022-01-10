@@ -10,6 +10,7 @@ let productDB = {
     carrito: (req, res) => {
         return res.render("products/carrito");
     },
+
     crear: function (req, res) {
         let sizes = db.Size.findAll();
         let doughs = db.Dough.findAll();
@@ -20,6 +21,7 @@ let productDB = {
                 res.render("products/agregarProducto", { sizes: sizes, doughs: doughs })
             })
     },
+
     guardar: function (req, res) {
         const resultValidation = validationResult(req);
 
@@ -85,7 +87,29 @@ let productDB = {
                 res.render("products/editarProducto", { productToEdit: productToEdit, sizes: sizes, doughs: doughs })
             })
     },
+
     actualizar: function (req, res) {
+
+    const resultValidation = validationResult(req);
+
+    if (resultValidation.errors.length > 0) {
+
+        let productoSeleccionado = db.Product.findByPk(req.params.id);
+        let tamanio = db.Size.findAll();
+        let masa = db.Dough.findAll();
+
+        Promise.all([productoSeleccionado, tamanio, masa])
+            .then(function ([productToEdit, sizes, doughs]) {
+                return res.render("products/editarProducto", {
+                    errors: resultValidation.mapped(),
+                    oldData: req.body,
+                    productToEdit: productToEdit,
+                    sizes: sizes,
+                    doughs: doughs
+                })
+            });
+
+    } else {
         db.Product.update({
             product_size_id: req.body.size,
             product_dough_id: req.body.dough,
@@ -100,7 +124,9 @@ let productDB = {
             }
         });
         res.redirect("/products/productos");
-    },
+    }
+},
+    
     borrar: function (req, res) {
         // db.Product.destroy({
         //         where: {

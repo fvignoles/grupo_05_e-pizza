@@ -15,3 +15,8 @@ main{
 main section form input{
     width: 100% !important;
 }
+
+.error-msg{
+    color: rgb(255, 75, 43);
+      text-align: center;
+    }
