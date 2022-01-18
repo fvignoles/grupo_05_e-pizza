@@ -1,15 +1,28 @@
 const path = require('path');
 const db = require('../../database/models');
 const sequelize = db.sequelize;
-const { Op } = require("sequelize");
+const { Op, SequelizeScopeError, QueryTypes } = require("sequelize");
 const moment = require('moment');
+const { SELECT } = require('sequelize/dist/lib/query-types');
 
+// const { QueryTypes } = require('sequelize');
+// const users = await sequelize.query("SELECT * FROM `users`", { type: QueryTypes.SELECT });
+
+
+// const pokemonDbFound = await Pokemon.findOne({
+//     where: { name: req.query.name },
+//     attributes: ["id", "name", "hp", "attack", "defense", "speed", "height", "image"],
+//     include: [
+//         { model: Type, attributes: ["name"], through: { attributes: [] } },
+//     ]
+// });
 const productsAPIController = {
 
     list: (req, res) => {
         db.Product.findAll({
             raw: true,
-            attributes: ['product_id','product_name', 'product_description']
+            attributes: ['product_id','product_name', 'product_description'],
+            include: [{ association: "sizes", attributes:["size_name"]},{ association: "doughs", attributes:["dough_name"]}]
         })
             .then(products => {
                 let newProducts = products.map(product => {
@@ -21,6 +34,16 @@ const productsAPIController = {
                     return product;
                 })
 
+                for (let i=0; i < sizes.length; i++){
+                    var sum = 0;
+                        sum =  Product.count({
+                        where: {
+                            product_size_id: {
+                            [Op.eq]: sizes[i].id
+                        }
+                        }
+                    })
+                    }
                 let respuesta = {
                     count: products.length,
                     products: newProducts
