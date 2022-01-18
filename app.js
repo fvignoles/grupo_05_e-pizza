@@ -26,10 +26,12 @@ const mainRoutes = require('./src/routes/mainRoutes');
 const productsRouter =require('./src/routes/productsRoutes');
 const usersRouter =require('./src/routes/usersRoutes');
 const usersAPIRouter =require('./src/routes/api/users');
+const productsAPIRouter =require('./src/routes/api/products');
 
 app.use('/', mainRoutes);
 app.use('/products', productsRouter);
 app.use('/api/users', usersAPIRouter);
+app.use('/api/products', productsAPIRouter);
 app.use('/users', usersRouter);
 
 app.listen(PORT, () => console.log(`Server Running on port: ${PORT}`));

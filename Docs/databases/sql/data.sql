@@ -18,11 +18,11 @@ VALUES(2, 'Juan', 'P�rez', 'juanperez@gmail.com', '$2a$10$p.BdGLInFuL2RILC2U7m
 
 INSERT INTO pizzadb.users
 (user_category_id, user_firstname, user_lastname, user_email, user_password, user_image, user_active)
-VALUES(2, 'Jimmy', 'Connors', 'jconnors@gmail.com', '$2a$10$bDL6wsx4C/5yQTxVEAJHb.EQs.qFQ.mW8SU5B7Bxyna2om37t7xnG', '../../public/img/avatardefault.png', 1);
+VALUES(2, 'Jimmy', 'Connors', 'jconnors@gmail.com', '$2a$10$bDL6wsx4C/5yQTxVEAJHb.EQs.qFQ.mW8SU5B7Bxyna2om37t7xnG', 'avatardefault.png', 1);
 
 INSERT INTO pizzadb.users
 (user_category_id, user_firstname, user_lastname, user_email, user_password, user_image, user_active)
-VALUES(2, 'Pedro', 'Lista', 'plista@gmail.com', '$2a$10$PM.UvqblMvSAC42YxhPHTeIqyN76Kmc9VFAsc1aekGzs/iSct1Sbm', '../../public/img/avatardefault.png', 1);
+VALUES(2, 'Pedro', 'Lista', 'plista@gmail.com', '$2a$10$PM.UvqblMvSAC42YxhPHTeIqyN76Kmc9VFAsc1aekGzs/iSct1Sbm', 'avatardefault.png', 1);
 
 INSERT INTO pizzadb.users
 (user_category_id, user_firstname, user_lastname, user_email, user_password, user_image, user_active)
