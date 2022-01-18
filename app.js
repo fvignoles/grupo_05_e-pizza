@@ -25,9 +25,11 @@ app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el 
 const mainRoutes = require('./src/routes/mainRoutes');
 const productsRouter =require('./src/routes/productsRoutes');
 const usersRouter =require('./src/routes/usersRoutes');
+const usersAPIRouter =require('./src/routes/api/users');
 
 app.use('/', mainRoutes);
 app.use('/products', productsRouter);
+app.use('/api/users', usersAPIRouter);
 app.use('/users', usersRouter);
 
 app.listen(PORT, () => console.log(`Server Running on port: ${PORT}`));
