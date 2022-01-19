@@ -19,11 +19,13 @@ const { SELECT } = require('sequelize/dist/lib/query-types');
 const productsAPIController = {
 
     list: (req, res) => {
+
         db.Product.findAll({
             raw: true,
             attributes: ['product_id','product_name', 'product_description'],
             include: [{ association: "sizes", attributes:["size_name"]},{ association: "doughs", attributes:["dough_name"]}]
         })
+        
             .then(products => {
                 let newProducts = products.map(product => {
                     product.name = product.product_name;
@@ -33,17 +35,39 @@ const productsAPIController = {
                     product.detail = '/api/products/' + product.product_id;
                     return product;
                 })
+                let sizes = db.Size.findAll({
+                    raw: true,
+                    attributes: ['size_name','size_id'],
+                    // include: [{ association: "sizes", attributes:["size_name"]},{ association: "doughs", attributes:["dough_name"]}]
+                });
+                let doughs = db.Dough.findAll();
+                 Promise.all([sizes,doughs])
+                    .then(()=>{
+                        var sum = 0;
+                        for (let i=0; i < sizes.length; i++){
+                            for(let j=0;j< newProducts.length;j++){
+                                if(newProducts[j].sizes.size_name == sizes[i].size_name){
+                                    sum= sum+1;
+                                }
+                                console.log(newProducts[j].sizes.size_name)
+                            }
+                            console.log("MASAS: " + sum);
 
-                for (let i=0; i < sizes.length; i++){
-                    var sum = 0;
-                        sum =  Product.count({
-                        where: {
-                            product_size_id: {
-                            [Op.eq]: sizes[i].id
+                            //     sum =  newProducts.count({
+                            //     where: {
+                            //         product_size_id: {
+                            //         [Op.eq]: sizes[i].size_id
+                            //     }
+                            //     }
+                            // })
                         }
-                        }
+                        console.log(newProducts);
+                        console.log(sizes);
+                        // console.log("La cantidad de masas es " +sum + "!");
                     })
-                    }
+
+                // let doughs = db.Dough.findAll();
+
                 let respuesta = {
                     count: products.length,
                     products: newProducts
