@@ -18,66 +18,76 @@ const { SELECT } = require('sequelize/dist/lib/query-types');
 // });
 const productsAPIController = {
 
-    list: (req, res) => {
+    list : async (req, res) => {
 
-        db.Product.findAll({
+         db.Product.findAll({
             raw: true,
             attributes: ['product_id', 'product_name', 'product_description'],
             include: [{ association: "sizes", attributes:["size_name"]},{ association: "doughs", attributes:["dough_name"]}]
         })
         
-            .then(products => {
-                let newProducts = products.map(product => {
-                    product.name = product.product_name;
-                    product.description = product.product_description;
-                    delete product.product_name;
-                    delete product.product_description;
-                    product.detail = '/api/products/' + product.product_id;
-                    return product;
-                })
-                let sizes = db.Size.findAll({
+            // .then(products => {
+                // let newProducts = products.map(product => {
+                //     product.name = product.product_name;
+                //     product.description = product.product_description;
+                //     delete product.product_name;
+                //     delete product.product_description;
+                //     product.detail = '/api/products/' + product.product_id;
+                //     return product;
+                // })
+                let sizes={};
+                 sizes = await db.Size.findAll({
                     raw: true,
-                    // attributes: ['size_name','size_id'],
+                    attributes: ['size_name','size_id'],
                     // include: [{ association: "sizes", attributes:["size_name"]},{ association: "doughs", attributes:["dough_name"]}]
-                });
-                let doughs = db.Dough.findAll();
-                 Promise.all([sizes, doughs])
-                    .then(()=>{
+                })
+                // console.log("La cantidad es: "+sizes.length);
                         var sum = 0;
-                        const sizes = [];
+                        let size = {};
                         for (let i=0; i < sizes.length; i++){
-                            sum = Product.count({
+                            sum =  await db.Product.count({
                                 where: {
-                                    size_id: {[Op.eq]: sizes[i].size_id}
+                                    product_size_id: {[Op.eq]: sizes[i].size_id}
                             }})      
-                        sizes[sizes[i].size_name] = sum;
+                        size[sizes[i].size_name] = sum;
                         }
-                        console.log("Tamaños: " + sizes);
-
-                            //     sum =  newProducts.count({
-                            //     where: {
-                            //         product_size_id: {
-                            //         [Op.eq]: sizes[i].size_id
-                            //     }
-                            //     }
-                            // })
-                        }
-                        console.log(newProducts)
                         console.log(sizes);
-                        // console.log("La cantidad de masas es " +sum + "!");
-                    })
+                let doughs={};
+                 doughs = await db.Dough.findAll({
+                    raw: true,
+                    attributes: ['dough_name','dough_id'],
+                    // include: [{ association: "sizes", attributes:["size_name"]},{ association: "doughs", attributes:["dough_name"]}]
+                })
+                // let doughs = db.Dough.findAll();
+                //  Promise.all([sizes, doughs])
+
+                    
+                        var sum = 0;
+                        let dough = {};
+                        for (let i=0; i < doughs.length; i++){
+                            sum =  await db.Product.count({
+                                where: {
+                                    product_dough_id: {[Op.eq]: doughs[i].dough_id}
+                            }})      
+                        dough[doughs[i].dough_name] = sum;
+                        }
+                        console.log(doughs);
 
                 // let doughs = db.Dough.findAll();
-
+                let category = {
+                    sizes: size,
+                    doughs: dough   
+                }
                 let respuesta = {
-                    count: products.length,
-                    products: newProducts
+
+                    countByCategory: category
+                    // products: newProducts
                 }
                 res.json(respuesta)
-            })
-            .catch(error => {
-                res.json(error)
-            })
+            // })
+            // .catch(error => {
+            //     res.json(error)
+            // })
     },
 
     detail: (req, res) => {
