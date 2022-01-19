@@ -22,7 +22,7 @@ const productsAPIController = {
 
         db.Product.findAll({
             raw: true,
-            attributes: ['product_id','product_name', 'product_description'],
+            attributes: ['product_id', 'product_name', 'product_description'],
             include: [{ association: "sizes", attributes:["size_name"]},{ association: "doughs", attributes:["dough_name"]}]
         })
         
@@ -37,21 +37,22 @@ const productsAPIController = {
                 })
                 let sizes = db.Size.findAll({
                     raw: true,
-                    attributes: ['size_name','size_id'],
+                    // attributes: ['size_name','size_id'],
                     // include: [{ association: "sizes", attributes:["size_name"]},{ association: "doughs", attributes:["dough_name"]}]
                 });
                 let doughs = db.Dough.findAll();
-                 Promise.all([sizes,doughs])
+                 Promise.all([sizes, doughs])
                     .then(()=>{
                         var sum = 0;
+                        const sizes = [];
                         for (let i=0; i < sizes.length; i++){
-                            for(let j=0;j< newProducts.length;j++){
-                                if(newProducts[j].sizes.size_name == sizes[i].size_name){
-                                    sum= sum+1;
-                                }
-                                console.log(newProducts[j].sizes.size_name)
-                            }
-                            console.log("MASAS: " + sum);
+                            sum = Product.count({
+                                where: {
+                                    size_id: {[Op.eq]: sizes[i].size_id}
+                            }})      
+                        sizes[sizes[i].size_name] = sum;
+                        }
+                        console.log("Tamaños: " + sizes);
 
                             //     sum =  newProducts.count({
                             //     where: {
@@ -61,7 +62,7 @@ const productsAPIController = {
                             //     }
                             // })
                         }
-                        console.log(newProducts);
+                        console.log(newProducts)
                         console.log(sizes);
                         // console.log("La cantidad de masas es " +sum + "!");
                     })
