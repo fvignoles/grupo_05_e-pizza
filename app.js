@@ -5,6 +5,7 @@ const app = express();
 const PORT = process.env.PORT || 8080;
 const session = require('express-session');
 const userLoggedMiddleware = require('./src/middlewares/userLoggedMiddleware');
+const cors = require('cors');
 
 app.set('view engine', 'ejs');
 app.set('views', './src/views');
@@ -33,6 +34,7 @@ app.use('/products', productsRouter);
 app.use('/api/users', usersAPIRouter);
 app.use('/api/products', productsAPIRouter);
 app.use('/users', usersRouter);
+app.use(cors());
 
 app.listen(PORT, () => console.log(`Server Running on port: ${PORT}`));
 
