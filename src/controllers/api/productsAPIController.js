@@ -15,7 +15,7 @@ const productsAPIController = {
         })
 
         let allProducts = products.map(product => {
-            product.image = '/img/products/' + product.product_image;
+            product.image = `/img/products/${product.product_image}`;
             product.name = product.product_name;
             product.description = product.product_description;
             delete product.product_image;
@@ -24,7 +24,7 @@ const productsAPIController = {
             product.detail = '/api/products/' + product.product_id;
             return product;
         });
-
+        console.log(allProducts);
         let sizes = {};
         sizes = await db.Size.findAll({
             raw: true,
