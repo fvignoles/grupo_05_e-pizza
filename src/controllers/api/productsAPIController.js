@@ -15,7 +15,7 @@ const productsAPIController = {
         })
 
         let allProducts = products.map(product => {
-            product.image = `/img/products/${product.product_image}`;
+            product.image = `http://localhost:8080/img/products/${product.product_image}`;
             product.name = product.product_name;
             product.description = product.product_description;
             delete product.product_image;

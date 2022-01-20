@@ -24,7 +24,6 @@ app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
 
-
 app.options('*', cors())
 const mainRoutes = require('./src/routes/mainRoutes');
 const productsRouter =require('./src/routes/productsRoutes');
