@@ -9,7 +9,7 @@ const usersAPIController = {
     list: (req, res) => {
         db.User.findAll({
             raw: true,
-            attributes: ['user_id', 'user_firstname', 'user_lastname', 'user_email']
+            attributes: ['user_id', 'user_firstname', 'user_lastname', 'user_email','user_image']
         })
             .then(users => {
                 let newUsers = users.map(user => {
@@ -18,6 +18,8 @@ const usersAPIController = {
                     delete user.user_firstname;
                     delete user.user_lastname;
                     delete user.user_email;
+                    user.image = `http://localhost:8080/img/users/${user.user_image}`,
+                    delete user.user_image;
                     user.detail = '/api/users/' + user.user_id;
                     return user;
                 })
