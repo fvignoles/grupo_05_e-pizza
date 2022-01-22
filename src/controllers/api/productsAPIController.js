@@ -24,7 +24,6 @@ const productsAPIController = {
             product.detail = '/api/products/' + product.product_id;
             return product;
         });
-        console.log(allProducts);
         let sizes = {};
         sizes = await db.Size.findAll({
             raw: true,

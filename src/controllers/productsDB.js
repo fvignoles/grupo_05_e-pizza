@@ -128,19 +128,7 @@ let productDB = {
 },
     
     borrar: function (req, res) {
-        // db.Product.destroy({
-        //         where: {
-        //             product_id: req.params.id
-        //         },
-        //         force: true
-        //     })
-        //     .then(() => {
 
-        //         res.redirect("/products/productos")
-        //     })
-        //     .catch((error) => {
-        //         console.log(error);
-        //     })
         db.Product.update({
             product_active: 0
         }, {
