@@ -21,7 +21,7 @@ window.addEventListener('load', () => {
             errores.push('La descripción debe tener al menos 20 caracteres');
         };
 
-        if (imageName.value == '#') {
+        if (imageName.value == '') {
             errores.push('Debe seleccionar una imagen para el producto');
         };
 

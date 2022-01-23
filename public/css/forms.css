@@ -4,43 +4,75 @@
     box-sizing: border-box;
     font-family: Roboto;
 }
+#images{
+        width: 0.1px;
+        height: 0.1px;
+        opacity: 0;
+        overflow: visible;
+        position: absolute;
+        z-index: -1;
+        }
+.images-label
+{
+            font-size: 14px;
+            font-weight: 600;
+            width: 100%;
+            height: 40px;
+            background: #439e40;
+            border: none;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            color: #fff;
+            display: inline-block;
+            transition: all .5s;
+            padding: 15px 40px !important;
+            text-transform: uppercase;
+           /* width: fit-content;*/
+            text-align: center;
+            }
 
 header{
     display: flex !important;
 }
 
-.body-form{
-        background-image: url(../img/fondo-tomate.jpg);
+.body-form{    
+    background-color: #CF0A2C;
 }
 
+.block-main{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: no-wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+}
+
+.block-child{
+    width: auto;
+    margin-right: 10px;
+}
+
+
 .form-login, .form-register, .form-create{
-    width: 400px;
+    width: 800px;
     height: 80%;
-    background-color: #403737;
+    background-color: #000;
     margin: auto;
-    margin-top: 120px;
-    margin-bottom: 60px;
+    margin-top: 40px;
+    margin-bottom: 40px;
     text-align: center;
     box-shadow: 7px 13px 37px #6E6C6C;
     padding: 20px 30px;
-    border-top: 4px solid #B4ABA9;
     color: #fff;
 }
-/*.form-login{
-    margin-top: 0px;
-}*/
-/*.form-login h4, .form-register h4{
-    margin: 0;
-    text-align: center;
-    height: 40px;
-    margin-bottom: 30px;
-    border-bottom: 1px solid;
-    font-size: 20px;
-} */
+
 .h4-form{
     margin: 0;
     text-align: center;
-    height: 40px;
+    height: 30px;
     margin-bottom: 30px;
     border-bottom: 1px solid;
     font-size: 20px;
@@ -57,20 +89,38 @@ header{
     border-radius: 5px;
     color:#fff;
 }
+#price.control{
+    width: 50%;
+}
 
 .button{
-    width: 100%;
+    width: 50%;
     height: 40px;
-    background: #017bab;
+    background: #439e40;
     border: none;
-    color: white;
+    color: #fff;
     margin-bottom: 15px;
     border-radius: 5px;
     cursor: pointer;
 }
 
-button:hover {
-    background-color: #0022AA;
+.button:hover {
+    background:  #118f0d;
+}
+
+.button-secondary{
+    width: 50%;
+    height: 40px;
+    background: #6d2c2c ;
+    border: none;
+    color: #fff;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button-secondary:hover {
+    background: #5f0e0e;
 }
 
 .form-login p, .form-register p{
@@ -92,6 +142,19 @@ button:hover {
     .form-login, .form-register{
         width: 80%;
     }
+
+    .block-main{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        width: 100%;
+        padding: 10px;
+        
+    }
+    
 }
 
 .error-msg{

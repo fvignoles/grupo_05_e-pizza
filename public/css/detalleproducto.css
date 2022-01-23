@@ -10,7 +10,7 @@ header{
 }
 
   .detalle-box {
-    background-image: url(../img/fondo-tomate.jpg);
+    background-color: #CF0A2C;
     display: flex;
     align-items: center;
     flex-direction: column;

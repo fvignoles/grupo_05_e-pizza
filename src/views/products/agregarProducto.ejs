@@ -5,75 +5,125 @@
 <%- include('../partials/head.ejs') %>
   <link href="/css/forms.css" rel="stylesheet" />
 
-  <body class="body-form">
+  <body>
     <%- include('../partials/header.ejs') %>
 
-      <body>
+      <main>
 
-
-        <main>
+        <body class="body-form">
 
           <form enctype="multipart/form-data" action="agregar" method="POST" class="create-form" name="create-form">
             <section class="form-create">
               <h4 class="h4-form">Crear producto</h4>
+
+<div class="block-main"> 
+
+              <div class="block-child">
+
               <label for="name">Nombre : </label>
-              <input class="control" type="text" name="name" id="name" value="<%= locals.oldData ? oldData.product_name :null%>"><br>
+              <input class="control" type="text" name="name" id="name"
+                value="<%= locals.oldData ? oldData.product_name :null%>">
               <% if(locals.errors && errors.name) { %>
                 <p class="error-msg">
-                    <%= errors.name.msg %>
+                  <%= errors.name.msg %>
                 </p>
                 <% } %>
-                            
-              <label for="descripcion">Descripción : </label>
-              <textarea class="control" name="description" id="description" value="<%= locals.oldData ? oldData.product_description :null%>" ></textarea>
-              <% if(locals.errors && errors.description) { %>
-                <p class="error-msg">
-                    <%= errors.description.msg %>
-                </p>
-                <% } %>
-              
-              <label for="image">
-                <p>Imágen : </p>
-              </label>
-              <input class="control" class="w3-margin-bottom" type="file" name="images" id="images" /><br>
-              <label for="size">Tamaño :
-                <select name="size" >
-                  <% for(let i=0; i < sizes.length; i++) { %>
-                    <option value="<%= sizes[i].size_id %>">
-                      <%= sizes[i].size_name %>
-                    </option>
+
+                  <label for="descripcion">Descripción : </label>
+                  <textarea class="control" name="description" id="description"
+                    value="<%= locals.oldData ? oldData.product_description :null%>"></textarea>
+                  <% if(locals.errors && errors.description) { %>
+                    <p class="error-msg">
+                      <%= errors.description.msg %>
+                    </p>
                     <% } %>
-                </select>
-              </label><br>
-              <!-- <input class="control" type="text" name="size"><br> -->
-              <label for="dough">Masa :
-                <select name="dough">
-                  <% for(let i=0; i < doughs.length; i++) { %>
-                    <option value="<%= doughs[i].dough_id %>">
-                      <%= doughs[i].dough_name %>
-                    </option>
-                    <% } %>
-                </select>
-              </label><br>
-              <!-- <input class="control" type="text" name="dough"><br> -->
-              <label for="price">Precio $ : </label>
-              <input class="control" type="number" name="price" id="price"><br>
 
-              <% if(locals.errors && errors.price) { %>
-                <p class="error-msg">
-                    <%= errors.price.msg %>
-                </p>
-                <% } %>
+                    <label for="size">Tamaño :
+                      <select name="size">
+                        <% for(let i=0; i < sizes.length; i++) { %>
+                          <option value="<%= sizes[i].size_id %>">
+                            <%= sizes[i].size_name %>
+                          </option>
+                          <% } %>
+                      </select>
+                    </label><br>
 
-              <ul class="errors"></ul>    
+                    <label for="dough">Masa :
+                      <select name="dough">
+                        <% for(let i=0; i < doughs.length; i++) { %>
+                          <option value="<%= doughs[i].dough_id %>">
+                            <%= doughs[i].dough_name %>
+                          </option>
+                          <% } %>
+                      </select>
+                    </label><br>
 
-              <input class="button" type="submit" value="Enviar">
+                    
+                    <label for="price">Precio $ : </label>
+                    <input class="control" type="number" name="price" id="price">
+
+                  </div>
+
+                  <div class="block-child">
+
+                      <span class="images">
+                        <input type="file" name="images" id="images" accept="image/*">
+                      </span>
+                      
+                      <img id="imagenPrevisualizacion" width="200px" alt="Aún no subió una imágen"><br><br>
+
+                      <label class="images-label" for="images">
+                        <span>Subir imágen</span>
+                      </label>
+                      <br>
+                      <script>
+                        // JAVASCRIPT !!!!!!!!!!!!!!!!!!!!!
+                        // Obtener referencia al input y a la imagen
+
+                        const $seleccionArchivos = document.querySelector("#images"),
+                          $imagenPrevisualizacion = document.querySelector("#imagenPrevisualizacion");
+                          $imagenPrevisualizacion.src = "/img/sin-imagen.png";
+                        // Escuchar cuando cambie
+                        $seleccionArchivos.addEventListener("change", () => {
+                          // Los archivos seleccionados, pueden ser muchos o uno
+                          const archivos = $seleccionArchivos.files;
+                          // Si no hay archivos salimos de la función y quitamos la imagen
+                          if (!archivos || !archivos.length) {
+                            $imagenPrevisualizacion.src = "";
+                            return;
+                          }
+                          // Ahora tomamos el primer archivo, el cual vamos a previsualizar
+                          const primerArchivo = archivos[0];
+                          // Lo convertimos a un objeto de tipo objectURL
+                          const objectURL = URL.createObjectURL(primerArchivo);
+                          // Y a la fuente de la imagen le ponemos el objectURL
+                          $imagenPrevisualizacion.src = objectURL;
+                        });
+
+                      //FIN JAVASCRIPT ! ! ! ! !
+                      </script>
+
+                      <% if(locals.errors && errors.price) { %>
+                        <p class="error-msg">
+                          <%= errors.price.msg %>
+                        </p>
+                        <% } %>
+
+                        </div>
+                        </div>
+
+                          <ul class="errors"></ul>
+
+                          <button class="button" type="submit" name="" value="Enviar">Enviar</button>
+                          <button class="button-secondary" type="button"  onclick="window.history.back();">Cancelar</button>
+
+
             </section>
           </form>
 
-        </main>
-        <script src="/js/agregarProducto.js"></script>
-        <%- include('../partials/footer.ejs') %>
-      </body>
+      </main>
+      <script src="/js/agregarProducto.js"></script>
+      <%- include('../partials/footer.ejs') %>
+  </body>
 
 </html>
