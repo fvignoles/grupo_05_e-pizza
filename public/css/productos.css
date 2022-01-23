@@ -4,6 +4,7 @@
 
 body {
     background-image: url(../img/background-carrito.jpg);
+    
 }
 
 .articulo {
@@ -49,11 +50,12 @@ body {
 }
 
 main section {
-    width: 90%;
+    width: 100%;
     align-items: center;
     margin-top: 10px;
 }
 main section article {
+    
     align-items: center;
     margin: 10px;
 }

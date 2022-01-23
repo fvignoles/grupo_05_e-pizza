@@ -21,7 +21,32 @@
 
 .logo-img {
     width: 79px;
-}
+    
+    animation: waitAnimate_4269115287 20s ease infinite;
+    transform-origin: 50% 50%;
+  }
+  
+  @keyframes waitAnimate_4269115287 {
+    0% {
+      transform: perspective(100px)rotate(0deg)
+    }
+    18.75% {
+      transform: perspective(100px)rotateX(180deg)rotateY(0);
+    }
+    37.5% {
+      transform: perspective(100px)rotateX(180deg)rotateY(180deg);
+    }
+    56.25% {
+      transform: perspective(100px)rotateX(0)rotateY(180deg);
+    }
+    75% {
+      transform: perspective(100px)rotateX(0)rotateY(0);
+    }
+    100% {
+      transform: perspective(100px)rotateX(0)rotateY(0);
+    }
+      }
+
 
 .logo {
     padding: 0 10px;

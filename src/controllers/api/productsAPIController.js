@@ -9,21 +9,21 @@ const productsAPIController = {
 
         let products = await db.Product.findAll({
             raw: true,
-            attributes: ['product_id', 'product_name', 'product_description', 'product_image'],
             include: [{ association: "sizes", attributes: ["size_name"] }, { association: "doughs", attributes: ["dough_name"] }],
+            attributes: ['product_id', 'product_name', 'product_description', 'product_image',"sizes.size_name","doughs.dough_name"],
             where: { product_active: 1 }
         })
 
-        let allProducts = products.map(product => {
-            product.image = `http://localhost:8080/img/products/${product.product_image}`;
-            product.name = product.product_name;
-            product.description = product.product_description;
-            delete product.product_image;
-            delete product.product_name;
-            delete product.product_description;
-            product.detail = '/api/products/' + product.product_id;
-            return product;
+        let allProducts = products.map(product => { return {
+            name : product.product_name,
+            description : product.product_description,
+            image : `http://localhost:8080/img/products/${product.product_image}`,
+            size : product.size_name,
+            dough : product.dough_name,
+            detail : '/api/products/' + product.product_id
+        }
         });
+
         let sizes = {};
         sizes = await db.Size.findAll({
             raw: true,
