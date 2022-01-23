@@ -10,8 +10,9 @@ header{
 }
 
 .body-form{
-    background-color: #506369;
-}  
+        background-image: url(../img/fondo-tomate.jpg);
+}
+
 .form-login, .form-register, .form-create{
     width: 400px;
     height: 80%;

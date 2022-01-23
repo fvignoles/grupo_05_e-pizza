@@ -9,9 +9,10 @@ header{
     display: flex !important;
 }
 
-body{
-    background-image: url(../img/background-carrito.jpg);
+body {
+    background-image: url(../img/fondo-tomate.jpg);
 }
+
 
 .pizzas{
     text-align: center;

@@ -1,5 +1,5 @@
 <header class="header">
-    <nav class="nav">
+    <nav class="nav-personalized">
         <input type="checkbox" id="check" />
         <label for="check" class="checkbtn">
             <i class="fas fa-bars"></i>
@@ -9,23 +9,23 @@
 
         <% if(locals.isLogged){ %>
 
-            <ul class="nav-menu">
+            <ul class="nav-menu text-light">
                 <li>
-                    <a class="nav-menu-link nav-link">Usuario: <%= locals.userLogged.user_firstname + " "%></a>
+                    <a class="nav-menu-link nav-link text-light">Usuario: <%= locals.userLogged.user_firstname + " "%></a>
                     <!-- <img src="/public/img/userdefault.png" width="40" style="border-radius: 100%"> -->
                 </li>
                 <li>
-                    <a href="/products/agregar" class="nav-menu-link nav-link">+ Producto</a>
+                    <a href="/products/agregar" class="nav-menu-link nav-link text-light">+ Producto</a>
                 </li>
                 <li>
-                    <a href="/products/carrito" class="nav-menu-link nav-link">Mi Carrito <i
+                    <a href="/products/carrito" class="nav-menu-link nav-link text-light">Mi Carrito <i
                             class="fas fa-shopping-basket"></i></a>
                 </li>
                 <li>
-                    <a href="/products/productos" class="nav-menu-link nav-link">Productos</a>
+                    <a href="/products/productos" class="nav-menu-link nav-link text-light">Productos</a>
                 </li>
                 <li>
-                    <a href="/users/logout" class="nav-menu-link nav-link">SALIR</a>
+                    <a href="/users/logout" class="nav-menu-link nav-link text-warning">SALIR</a>
                 </li>
                 <li>
                     <div>
@@ -38,13 +38,13 @@
             </ul>
             <% } else{ %>
                 <ul class="nav-menu">
-                    <li><a href="/" class="nav-menu-link nav-link">Home</a></li>
+                    <li><a href="/" class="nav-menu-link nav-link text-light">Home</a></li>
                     <li>
-                        <a href="/users/login" class="nav-menu-link nav-link">Ingresá <i
+                        <a href="/users/login" class="nav-menu-link nav-link text-light">Ingresá <i
                                 class="fas fa-sign-in-alt"></i></a>
                     </li>
                     <li>
-                        <a href="/users/register" class="nav-menu-link nav-link">Registrate <i
+                        <a href="/users/register" class="nav-menu-link nav-link text-light">Registrate <i
                                 class="far fa-id-card"></i></a>
                     </li>
                 </ul>

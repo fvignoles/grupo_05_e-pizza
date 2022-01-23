@@ -2,6 +2,10 @@
     font-family: Roboto;
 }
 
+body {
+    background-image: url(../img/fondo-tomate.jpg);
+}
+
 h3{
     margin-top: 0px;
     width: 100%;

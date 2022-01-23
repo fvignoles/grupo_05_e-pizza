@@ -6,6 +6,11 @@ header{
     display: flex !important;
 }
 
+body {
+    background-image: url(../img/fondo-tomate.jpg);
+}
+
+
 main{
     margin: 0 auto;
     width: 50%;

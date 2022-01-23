@@ -11,9 +11,14 @@ main{
     width: 50%;
 }
 
+body {
+    background-image: url(../img/fondo-tomate.jpg);
+}
+
+
 .container-user{
     display: flex;
-    background-color:#506369;
+    color:antiquewhite;
     align-items: center;
     justify-content: center;
     padding: 30px;
