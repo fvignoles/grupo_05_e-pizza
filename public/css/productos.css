@@ -4,8 +4,6 @@
 
 body {
     background-color: #CF0A2C;
-
-    
 }
 
 .articulo {
@@ -13,23 +11,25 @@ body {
     width: auto;
     flex-direction: column; 
     background-color: black;
+    color:whitesmoke;
+    border-radius: 6%;
+    margin: 1%;
 }
 
-.contenedor {
-    width: auto;
-    height: auto;
-    font-size: 10px;
-    color: gainsboro;
-    background-color: black;
-    padding: 1px;
+.articulo:hover 
+{
+    transform: scale(1.05);
+    transition: all 0.5s;
+    background-color: #5f5d5e; 
+    cursor: pointer;
+    font-size: 12px;
 }
-
-
 
 .img-product {
     align-content: center;
     align-items: center;
     width: 100%;
+    border-radius: 6%;
 }
 
 .precio {
@@ -50,7 +50,7 @@ body {
     margin-top: 5px;
 }
 
-main section {
+/* main section {
     width: 100%;
     align-items: center;
     margin-top: 10px;
@@ -59,12 +59,7 @@ main section article {
     
     align-items: center;
     margin: 10px;
-}
-
-.img-product{
-    text-align: center;
-    align-items: center;
-}
+} */
 
 @media (min-width: 361px){
     /*.descripcion{
