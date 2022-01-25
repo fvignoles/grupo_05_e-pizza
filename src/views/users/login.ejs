@@ -1,31 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('../partials/head.ejs') %>
-  <link href="/css/forms.css" rel="stylesheet" />
+
+<%- include('../partials/head.ejs') %>
+  <link href="/css/forms-prueba.css" rel="stylesheet" />
 
   <body class="body-form">
     <%- include('../partials/header.ejs') %>
 
-    <main>
-      <form action="/users/login" method="POST" class="login-form">
-        <section class="form-login">
-          <h4 class="h4-form">Ingresá</h4>
-          <input class="control" type="email" name="email" id="email" placeholder="E-mail"/>
-          <% if(locals.errors && errors.email) { %>
-            <p class="error-msg"><%= errors.email.msg %></p>
-        <% } %>
-          <input class="control" type="password" name="password" id="password" placeholder="Contraseña"/>
-          
-          <ul class="errors"></ul>
-        
-          <button class="button" type="submit" name="" value="Ingresar" > Ingresar </button>
-          <button class="button-secondary" type="button"  onclick="window.history.back();">Cancelar</button>
-          <p><a href="#">¿Olvidaste tu contraseña?</a></p>
-        </section>
-      </form>
-    </main>
+      <main>
+        <form action="/users/login" method="POST" class="login-form">
+          <section class="form-login">
+            <h4 class="h4-form">Ingresá</h4>
+            <div class="div-form">
+              <label class="label-form">
+                <span class="span-form">E-mail</span>
+                <input class="input-form " id="email" type="email" name="email" />
+                
+              </label>
+              <% if(locals.errors && errors.email) { %>
+                <p class="error-msg">
+                  <%= errors.email.msg %>
+                </p>
+                <% } %>
+            </div>
+            <div class="div-form">
+              <label class="label-form">
+                <span class="span-form" >Contraseña</span>
+                <input class="input-form" id="password" type="password" autocomplete="off" name="password" />
+              </label>
+            </div>
 
-    <%- include('../partials/footer.ejs') %>
-    <script src="/js/login.js"></script>
+
+            <ul class="errors"></ul>
+
+            <button class="button" type="submit" name="" value="Ingresar"> Ingresar </button>
+            <button class="button-secondary" type="button" onclick="window.history.back();">Cancelar</button>
+            <p><a href="#">¿Olvidaste tu contraseña?</a></p>
+          </section>
+        </form>
+
+      </main>
+      <%- include('../partials/footer.ejs') %>
+
+        <script src="/js/login.js"></script>
+        <script src="/js/forms.js"></script>
+        
+
   </body>
+
 </html>

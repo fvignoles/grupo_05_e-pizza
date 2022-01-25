@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include('../partials/head.ejs') %>
-    <link type="text/css" href="/css/forms.css" rel="stylesheet" />
+
+    <link type="text/css" href="/css/forms-prueba.css" rel="stylesheet" />
 
     <body class="body-form">
         <%- include('../partials/header.ejs') %>
@@ -9,44 +10,115 @@
                 <form action="register" class="login-form" enctype="multipart/form-data" method="POST">
                     <section class="form-register">
                         <h4 class="h4-form">Registrate</h4>
-                        
-                        <input class="control firstName" type="text" name="firstName" placeholder="Nombre" value="<%= locals.oldData ? oldData.user_firstName : null %>" />
-                        <% if(locals.errors && errors.firstName) { %>
-                            <p class="error-msg">
-                                <%= errors.firstName.msg %>
-                            </p>
-                            <% } %>
-                                <input class="control lastName" type="text" name="lastName" placeholder="Apellido" value="<%=locals.oldData ? oldData.user_lastname :null%>" />
+
+                        <div class="div-form">
+                            <label class="label-form">
+                                <span class="span-form">Nombre</span>
+                                <input class="input-form firstName" id="firstName" type="text" autocomplete="off"
+                                    name="firstName" value="<%= locals.oldData ? oldData.user_firstName : null %>" />
+                            </label>
+                            <% if(locals.errors && errors.firstName) { %>
+                                <p class="error-msg">
+                                    <%= errors.firstName.msg %>
+                                </p>
+                                <% } %>
+                        </div>
+                        <div class="div-form">
+                            <label class="label-form">
+                                <span class="span-form">Apellido</span>
+                                <input class="input-form lastName" id="lastName" type="text" autocomplete="off"
+                                    name="lastName" value="<%= locals.oldData ? oldData.user_lastName : null %>" />
                                 <% if(locals.errors && errors.lastName) { %>
                                     <p class="error-msg">
                                         <%= errors.lastName.msg %>
                                     </p>
                                     <% } %>
-                                        <input class="control email" type="email" name="email" placeholder="E-mail" value="<%= locals.oldData ? oldData.user_email :null%> " />
-                                        <% if(locals.errors && errors.email) { %>
-                                            <p class="error-msg" >
-                                                <%= errors.email.msg %>
-                                            </p>
-                                            <% } %>
+                            </label>
+                        </div>
+                        <div class="div-form">
+                            <label class="label-form">
+                                <span class="span-form">E-mail</span>
+                                <input class="input-form email" id="email" type="email" autocomplete="off"
+                                    name="email" value="<%= locals.oldData ? oldData.user_email : null %>" />
+                                <% if(locals.errors && errors.email) { %>
+                                    <p class="error-msg">
+                                        <%= errors.email.msg %>
+                                    </p>
+                                    <% } %>
+                            </label>
+                        </div>
+                        <div class="div-form-password">
+                        
+                            <label class="label-form">
+                                
+                                <!-- <i class="fas icon fa-eye " onclick="mostrarContrasena()"></i> -->
+                                
+                                <div class="icono">
+                                <span class="span-form" >Contraseña</span>
+                                <input class="input-form password" id="password" type="password" autocomplete="off"
+                                name="password" value="<%= locals.oldData ? oldData.user_password : null %>" />
+                                <i class="fas icon fa-eye" onclick="mostrarContrasena()"></i>
+                                
+                                </div>
+                                <% if(locals.errors && errors.password) { %>
+                                    <p class="error-msg">
+                                        <%= errors.password.msg %>
+                                    </p>
+                                    <% } %>
+                                </div>
+                            </label>
+                        </div>
+                    
                                                 <label for="images">Imágen de Perfil</label>
-                                                <input class="control" type="file" name="images" id="images" placeholder="Imagen de Perfil" />
-                                                <input class="control password" type="password" name="password" placeholder="Contraseña" value="<%= locals.oldData ? oldData.user_password : null %>" />
-                                                <% if(locals.errors && errors.password) { %>
-                                                    <p class="error-msg">
-                                                        <%= errors.password.msg %>
-                                                    </p>
-                                                    <% } %>
-                                                <ul class="errors"></ul>    
-                                                <button class="button" type="submit" name="" value="Crear cuenta"> Crear cuenta </button>
-                                                <button class="button" type="reset" name="" value="Cancelar"> Cancelar </button>
-                                                <p><a href="/users/login">¿Ya tenés una cuenta?¡Ingresá!</a></p>
+                                                <input class="control" type="file" name="images" id="images"
+                                                    placeholder="Imagen de Perfil" />
+                                                
+                                                        <ul class="errors"></ul>
+                                                        <button class="button" type="submit" name=""
+                                                            value="Crear cuenta"> Crear cuenta </button>
+                                                        <button class="button-secondary" type="button" onclick="window.history.back();">
+                                                            Cancelar </button>
+                                                        <p><a href="/users/login">¿Ya tenés una cuenta?¡Ingresá!</a></p>
                     </section>
                 </form>
             </main>
 
 
             <%- include('../partials/footer.ejs') %>
-            <script src="/js/register.js"></script>
+           
+                <script src="/js/register.js"></script>
+                <script src="/js/forms.js"></script>
+                <script>
+                    function mostrarContrasena(){
+                        var tipo = document.getElementById("password");
+                        let eye = document.querySelector(".icon");
+            
+                        if(tipo.type == "password"){
+                            tipo.type = "text";
+                            eye.classList.remove("fa-eye");
+                            eye.classList.add("fa-eye-slash");
+                        }else{
+                            tipo.type = "password";
+                            eye.classList.add("fa-eye");
+                            eye.classList.remove("fa-eye-slash");
+
+                           
+                        }
+                    }
+                    function ocultarContrasena(){
+                        var tipo = document.getElementById("password");
+                        let eye = document.querySelector(".icon");
+            
+                        if(tipo.type == "password"){
+                            tipo.type = "text";
+                            eye.classList.add("fa-eye-slash");
+                        }else{
+                            tipo.type = "password";
+                            eye.classList.remove("fa-eye-slash");
+                           
+                        }
+                    }
+                  </script>
     </body>
 
 </html>

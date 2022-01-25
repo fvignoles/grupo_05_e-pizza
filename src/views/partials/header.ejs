@@ -8,15 +8,22 @@
         <a href="/" class="logo"><img src="/img/logo_transparent.png" alt="logo" class="logo-img" /></a>
 
         <% if(locals.isLogged){ %>
-
+            <% if(locals.userLogged.user_category_id == "1"){%>
             <ul class="nav-menu text-light">
                 <li>
-                    <a class="nav-menu-link nav-link text-light">Usuario: <%= locals.userLogged.user_firstname + " "%></a>
+                    <a class="nav-menu-link nav-link text-light">ADMIN: <%= locals.userLogged.user_firstname + " "%></a>
                     <!-- <img src="/public/img/userdefault.png" width="40" style="border-radius: 100%"> -->
+                </li>
+                <li>
+                    <a href="/products/productos" class="nav-menu-link nav-link text-light">Productos</a>
                 </li>
                 <li>
                     <a href="/products/agregar" class="nav-menu-link nav-link text-light">+ Producto</a>
                 </li>
+                <li>
+                    <a href="/users/logout" class="nav-menu-link nav-link text-warning">SALIR</a>
+                </li>
+                <% }else if(locals.userLogged.user_category_id == "2"){ %>
                 <li>
                     <a href="/products/carrito" class="nav-menu-link nav-link text-light">Mi Carrito <i
                             class="fas fa-shopping-basket"></i></a>
@@ -36,6 +43,7 @@
                     </div>
                 </li>
             </ul>
+            <!-- <% } %> -->
             <% } else{ %>
                 <ul class="nav-menu">
                     <li><a href="/" class="nav-menu-link nav-link text-light">Home</a></li>

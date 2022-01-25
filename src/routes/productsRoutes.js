@@ -22,14 +22,17 @@ const productsDB = require('../controllers/productsDB');
 const validateProduct = require('../middlewares/validateProduct');
 
 const validateProductUpdate = require('../middlewares/validateProductUpdate');
+const authMiddleware = require('../middlewares/authMiddleware');
+
+const adminMiddleware = require('../middlewares/admin');
 
 router.get('/carrito', productsDB.carrito);
 
 router.get('/detalle', productsDB.detalle);
 
 //Creación y guardado de un producto nuevo
-router.get('/agregar', productsDB.crear);
-router.post('/agregar', upload.single('images'), validateProduct, productsDB.guardar);
+router.get('/agregar',adminMiddleware, productsDB.crear);
+router.post('/agregar', adminMiddleware,upload.single('images'), validateProduct, productsDB.guardar);
 
 //Listado de productos
 router.get('/productos', productsDB.listado);
