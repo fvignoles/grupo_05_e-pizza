@@ -15,6 +15,19 @@ body {
     background-color: #CF0A2C;
 }
 
+footer {
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: space-around;
+    background-color:black;
+    padding: 5px;
+    color:white;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+  }
+
 
 .container-user{
     display: flex;

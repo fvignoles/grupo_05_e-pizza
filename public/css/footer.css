@@ -22,7 +22,9 @@
     justify-content: space-around;
     background-color:black;
     padding: 5px;
-    color:white
+    color:white;
+    bottom: 0;
+    width: 100%;
   }
 
 
