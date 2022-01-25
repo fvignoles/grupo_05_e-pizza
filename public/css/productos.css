@@ -20,17 +20,74 @@ body {
 {
     transform: scale(1.05);
     transition: all 0.5s;
-    background-color: #5f5d5e; 
+    /* background-color: #5f5d5e;  */
     cursor: pointer;
     font-size: 12px;
 }
+
+/* .img-product {
+    align-content: center;
+    align-items: center;
+    width: 100%;
+    border-radius: 6%;
+} */
+
+/* Desde aca Modifico */
 
 .img-product {
     align-content: center;
     align-items: center;
     width: 100%;
     border-radius: 6%;
+
+    position: relative;
+    opacity: 1;
 }
+
+/* .img-product > div {
+    position: absolute;
+    z-index: -1;
+} */
+
+.img-product-detail {
+    position: relative;
+    opacity: 0;
+}
+
+.img-product:hover {
+    opacity: 0.7;
+    transition: opacity 300ms;
+    /* -webkit-transition: opacity 500ms; */
+}
+
+.img-product-detail:hover {
+    opacity: 1;
+    transition:  opacity 500ms;
+}
+
+/* 
+.img-product p {
+    margin: auto;
+    text-align: center;
+    transition: opacity .4s linear;
+    position: absolute;
+    opacity: 0;
+}
+
+.img-product:hover p {
+    opacity: 1;
+} */
+
+/* .img-product-detail {
+    align-content: center;
+    align-items: center;
+    width: 100%;
+    border-radius: 6%;
+} */
+
+
+/* Hasta aca */
+
 
 .precio {
     font-size: 18px;

@@ -13,15 +13,27 @@
                                 <a href="/products/detalle/<%= products[i].product_id %>">
                                     <div class="contenedor">
                                         <img class="img-product" class="images" src="/img/products/<%= products[i].product_image %>" width="70%" alt="">
-                                        <p class="precio">$
-                                            <%= products[i].product_price %>
-                                        </p>
-                                        <p class="descripcion">
-                                            <%= products[i].product_description %>
-                                        </p>
-                                        <h4 class="descripcion">
-                                            <%= products[i].product_name %>
-                                        </h4>
+
+                                                                                    
+                                            <div class="contenedor-texto">
+                                                <%= products[i].product_price %>
+                                                <!-- <%= products[i].product_description %>       -->
+                                            </div>
+
+
+                                            <!-- Esto modifique -->
+                                            <!-- <div class="img-product-detail">
+                                                <p class="precio">$
+                                                    <%= products[i].product_price %>
+                                                </p>
+                                                <p class="descripcion">
+                                                    <%= products[i].product_description %>
+                                                </p>
+                                                <h4 class="descripcion">
+                                                    <%= products[i].product_name %>
+                                                </h4>
+                                            </div> -->
+
                                     </div>
                             </article>
                             <% } %>
