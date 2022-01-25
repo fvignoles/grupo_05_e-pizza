@@ -1,149 +1,122 @@
-*{
-    font-family: Roboto;
+* {
+  font-family: Roboto;
 }
 
 body {
-    background-color: #CF0A2C;
+  background-color: #cf0a2c;
 }
 
 .articulo {
-    display: flex;
-    width: auto;
-    flex-direction: column; 
-    background-color: black;
-    color:whitesmoke;
-    border-radius: 6%;
-    margin: 1%;
+  border-color: #cf0a2c;
+  display: flex;
+  width: auto;
+  flex-direction: column;
+  color: whitesmoke;
+  border-radius: 6%;
+  margin: 1%;
 }
 
-.articulo:hover 
-{
+.articulo:hover {
     transform: scale(1.05);
     transition: all 0.5s;
-    /* background-color: #5f5d5e;  */
     cursor: pointer;
     font-size: 12px;
-}
-
-/* .img-product {
-    align-content: center;
-    align-items: center;
-    width: 100%;
     border-radius: 6%;
-} */
+  }
 
-/* Desde aca Modifico */
+  .contenedor {
+    position: relative;
+    max-width: 100%;
+    max-height: 100%;
+    display: inline-block;
+    text-align: center;
+    border-radius: 6%;
+  }
 
 .img-product {
-    align-content: center;
-    align-items: center;
-    width: 100%;
-    border-radius: 6%;
-
-    position: relative;
-    opacity: 1;
+  align-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 6%;
+  position: relative;
+  opacity: 1;
 }
 
-/* .img-product > div {
-    position: absolute;
-    z-index: -1;
-} */
-
 .img-product-detail {
-    position: relative;
-    opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 6%;
 }
 
 .img-product:hover {
-    opacity: 0.7;
-    transition: opacity 300ms;
-    /* -webkit-transition: opacity 500ms; */
+  opacity: 1;
+  transition: opacity 300ms;
+  border-radius: 6%;
 }
 
 .img-product-detail:hover {
-    opacity: 1;
-    transition:  opacity 500ms;
+  opacity: 1;
+  transition: opacity 350ms;
+  content: "";
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
-/* 
-.img-product p {
-    margin: auto;
-    text-align: center;
-    transition: opacity .4s linear;
-    position: absolute;
-    opacity: 0;
-}
-
-.img-product:hover p {
-    opacity: 1;
-} */
-
-/* .img-product-detail {
-    align-content: center;
-    align-items: center;
-    width: 100%;
-    border-radius: 6%;
-} */
-
-
-/* Hasta aca */
-
-
-.precio {
-    font-size: 18px;
+.nombre {
+    font-size: 24px;
     text-align: center;
     margin-top: 20px;
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 70%;
+    left: 50%;
     width: 100%;
+    transform: translate(-50%, -50%);
+    border-radius: 6%;
 }
-.descuento {
-    font-size: 16px;
-    text-align: center;
-    color: whitesmoke;
-    margin-top: 5px;
+
+.precio {
+font-size: 22px;
+text-align: center;
+margin-top: 20px;
+width: 100%; 
 }
+
 .descripcion {
-    font-size: 12px;
-    text-align: center;
-    margin-top: 5px;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 20px;
 }
 
-/* main section {
-    width: 100%;
-    align-items: center;
-    margin-top: 10px;
-}
-main section article {
-    
-    align-items: center;
-    margin: 10px;
-} */
 
-@media (min-width: 361px){
-    /*.descripcion{
-        display: block;
-    }*/
-    main section article{
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
-    }
-    main section div.productos{
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    main section div.productos article{
-        width: 45%;
-    }
 
+@media (min-width: 361px) {
+  main section article {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+  }
+  main section div.productos {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  main section div.productos article {
+    width: 45%;
+  }
 }
 
-@media (min-width: 769px){
-    main section div.productos article{
-        width: 23%;
-    }
-    .descuento{
-        width: 40%;
-        margin-left: 15px;
-    }
-
+@media (min-width: 769px) {
+  main section div.productos article {
+    width: 23%;
+  }
+  .descuento {
+    width: 40%;
+    margin-left: 15px;
+  }
 }
