@@ -1,12 +1,7 @@
 *{
   margin:0;
   padding: 0;
-  box-sizing: border-box;
   font-family: Roboto;
-}
-
-header{
-  display: flex !important;
 }
 
   .detalle-box {
@@ -14,92 +9,115 @@ header{
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content:space-around;
-    flex-grow: 1;
   }
   
   .detalle-titulo {
-    display: flex;
     color: #ebebeb;
     text-align: center;
-    flex-direction: column;
-    margin: 5px;
-    width: 340px;
+    font-size: 24px;
+    text-align: center;
+    margin-top: 20px;
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: relative;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
   }
-  .detalle-box-menor {
+
+  .detalle-pizza {
+    background-color: #CF0A2C;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    background-color: gray;
-    width: 340px;
+    flex-direction: row;
+    width: 40%;
+  } 
+
+  .detalle-imagen {
+    background-color: #CF0A2C;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  } 
+
+  .detalle-pizza img {
+    border-radius: 6%;
+    width: 100%;
   }
 
   .detalle-pie-imagen {
     display: flex;
     background-color: gainsboro;
     flex-direction: row;
-    align-items: center;
-    justify-content:center;
-    width: 330px;
-  }
-  
-  .detalle-imagen-pizza {
-    width: 330px;
-    background-color: gray;
-    flex-wrap: nowrap;
+    align-items: space-around;
   }
 
-  .detalle-imagen-pizza img{
-    width:270px;
-    background-color: gray;
-  }
       
-  .detalle-ingredientes {
-    width: 330px;
-    font-size: 12px;
-    text-align: left;
+  .ingredientes {
+    font-family: roboto;
+    font-size: 18px;
+    text-align: center;
     padding: 5px 25px;
-    font-family: Roboto;
   }
 
-  .detalle-ingredientes h3 {
+  .ingredientes h3 {
     color:darkblue;
     text-align: center;
   }
 
-  .detalle-ingredientes p {
+  .ingredientes p {
     color: black;
     text-align: center;
   }
   
   .detalle-precio {
     font-size: 30px;
-    font-family: Roboto;
-    width: 50%;
-    text-align: center;
     padding: 10px;
-  }
-
-  .detalle-salir {
-    display: flex;
-    justify-content: center;
-    font-size: 20px;
-    font-family: Roboto;
-    width: 100%;
-    text-align: right;
-    padding: 10px;
+    background-color: #CF0A2C;
+    color: whitesmoke;
   }
 
   .crud-buttons{
+    width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     font-size: 20px;
-    font-family: Roboto;
     text-align: center;
+    align-items: center;
     padding: 10px;
   }
 
-  @media (min-width:708px) {
+  .button{
+    width: 40%;
+    height: 40px;
+    background: #439e40;
+    border: none;
+    color: #fff;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background:  #118f0d;
+}
+
+.button-secondary{
+  width: 40%;
+  height: 40px;
+  background: #6d2c2c ;
+  border: none;
+  color: #fff;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button-secondary:hover {
+  background: #5f0e0e;
+}
+
+  /* @media (min-width:708px) {
 
     main section {
         display: flex;
@@ -121,7 +139,6 @@ header{
   
     .detalle-imagen-pizza img{
       width:580px;
-      padding: 10px;
     }
 }
 
@@ -148,4 +165,4 @@ header{
     .detalle-imagen-pizza img{
       width:680px
     }
-}
+} */

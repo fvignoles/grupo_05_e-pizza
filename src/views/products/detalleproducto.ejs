@@ -10,59 +10,65 @@
     <%- include('../partials/header.ejs') %>
         <div class="detalle-box">
             <div class="detalle-titulo">
-                <h1>Detalle
+                <h1>
                     <%= product.product_name %>
                 </h1>
             </div>
-            <div class="detalle-box-menor">
-                <div class="detalle-imagen-pizza">
-                    <img src="/img/products/<%= product.product_image %>" width="70%" alt="">
+
+            <div class="detalle-pizza">
+                <div class="imagen-pizza">
+                    <img src="/img/products/<%= product.product_image %>" alt="Sin Imágen">
                 </div>
-                <div class="detalle-pie-imagen">
-                    <div class="detalle-precio">
-                        <p>$
-                            <%= product.product_price %>
+                <div class="ingredientes">
+                    <div>
+                        <h3>Descripción</h3>
+                        <p>
+                            <%= product.product_description %>
                         </p>
                     </div>
-                    <button class="w3-button w3-round w3-green" type="submit" id="button" name="button">
-              <i class="fas fa-shopping-cart"></i> Comprar
+                    <div class="detalle-obs">
+                        <h3>Tamaño</h3>
+                        <p>
+                            <%= product.sizes.size_name %>
+                        </p>
+                        <h3>Masa</h3>
+
+                        <p>
+                            <%= product.doughs.dough_name %>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="detalle-pie-imagen">
+                <div class="detalle-precio">
+                    <p>$
+                        <%= product.product_price %>
+                    </p>
+                </div>
+            </div>
+            <button class="button" type="submit" id="button" name="button">
+                <i class="fas fa-shopping-cart"></i> Comprar
             </button>
-                </div>
-            </div>
-            <div class="detalle-ingredientes">
-                <h3>Descripción</h3>
-                <p class="detalle-lista-ingredientes">
-                    <%= product.product_description %>
-                </p>
-                <div class="detalle-obs">
-                    <h3>Tamaño</h3>
-                    <p>
-                        <%= product.sizes.size_name %>
-                    </p>
-                    <h3>Masa</h3>
-
-                    <p>
-                        <%= product.doughs.dough_name %>
-                    </p>
-                </div>
-                <div class="crud-buttons">
-                    <div>
-                        <a href="/products/edit/<%= product.product_id %>" class="w3-button w3-round w3-blue">Editar</a>
-                    </div>
-                    <div>
-                        <form action="/products/delete/<%= product.product_id %>" method="POST" style="display: inline-flex">
-                            <button type="submit" class="w3-button w3-round w3-red">Eliminar</button>
-                        </form>
-                    </div>
-                </div>
-
-
-            </div>
-            <div class="detalle-salir">
-                <a href="/products/productos" class="w3-button w3-round w3-aqua"><i class="fas fa-door-open"></i> Salir</a>
-            </div>
+            <button class="button-secondary" type="button" onclick="window.history.back();">
+                <i class="fas fa-door-open"></i>Salir
+            </button>
         </div>
         </div>
+        <div class="crud-buttons">
+            <div>
+                <p>Panel Administrador</p>
+            </div>
+
+            <div>
+                <a href="/products/edit/<%= product.product_id %>" class="w3-button w3-round w3-blue">Editar</a>
+            </div>
+
+            <div>
+                <form action="/products/delete/<%= product.product_id %>" method="POST" style="display: inline-flex">
+                    <button type="submit" class="w3-button w3-round w3-red">Eliminar</button>
+                </form>
+            </div>
+
         </div>
 
 

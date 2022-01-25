@@ -25,17 +25,19 @@
     color:white
   }
 
+
 .social-network a{
   font-size: 20px;
   color: #fff;
   padding: 0 10px;
   transition: all 0.5s ease;
 }
-.social-network h4{
+.social-network h5{
+  font-size: 14px;
   text-align: center;
   color: #fff;
 }
 .social-network a:hover {
   border-color: transparent;
-  color: cyan;
+  color: #cf0a2c ;
 }
