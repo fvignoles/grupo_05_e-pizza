@@ -12,7 +12,9 @@
         position: absolute;
         z-index: -1;
         }
-
+.profile-edit{
+    text-align: center;
+}
 .images-label {
             font-size: 14px;
             font-weight: 600;

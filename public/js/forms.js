@@ -1,4 +1,4 @@
-const inputs = document.querySelectorAll("input");
+const inputs = document.querySelectorAll(".input-form");
 inputs.forEach((input) => {
   input.onfocus = () => {
     input.previousElementSibling.classList.add("top");

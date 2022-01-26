@@ -3,41 +3,45 @@
 
 
 <%- include('../partials/head.ejs') %>
-    <link rel="stylesheet" href="/css/editarProducto.css" />
+    <!-- <link rel="stylesheet" href="/css/editarProducto.css" /> -->
+    <link rel="stylesheet" href="/css/forms-prueba.css" />
 
 
-    <body>
+    <body class="body-form">
         <%- include('../partials/header.ejs') %>
 
             <main>
-                <section class="w3-margin-bottom">
-                    <form action="/products/edit/<%= productToEdit.product_id %>" class="edit-form" method="POST">
-                        <strong>
-            <p class="w3-center">Editar <%= productToEdit.product_name %>
-            </p>
-          </strong>
-
-                        <label for="name" class="form-label">Nombre:</label>
-                        <input value="<%= productToEdit.product_name %>" name="name" id="name" class="form-input">
-
+            
+                    <form action="/products/edit/<%= productToEdit.product_id %>" class="edit-form " method="POST">
+          <div div-form>
+            <h4 class="h4-form">Editar <%= productToEdit.product_name %></h4>
+            <label class="label-form">
+              <span class="span-form top">Nombre</span>
+                        <input value="<%= productToEdit.product_name %>" name="name" id="name" class="form-input input-form">
+            </label>
+          </div>
                         <% if(locals.errors && errors.name) { %>
                           <p class="error-msg">
                               <%= errors.name.msg %>
                           </p>
                           <% } %>
 
-                        <label for="description" class="form-label"><strong>
-              <p>Descripción:</p>
-            </strong></label>
-                        <input value="<%= productToEdit.product_description %>" name="description" id="description" class="form-input">
-
+                          <div div-form>
+                            <label class="label-form">
+                              <span class="span-form top">Descripción</span>
+                        <input value="<%= productToEdit.product_description %>" name="description" id="description" class="input-form">
+                        
+                            </label>
+                          </div>
                         <% if(locals.errors && errors.description) { %>
                           <p class="error-msg">
                               <%= errors.description.msg %>
                           </p>
                           <% } %>
 
-                        <label for="size" class="form-label"><strong><p>Tamaño:</p></strong>
+                          <div div-form>
+                            <label class="label-form">
+                              <span class="span-form top">Tamaño</span>
             
                             <select name="size">
                               <% for(let i=0; i < sizes.length; i++) { %>
@@ -52,11 +56,13 @@
                                 <% } %>
                                 <% } %>
                               </select>
-          </label>
+                            </label>
+                          </div>
+          
 
-                        <label for="dough" class="form-label"><strong>
-              <p>Masa:</p>
-            </strong>
+                          <div div-form>
+                            <label class="label-form">
+                              <span class="span-form top">Masa</span>
             <select name="dough">
               <% for(let i=0; i < doughs.length; i++) { %>
               <% if(doughs[i].dough_id == productToEdit.product_dough_id) {%>
@@ -70,29 +76,32 @@
                 <% } %>
                 <% } %>
               </select>
-          </label>
+                            </label>
+                          </div>
                         <!-- <input value="<%= productToEdit.product_dough_id %>" name="dough" id="dough" class="form-input"> -->
 
-                        <strong>
-            <p>Precio:</p>
-          </strong>
-                        <input class="w3-margin-bottom" type="number" name="price" id="price" value="<%= productToEdit.product_price %>">
-
+                        <div div-form>
+                          <label class="label-form">
+                            <span class="span-form top">Precio</span>
+                        <input class="input-form" type="number" name="price" id="price" value="<%= productToEdit.product_price %>">
+                      </label>
+                    </div>
                         <% if(locals.errors && errors.price) { %>
                           <p class="error-msg">
                               <%= errors.price.msg %>
                           </p>
                           <% } %>
-                        
+                          
                         <ul class="errors"></ul>  
 
-                        <input class="w3-btn w3-round-xlarge w3-green w3-hover-black" type="submit" value="Editar producto">
-
+                        <button class="button" type="submit" name="" value="Editar producto">Editar</button>
+                        <button class="button-secondary" type="button" onclick="window.history.back();">Cancelar</button>
                     </form>
-                </section>
+               
             </main>
 
             <script src="/js/editarProducto.js"></script>
+            <script src="/js/forms.js"></script>
             <%- include('../partials/footer.ejs') %>
     </body>
 

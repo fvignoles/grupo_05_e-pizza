@@ -97,7 +97,7 @@ let usersDB = {
             })
     },
     profile: (req, res) => {
-        return res.render("users/profile", {
+        return res.render("users/profile-prueba", {
             user: req.session.userLogged
         });
     },
