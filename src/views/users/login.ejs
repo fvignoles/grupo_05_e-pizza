@@ -25,8 +25,11 @@
             </div>
             <div class="div-form">
               <label class="label-form">
-                <span class="span-form" >Contraseña</span>
-                <input class="input-form" id="password" type="password" autocomplete="off" name="password" />
+                <div class="icono">
+                  <span class="span-form">Contraseña</span>
+                  <input class="input-form" id="password" type="password" autocomplete="off" name="password" />
+                  <i class="fas icon fa-eye" onclick="mostrarContrasena()"></i>           
+                </div>
               </label>
             </div>
 
@@ -40,11 +43,11 @@
         </form>
 
       </main>
-      <br><br><br><br><br><br><br>
       <%- include('../partials/footer.ejs') %>
 
         <script src="/js/login.js"></script>
         <script src="/js/forms.js"></script>
+        <script src="/js/password.js"></script>
         
 
   </body>

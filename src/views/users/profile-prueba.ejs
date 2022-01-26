@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<%- include('../partials/head.ejs') %>
+  <link href="/css/forms-prueba.css" rel="stylesheet" />
+
+  <body>
+    <%- include('../partials/header.ejs') %>
+
+      <main>
+
+        <body class="body-form">
+
+          <form enctype="multipart/form-data" action="agregar" method="POST" class="create-form profile-form" name="create-form profile-form login-form">
+            <section class="form-create">
+              <h4 class="h4-form"><%= user.user_firstname +" "+ user.user_lastname %>!</h4>
+
+
+                    <div div-form>
+                      <label class="label-form">
+                        <span class="span-form top">Nombre</span>
+                  <input value="<%= user.user_firstname %>" name="description" id="description" class="input-form">
+                  
+                      </label>
+                    </div>
+                    <div div-form>
+                      <label class="label-form">
+                        <span class="span-form top">Apellido</span>
+                  <input value="<%= user.user_lastname %>" name="description" id="description" class="input-form">
+                  
+                      </label>
+                    </div>
+                    <div div-form>
+                      <label class="label-form">
+                        <span class="span-form top">E-mail</span>
+                  <input value="<%= user.user_email %>" name="description" id="description" class="input-form">
+                  
+                      </label>
+                    </div>
+                      <span class="images">
+                        <input type="file" name="images" id="images" accept="image/*">
+                      </span>
+                      
+                      
+                      
+                      
+
+                     
+
+                        
+
+                          <ul class="errors"></ul>
+                          <label class="label-form profile-edit">
+                           <a href="/users/edit/<%= user.user_id %>" >Editar Perfil</a>
+                          </label>
+                        
+                        
+
+
+            </section>
+          </form>
+
+      </main>
+      <script src="/js/agregarProducto.js"></script>
+      <script src="/js/forms.js"></script>
+      <%- include('../partials/footer.ejs') %>
+  </body>
+
+</html>
+

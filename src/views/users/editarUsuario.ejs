@@ -3,28 +3,37 @@
 
 
 <%- include('../partials/head.ejs') %>
-    <link rel="stylesheet" href="/css/editarProducto.css" />
+    <link rel="stylesheet" href="/css/forms-prueba.css" />
 
 
-    <body>
+    <body class="body-form">
         <%- include('../partials/header.ejs') %>
 
             <main>
                 <section class="w3-margin-bottom">
-                    <form action="/users/edit/<%= userToEdit.user_id %>?_method=PATCH" method="POST">
+                    <form class="login-form edit-user" action="/users/edit/<%= userToEdit.user_id %>?_method=PATCH" method="POST">
                         <strong>
-            <p class="w3-center">Editar <%= userToEdit.user_firstname %>
-            </p>
-          </strong>
+           <h4 class="h4-form"><%= userToEdit.user_firstname +" "+ userToEdit.user_lastname %>!</h4>
 
-                        <label for="firstName" class="form-label">Nombre:</label>
-                        <input value="<%= userToEdit.user_firstname %>" name="firstName" id="name" class="form-input">
 
-                        <label for="lastName" class="form-label">Apellido:</label>
-                        <input value="<%= userToEdit.user_lastname %>" name="lastName" id="name" class="form-input">
-
-                        <input class="w3-btn w3-round-xlarge w3-green w3-hover-black" type="submit" value="Editar usuario">
-
+                    <div div-form>
+                      <label class="label-form">
+                        <span class="span-form top">Nombre</span>
+                  <input value="<%= userToEdit.user_firstname %>" name="description" id="description" class="input-form">
+                  
+                      </label>
+                    </div>
+                    <div div-form>
+                      <label class="label-form">
+                        <span class="span-form top">Apellido</span>
+                  <input value="<%= userToEdit.user_lastname %>" name="description" id="description" class="input-form">
+                  
+                      </label>
+                    </div>
+                    <div class="button boton-dirige">
+                        <a href="/users/edit/<%= userToEdit.user_id %>" class="w3-button w3-round w3-green">Editar</a>
+                    </div>
+                        <button class="button-secondary" type="button" onclick="window.history.back();">Cancelar</button>
                     </form>
                 </section>
             </main>
